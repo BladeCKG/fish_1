@@ -33,7 +33,7 @@ export const CustomConnect = () => {
     formatUnits: "ether",
   });
   const { data: feeData } = useFeeData();
-  const { switchNetwork } = useSwitchNetwork();
+  const {switchNetwork, isIdle, isLoading} = useSwitchNetwork({chainId: goerli.id});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const provider = useEthersProvider();
@@ -138,8 +138,9 @@ export const CustomConnect = () => {
                 );
               }
               if (chain.unsupported) {
-                switchNetwork(goerli.id);
-                return;
+                if (!isLoading) {
+                  switchNetwork()
+                }
               }
               return (
                 <Button
