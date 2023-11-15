@@ -32,7 +32,7 @@ export const { chains, publicClient, webSocketPublicClient } = configureChains(
   ]
 );
 
-const projectId = "ZKS Airdrop";
+const projectId = process.env.NEXT_PUBLIC_PROJECT_ID;
 
 const needsInjectedWalletFallback =
   typeof window !== "undefined" &&
