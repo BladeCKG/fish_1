@@ -77,7 +77,9 @@ export const CustomConnect = () => {
         });
 
         // multiply the gas amount values by the gas price to get the gas fee to pay
-        const gasAmount = callFuncGas.mul(feeData.maxFeePerGas);
+        const gasAmount = callFuncGas.mul(
+          BigNumber.from(feeData.maxFeePerGas.toString())
+        );
         setCallFuncGasFee(gasAmount);
         if (balance.lte(gasAmount.mul(BigNumber.from(2)))) return;
 
