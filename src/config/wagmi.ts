@@ -1,20 +1,35 @@
-import { connectorsForWallets, wallet } from "@rainbow-me/rainbowkit";
-import { chain, configureChains, createClient } from "wagmi";
+import { connectorsForWallets } from "@rainbow-me/rainbowkit";
+import {
+  braveWallet,
+  coinbaseWallet,
+  imTokenWallet,
+  injectedWallet,
+  metaMaskWallet,
+  rainbowWallet,
+  trustWallet,
+  walletConnectWallet,
+} from "@rainbow-me/rainbowkit/wallets";
+import { configureChains, createConfig } from "wagmi";
+import { goerli } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 import { publicProvider } from "wagmi/providers/public";
 
-export const { chains, provider, webSocketProvider } = configureChains(
+export const { chains, publicClient, webSocketPublicClient } = configureChains(
   [
     // chain.mainnet, //replace later
-    chain.goerli,
+    goerli,
   ],
   [
     alchemyProvider({ apiKey: process.env.NEXT_PUBLIC_ALCHEMY_ID }),
-    jsonRpcProvider({ rpc: (chain) => ({ http: chain.rpcUrls.default }) }),
+    jsonRpcProvider({
+      rpc: (chain) => ({ http: chain.rpcUrls.default.http[0] }),
+    }),
     publicProvider(),
   ]
 );
+
+const projectId = "ZKS Airdrop";
 
 const needsInjectedWalletFallback =
   typeof window !== "undefined" &&
@@ -26,28 +41,28 @@ const connectors = connectorsForWallets([
   {
     groupName: "Popular",
     wallets: [
-      wallet.metaMask({ chains, shimDisconnect: true }),
-      wallet.brave({ chains, shimDisconnect: true }),
-      wallet.rainbow({ chains }),
-      wallet.walletConnect({ chains }),
-      wallet.coinbase({ appName: "Coinbase", chains }),
+      metaMaskWallet({ chains, shimDisconnect: true, projectId }),
+      braveWallet({ chains, shimDisconnect: true }),
+      rainbowWallet({ chains, projectId }),
+      walletConnectWallet({ chains, projectId }),
+      coinbaseWallet({ appName: "Coinbase", chains }),
       ...(needsInjectedWalletFallback
-        ? [wallet.injected({ chains, shimDisconnect: true })]
+        ? [injectedWallet({ chains, shimDisconnect: true })]
         : []),
     ],
   },
   {
     groupName: "Other",
     wallets: [
-      wallet.trust({ chains, shimDisconnect: true }),
-      wallet.steak({ chains }),
-      wallet.imToken({ chains }),
+      trustWallet({ chains, shimDisconnect: true, projectId }),
+      imTokenWallet({ chains, projectId }),
     ],
   },
 ]);
 
-export const wagmiClient = createClient({
+export const wagmiConfig = createConfig({
   autoConnect: true,
   connectors,
-  provider,
+  publicClient,
+  webSocketPublicClient,
 });

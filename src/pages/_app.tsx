@@ -1,5 +1,5 @@
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
-import { chains, wagmiClient } from "config/wagmi";
+import { chains, wagmiConfig } from "config/wagmi";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import "styles/globals.css";
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   if (!mounted) return null;
 
   return (
-    <WagmiConfig client={wagmiClient}>
+    <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
         <ChakraProvider theme={theme}>
           <Component {...pageProps} />
