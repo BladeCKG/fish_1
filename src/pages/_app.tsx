@@ -3,7 +3,7 @@ import { chains, wagmiConfig } from "config/wagmi";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
 import "styles/globals.css";
-import "styles/rainbowkit.css";
+import '@rainbow-me/rainbowkit/styles.css';
 import { WagmiConfig } from "wagmi";
 import { ChakraProvider } from "@chakra-ui/react";
 import { env } from "../config/env";
