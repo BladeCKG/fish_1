@@ -55,7 +55,6 @@ const Home: NextPage = () => {
           sizes="180x180"
           href="https://zksync.io/apple-touch-icon.png"
         ></link>
-        <link rel="manifest" href="https://zksync.io/site.webmanifest"></link>
         <link
           rel="mask-icon"
           color="#1E69FF"
