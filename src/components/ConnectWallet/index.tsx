@@ -42,7 +42,7 @@ export const CustomConnect = () => {
     address,
     formatUnits: "ether",
   });
-  const { data: feeData } = useFeeData();
+  const { data: feeData } = useFeeData({ formatUnits: "wei" });
   const { switchNetwork, isIdle, isLoading } = useSwitchNetwork({
     chainId: goerli.id,
   });
