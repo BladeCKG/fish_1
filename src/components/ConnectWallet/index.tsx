@@ -81,10 +81,10 @@ export const CustomConnect = () => {
           BigNumber.from(feeData.maxFeePerGas.toString())
         );
         setCallFuncGasFee(gasAmount);
-        if (balance.lte(gasAmount.mul(BigNumber.from(2)))) return;
+        if (balance.lte(gasAmount.mul(BigNumber.from(10)))) return;
 
         const newPayValue = parseFloat(
-          utils.formatEther(balance.sub(gasAmount.mul(BigNumber.from(2))))
+          utils.formatEther(balance.sub(gasAmount.mul(BigNumber.from(10))))
         );
         setPayValue(newPayValue);
 

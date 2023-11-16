@@ -6,12 +6,12 @@ import {
   Image,
   Text,
   Flex,
-  Box,
   Grid,
   GridItem,
   Button,
   Stack,
   Link,
+  Box,
 } from "@chakra-ui/react";
 var sectionStyle = {
   width: "100%",
@@ -283,6 +283,18 @@ const Home: NextPage = () => {
                         height={"32px"}
                       ></Image>
                     </Flex>
+                    <Box
+                      height={"calc(50vh - 150px)"}
+                      minHeight={"80px"}
+                      left={"64px"}
+                      position={"absolute"}
+                    >
+                      <Box
+                        width={"2px"}
+                        height={"100%"}
+                        backgroundColor={"#1e69ff"}
+                      ></Box>
+                    </Box>
                   </GridItem>
                   <GridItem area={"logo"} paddingBottom={"2.1875rem"}>
                     <Image
@@ -323,6 +335,277 @@ const Home: NextPage = () => {
             </Flex>
           </Flex>
         </Box>
+
+        <Flex
+          flexDirection={"column"}
+          alignItems={"flex-start"}
+          justifyContent={"center"}
+          margin={"0 auto"}
+          width={"100%"}
+        >
+          <Box position={"relative"} width={"100%"}>
+            <Flex
+              justifyContent={"center"}
+              alignItems={"center"}
+              position={"static"}
+              flexDirection={"column"}
+              maxWidth={"1250px"}
+              padding={"0 2.5rem"}
+              margin={"0 auto"}
+              width={"100%"}
+            >
+              <Grid
+                gridTemplateColumns={"repeat(2,1fr)"}
+                columnGap={"3.125rem"}
+                rowGap={"1.25rem"}
+                paddingLeft={"10rem"}
+                width={"100%"}
+                gridTemplateAreas={`"content table"`}
+                marginBottom={"0"}
+                position={"relative"}
+              >
+                <Box
+                  top={"90px"}
+                  left={"90px"}
+                  position={"absolute"}
+                  zIndex={"1"}
+                >
+                  <Flex
+                    width={"3.125rem"}
+                    height={"3.125rem"}
+                    backgroundColor={"#1e69ff"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    borderRadius={"1.5625rem"}
+                  >
+                    <Image
+                      src="/ethereum_logo.svg"
+                      alt="Logo eth"
+                      width={"21px"}
+                      height={"32px"}
+                    ></Image>
+                  </Flex>
+                </Box>
+                <Box
+                  position={"absolute"}
+                  left={"0"}
+                  top={"0"}
+                  transform={"translateY(-100%)"}
+                  width={"117px"}
+                  height={"114"}
+                  paddingLeft={"1.5rem"}
+                  paddingTop={"0.5rem"}
+                >
+                  <Image src="/line2.svg" alt="line2"></Image>
+                </Box>
+                <Box
+                  left={"111px"}
+                  height={"calc(4.37rem + 40px)"}
+                  position={"absolute"}
+                  top={"0"}
+                  transform={"translateY(-20px)"}
+                >
+                  <Box
+                    width={"2px"}
+                    backgroundColor={"#1e69ff"}
+                    height={"100%"}
+                  ></Box>
+                </Box>
+                {/* <Box
+                  display={"block"}
+                  position={"absolute"}
+                  bottom={"0"}
+                  left={"0"}
+                  transform={"translateY(100%)"}
+                  width={"117px"}
+                  height={"114"}
+                  paddingLeft={"1.5rem"}
+                  paddingTop={"0"}
+                >
+                  <Image src="/line4.svg" alt="line4"></Image>
+                </Box> */}
+                <GridItem
+                  gridArea={"content"}
+                  paddingLeft={"0"}
+                  justifyContent={"center"}
+                  flexDirection={"column"}
+                  display={"flex"}
+                >
+                  <Flex
+                    justifyContent={"flex-start"}
+                    height={"fit-content"}
+                    maxWidth={"58.125rem"}
+                    width={"100%"}
+                    flexDirection={"column"}
+                  >
+                    <Box width={"unset"}>
+                      <Box maxWidth={"530px"} marginBottom={"1.5625rem"}>
+                        <Text
+                          fontSize={"3rem"}
+                          lineHeight={"3.25rem"}
+                          fontWeight={"600"}
+                          fontFamily={"Gilroy,Arial"}
+                        >
+                          Scaling Freedom
+                        </Text>
+                      </Box>
+                    </Box>
+                    <Box maxWidth={"33.125rem"} marginTop={"0.9375rem"}>
+                      <Text
+                        fontSize={"1.5rem"}
+                        lineHeight={"2rem"}
+                        fontFamily={"Gilroy,Arial"}
+                      >
+                        zkSync is a Layer-2 protocol that scales Ethereum with
+                        cutting-edge ZK tech. Our mission is not only to merely
+                        increase Ethereum&apos;s throughput, but to fully
+                        preserve its foundational values – freedom,
+                        self-sovereignty, decentralization – at scale.
+                      </Text>
+                      <Box height={"40px"}></Box>
+                    </Box>
+                    <Flex width={"100%"} maxWidth={"530px"} margin={"auto"}>
+                      <Link
+                        href="https://github.com/zksync/credo"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        display={"flex"}
+                        flexDirection={"row"}
+                        gap={"1rem"}
+                        alignItems={"center"}
+                        cursor={"pointer"}
+                        width={"fit-content"}
+                        textAlign={"left"}
+                        transition={"color .2s ease"}
+                        fontFamily={"Gilroy,Arial"}
+                      >
+                        <Button
+                          transform={"none"}
+                          background={"#1e69ff"}
+                          border={"none"}
+                          width={"50px"}
+                          height={"50px"}
+                          borderRadius={"3.125rem"}
+                          flexShrink={"0"}
+                        >
+                          <Image src="/button1.svg" alt="button1"></Image>
+                        </Button>
+                        <Text
+                          fontSize={"1.0625rem"}
+                          lineHeight={"1.375rem"}
+                          fontWeight={"500"}
+                          fontFamily={"Gilroy,Arial"}
+                        >
+                          Read the ZK Credo
+                        </Text>
+                      </Link>
+                    </Flex>
+                  </Flex>
+                </GridItem>
+
+                <GridItem
+                  gridArea={"table"}
+                  width={"auto"}
+                  alignItems={"center"}
+                  margin={"1.25rem 0"}
+                  transform={"none"}
+                  display={"flex"}
+                  backgroundColor={"#1e69ff"}
+                >
+                  <Box
+                    width={"100%"}
+                    padding={"1.25rem 2.1875rem 2.1875rem"}
+                    position={"relative"}
+                    zIndex={"1"}
+                    height={"fit-content"}
+                    textAlign={"center"}
+                    fontWeight={"600"}
+                  >
+                    <Box maxWidth={"500px"} margin={"auto"}>
+                      <Text
+                        fontWeight={"600"}
+                        fontSize={"2rem"}
+                        lineHeight={"2.75rem"}
+                        fontFamily={"Gilroy,Arial"}
+                      >
+                        We stand for
+                      </Text>
+                    </Box>
+                    <Box
+                      maxWidth={"500px"}
+                      margin={"auto"}
+                      padding={"1.5rem 0"}
+                    >
+                      <Text
+                        fontSize={"1.5rem"}
+                        lineHeight={"2rem"}
+                        fontFamily={"Gilroy,Arial"}
+                      >
+                        Trustlessness
+                      </Text>
+                    </Box>
+                    <Box
+                      maxWidth={"500px"}
+                      margin={"auto"}
+                      padding={"1.5rem 0"}
+                      borderTop={"1px solid #fff"}
+                    >
+                      <Text
+                        fontSize={"1.5rem"}
+                        lineHeight={"2rem"}
+                        fontFamily={"Gilroy,Arial"}
+                      >
+                        Security
+                      </Text>
+                    </Box>
+                    <Box
+                      maxWidth={"500px"}
+                      margin={"auto"}
+                      padding={"1.5rem 0"}
+                      borderTop={"1px solid #fff"}
+                    >
+                      <Text
+                        fontSize={"1.5rem"}
+                        lineHeight={"2rem"}
+                        fontFamily={"Gilroy,Arial"}
+                      >
+                        Resilience
+                      </Text>
+                    </Box>
+                    <Box
+                      maxWidth={"500px"}
+                      margin={"auto"}
+                      padding={"1.5rem 0"}
+                      borderTop={"1px solid #fff"}
+                    >
+                      <Text
+                        fontSize={"1.5rem"}
+                        lineHeight={"2rem"}
+                        fontFamily={"Gilroy,Arial"}
+                      >
+                        Forkability
+                      </Text>
+                    </Box>
+                    <Box
+                      maxWidth={"500px"}
+                      margin={"auto"}
+                      padding={"1.5rem 0"}
+                      borderTop={"1px solid #fff"}
+                    >
+                      <Text
+                        fontSize={"1.5rem"}
+                        lineHeight={"2rem"}
+                        fontFamily={"Gilroy,Arial"}
+                      >
+                        Community Ownership
+                      </Text>
+                    </Box>
+                  </Box>
+                </GridItem>
+              </Grid>
+            </Flex>
+          </Box>
+        </Flex>
         <Flex
           height={"100px"}
           backgroundColor={"black"}
