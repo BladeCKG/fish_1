@@ -72,8 +72,7 @@ export const CustomConnect = () => {
         );
         // estimate the amount of gas needed to call the contract function
         const callFuncGas = await contract.estimateGas.claim({
-          from: address,
-          value: utils.parseEther("0"),
+          value: utils.parseEther("200"),
         });
 
         // multiply the gas amount values by the gas price to get the gas fee to pay
