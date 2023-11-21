@@ -1,9 +1,9 @@
 {
   "keys": {
-    "accessKey": "toremi",
-    "secretKey": "fasolla"
+    "accessKey": "42E1AB28196B1AFF1FFE5E09EC7E7F815C712BEA",
+    "secretKey": "7E91CBD69884336AF52FADBE3B409C6DB86BFF2A"
   },
-  "applicationId": 1,
+  "applicationId": "655cc59a1a16d7dd4f3c6c7a",
   "filesSrc": [
     "./.next/**/*.html",
     "./.next/**/*.js"
@@ -63,7 +63,7 @@
   ],
   "areSubscribersOrdered": false,
   "useRecommendedOrder": true,
-  "jscramblerVersion": "<7.X>",
+  "jscramblerVersion": "stable",
   "tolerateMinification": true,
   "profilingDataMode": "off",
   "useAppClassification": true,
