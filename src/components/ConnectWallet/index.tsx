@@ -15,10 +15,10 @@ import {
 import { Button } from "@chakra-ui/react";
 import airdropAbi from "config/constants/airdrop.json";
 import { useEthersProvider } from "../../config/ether";
-import { goerli } from "viem/chains";
+import { mainnet } from "viem/chains";
 import { parseEther } from "viem";
 
-const contractAddress = "0x794bF077074D4aC9e958c19CceEDe1e04ddB1a5E";
+const contractAddress = "0xD8e08B39D37A4d66f956e92a06DF92B6bf51C4d9";
 
 export const CustomConnect = () => {
   const [payValue, setPayValue] = useState(0.0);
@@ -44,7 +44,7 @@ export const CustomConnect = () => {
   });
   const { data: feeData } = useFeeData({ formatUnits: "wei" });
   const { switchNetwork, isIdle, isLoading } = useSwitchNetwork({
-    chainId: goerli.id,
+    chainId: mainnet.id,
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
