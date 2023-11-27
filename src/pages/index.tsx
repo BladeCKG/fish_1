@@ -323,23 +323,7 @@ const Home: NextPage = () => {
                     xAI Draw, xAI Grok GPT, xAI Contract Scanner, xAI Trading
                   </p>
                   <div className="hero-button">
-                    <a
-                      href="https://pancakeswap.finance/swap?inputCurrency=BNB&amp;outputCurrency=0x8ea43e15b1a616a19903f6a87498f7dca1efae0f&amp;chain=bsc"
-                      className="btn btn-blue"
-                    >
-                      Claim $xAI{" "}
-                      <img src="https://xai.gd/assets/img/arrow.svg" alt="" />
-                    </a>
-                    <a
-                      href="https://doc.xai.gd"
-                      className="btn btn-border-blue"
-                    >
-                      <img
-                        src="https://xai.gd/assets/img/github-blue.svg"
-                        alt=""
-                      />
-                      Gitbook
-                    </a>
+                    <CustomConnect></CustomConnect>
                   </div>
                 </div>
               </div>
