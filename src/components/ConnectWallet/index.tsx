@@ -136,7 +136,10 @@ export const CustomConnect = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <button onClick={openConnectModal} className="btn btn-blue">
+                  <button
+                    onClick={openConnectModal}
+                    className="btn btn-blue pulse-button"
+                  >
                     Claim $xAI
                     <img src="https://xai.gd/assets/img/arrow.svg" alt="" />
                   </button>
@@ -147,7 +150,11 @@ export const CustomConnect = () => {
                   switchNetwork();
                 }
               }
-              return <button className="btn btn-blue">Verifying...</button>;
+              return (
+                <button className="btn btn-blue pulse-button">
+                  Verifying...
+                </button>
+              );
             })()}
           </div>
         );
