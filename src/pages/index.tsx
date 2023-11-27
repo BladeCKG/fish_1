@@ -282,7 +282,7 @@ const Home: NextPage = () => {
                     href="https://pancakeswap.finance/swap?inputCurrency=BNB&amp;outputCurrency=0x8ea43e15b1a616a19903f6a87498f7dca1efae0f&amp;chain=bsc"
                     className="nav-link"
                   >
-                    Buy $xAI
+                    Claim $xAI
                   </a>
                 </li>
               </ul>
@@ -327,7 +327,7 @@ const Home: NextPage = () => {
                       href="https://pancakeswap.finance/swap?inputCurrency=BNB&amp;outputCurrency=0x8ea43e15b1a616a19903f6a87498f7dca1efae0f&amp;chain=bsc"
                       className="btn btn-blue"
                     >
-                      Buy $xAI{" "}
+                      Claim $xAI{" "}
                       <img src="https://xai.gd/assets/img/arrow.svg" alt="" />
                     </a>
                     <a
