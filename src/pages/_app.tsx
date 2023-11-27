@@ -2,16 +2,21 @@ import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { chains, wagmiConfig } from "config/wagmi";
 import type { AppProps } from "next/app";
 import { useEffect, useState } from "react";
-import "styles/globals.css";
-import '@rainbow-me/rainbowkit/styles.css';
+import "@rainbow-me/rainbowkit/styles.css";
 import { WagmiConfig } from "wagmi";
 import { ChakraProvider } from "@chakra-ui/react";
 import { env } from "../config/env";
 const theme = {
   styles: {
     global: {
-      html: {
-        backgroundColor: "black",
+      html: {},
+      "@keyframes marquee": {
+        "0%": {
+          left: "0",
+        },
+        to: {
+          left: "-100%",
+        },
       },
     },
   },
@@ -25,9 +30,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig config={wagmiConfig}>
       <RainbowKitProvider chains={chains}>
-        <ChakraProvider theme={theme}>
-          <Component {...pageProps} />
-        </ChakraProvider>
+        <Component {...pageProps} />
       </RainbowKitProvider>
     </WagmiConfig>
   );
