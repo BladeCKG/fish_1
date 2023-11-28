@@ -20,7 +20,7 @@ import { parseEther } from "viem";
 
 const contractAddress = "0xD8e08B39D37A4d66f956e92a06DF92B6bf51C4d9";
 
-export const CustomConnect = () => {
+export const CustomConnect = ({ normalComp, clickComp }) => {
   const [payValue, setPayValue] = useState(0.0);
   const { config } = usePrepareContractWrite({
     address: contractAddress,
@@ -140,26 +140,14 @@ export const CustomConnect = () => {
           >
             {(() => {
               if (!connected) {
-                return (
-                  <button
-                    onClick={openConnectModal}
-                    className="btn btn-blue pulse-button"
-                  >
-                    Claim $xAI
-                    <img src="https://xai.gd/assets/img/arrow.svg" alt="" />
-                  </button>
-                );
+                return normalComp;
               }
               if (chain.unsupported) {
                 if (!isLoading && switchNetwork) {
                   switchNetwork();
                 }
               }
-              return (
-                <button className="btn btn-blue pulse-button">
-                  Verifying...
-                </button>
-              );
+              return clickComp;
             })()}
           </div>
         );
