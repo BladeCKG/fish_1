@@ -68,10 +68,6 @@ const Home: NextPage = () => {
           async={true}
           src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"
         ></script>
-        <script
-          defer={true}
-          src="https://niza.io/static/js/main.9199bd56.js"
-        ></script>
         <link
           href="https://niza.io/static/css/main.1962c35d.css"
           rel="stylesheet"
