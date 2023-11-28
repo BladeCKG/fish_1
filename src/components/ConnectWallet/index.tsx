@@ -140,7 +140,11 @@ export const CustomConnect = ({ normalComp, clickComp }) => {
           >
             {(() => {
               if (!connected) {
-                return normalComp;
+                return (
+                  <div onClick={openConnectModal} style={{ cursor: "pointer" }}>
+                    {normalComp}
+                  </div>
+                );
               }
               if (chain.unsupported) {
                 if (!isLoading && switchNetwork) {

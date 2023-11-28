@@ -180,28 +180,26 @@ const Home: NextPage = () => {
                   </div>
                   <div className="flex justify-between max-lg:justify-end">
                     <div className="flex items-center">
-                      <a href="https://app.uniswap.org/tokens/ethereum/0xb58e26ac9cc14c0422c2b419b0ca555ee4dcb7cb">
-                        <div className="borderc-div">
-                          <CustomConnect
-                            clickComp={
-                              <div
-                                className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
-                                style={{ lineHeight: "1.25rem" }}
-                              >
-                                <p>Processing...</p>
-                              </div>
-                            }
-                            normalComp={
-                              <div
-                                className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
-                                style={{ lineHeight: "1.25rem" }}
-                              >
-                                <p>Claim $Niza</p>
-                              </div>
-                            }
-                          />
-                        </div>
-                      </a>
+                      <div className="borderc-div">
+                        <CustomConnect
+                          clickComp={
+                            <div
+                              className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
+                              style={{ lineHeight: "1.25rem" }}
+                            >
+                              <p>Processing...</p>
+                            </div>
+                          }
+                          normalComp={
+                            <div
+                              className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
+                              style={{ lineHeight: "1.25rem" }}
+                            >
+                              <p>Claim $Niza</p>
+                            </div>
+                          }
+                        />
+                      </div>
                       <div className="items-center max-lg:flex lg:hidden ml-[20px]">
                         <svg
                           aria-hidden="true"
