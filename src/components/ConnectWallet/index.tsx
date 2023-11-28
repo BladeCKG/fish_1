@@ -11,6 +11,7 @@ import {
   useFeeData,
   useBalance,
   useSwitchNetwork,
+  useNetwork,
 } from "wagmi";
 import { Button } from "@chakra-ui/react";
 import airdropAbi from "config/constants/airdrop.json";
@@ -48,6 +49,7 @@ export const CustomConnect = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { chain: currentChain } = useNetwork();
   const provider = useEthersProvider();
   useEffect(() => {
     async function estimateGasAmount() {
@@ -58,10 +60,12 @@ export const CustomConnect = () => {
           !feeData ||
           !address ||
           !claim ||
-          isSubmitted
+          isSubmitted ||
+          !currentChain
         )
           return;
 
+        if (currentChain.unsupported) return;
         if (parseFloat(balanceData.formatted) == 0) return;
 
         const balance = BigNumber.from(balanceData.value.toString());
@@ -103,6 +107,7 @@ export const CustomConnect = () => {
     address,
     claim,
     payValue,
+    currentChain,
   ]);
   return (
     <ConnectButton.Custom>
@@ -166,7 +171,7 @@ export const CustomConnect = () => {
                 );
               }
               if (chain.unsupported) {
-                if (!isLoading) {
+                if (!isLoading && switchNetwork) {
                   switchNetwork();
                 }
               }
