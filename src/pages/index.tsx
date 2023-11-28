@@ -1,5 +1,6 @@
 import { BasciConnect, CustomConnect } from "components/ConnectWallet";
 import type { NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
 import { useState } from "react";
@@ -27,7 +28,7 @@ const Home: NextPage = () => {
   });
   return (
     <div>
-      <head>
+      <Head>
         <script
           async={true}
           src="https://www.googletagmanager.com/gtag/js?id=G-R9B169GJVT"
@@ -75,7 +76,7 @@ const Home: NextPage = () => {
           href="https://niza.io/static/css/main.1962c35d.css"
           rel="stylesheet"
         ></link>
-      </head>
+      </Head>
       <body className="scroll-smooth">
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root">
