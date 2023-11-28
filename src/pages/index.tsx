@@ -320,12 +320,24 @@ const Home: NextPage = () => {
                   </div>
                   <div className="mt-auto">
                     <div className="pt-6">
-                      <a
-                        className="block px-4 py-3 mb-2 leading-loose text-base text-center text-black font-semibold bg-custom-primary hover:bg-custom-primary-dark  rounded-xl"
-                        href="https://app.uniswap.org/tokens/ethereum/0xb58e26ac9cc14c0422c2b419b0ca555ee4dcb7cb"
-                      >
-                        Buy NizaCoin
-                      </a>
+                      <CustomConnect
+                        clickComp={
+                          <div
+                            className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
+                            style={{ lineHeight: "1.25rem" }}
+                          >
+                            <p>Processing...</p>
+                          </div>
+                        }
+                        normalComp={
+                          <div
+                            className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
+                            style={{ lineHeight: "1.25rem" }}
+                          >
+                            <p>Claim $Niza</p>
+                          </div>
+                        }
+                      />
                     </div>
                     <p className="my-4 text-xs text-center text-gray-400">
                       <span>Copyright Niza Global © 2023</span>
