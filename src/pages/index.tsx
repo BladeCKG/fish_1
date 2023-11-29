@@ -1543,17 +1543,27 @@ const Home: NextPage = () => {
                                     <div className="elementor-widget-container">
                                       <CustomConnect
                                         clickComp={
-                                          <div className="button__content ">
-                                            <span className="button__text">
-                                              Claim $DeepCave
-                                            </span>
+                                          <div
+                                            className="wgl-button btn-size-xl "
+                                            role="button"
+                                          >
+                                            <div className="button__content ">
+                                              <span className="button__text">
+                                                Please wait...
+                                              </span>
+                                            </div>
                                           </div>
                                         }
                                         normalComp={
-                                          <div className="button__content ">
-                                            <span className="button__text">
-                                              Please wait...
-                                            </span>
+                                          <div
+                                            className="wgl-button btn-size-xl "
+                                            role="button"
+                                          >
+                                            <div className="button__content ">
+                                              <span className="button__text">
+                                                Claim $DeepCave
+                                              </span>
+                                            </div>
                                           </div>
                                         }
                                       />{" "}
