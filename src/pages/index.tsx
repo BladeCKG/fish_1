@@ -6,1363 +6,7507 @@ import Script from "next/script";
 import { useState } from "react";
 
 const Home: NextPage = () => {
-  const [style1, setStyle1] = useState(
-    "xl:container lg:mt-[32px] transition-width-nav2 lg:m-auto"
-  );
-  const [style2, setStyle2] = useState(
-    "justify-between sm:p-[12px] max-sm:pr-[5px] lg:rounded-[12px] flex items-center min-lg:w-full"
-  );
-  window.addEventListener("scroll", () => {
-    const currentScrollPos = window.scrollY;
-    if (currentScrollPos > 0) {
-      setStyle1("w-full width-transition2 lg:m-auto");
-      setStyle2(
-        "justify-between sm:p-[12px] max-sm:pr-[5px] bg-special flex items-center min-lg:w-full"
-      );
-    } else {
-      setStyle1("xl:container lg:mt-[32px] transition-width-nav2 lg:m-auto");
-      setStyle2(
-        "justify-between sm:p-[12px] max-sm:pr-[5px] lg:rounded-[12px] flex items-center min-lg:w-full"
-      );
-    }
-  });
   return (
     <div>
       <Head>
-        <script
-          async={true}
-          src="https://www.googletagmanager.com/gtag/js?id=G-R9B169GJVT"
-        ></script>
-        <link rel="icon" href="https://niza.io/logo.png" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <style></style>
-        <link rel="apple-touch-icon" href="https://niza.io/logo192.png" />
-        <link rel="manifest" href="https://niza.io/manifest.json" />
-        <title>NizaGlobal</title>
-        <meta name="title" content="Niza Coin" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta
-          name="description"
-          content="Not your average crypto token! Invest in your future!"
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://niza.io/" />
-        <meta property="og:title" content="Niza Coin" />
-        <meta
-          property="og:description"
-          content="Not your average crypto token! Invest in your future!"
-        />
-        <meta property="og:image" content="https://niza.io/niza-banner.jpg" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://niza.io/" />
-        <meta property="twitter:title" content="Niza Coin" />
-        <meta
-          property="twitter:description"
-          content="Not your average crypto token! Invest in your future!"
-        />
-        <meta
-          property="twitter:image"
-          content="https://niza.io/niza-banner.jpg"
-        />
-        <script
-          async={true}
-          src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"
-        ></script>
+        <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
+        <title>Deepcave.io – Turn Your Words Into Art</title>
+        <meta name="robots" content="max-image-preview:large" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link
-          href="https://niza.io/static/css/main.1962c35d.css"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Deepcave.io » Feed"
+          href="https://deepcave.io/feed/"
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Deepcave.io » Comments Feed"
+          href="https://deepcave.io/comments/feed/"
+        />
+
+        <link
           rel="stylesheet"
-        ></link>
+          id="wp-block-library-css"
+          href="https://deepcave.io/wp-includes/css/dist/block-library/style.min.css?ver=6.4.1"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="copy-the-code-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/assets/css/copy-the-code.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-copy-inline-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/assets/css/copy-inline.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="contact-form-7-css"
+          href="https://deepcave.io/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.8.1"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="woocommerce-layout-css"
+          href="https://deepcave.io/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=8.2.1"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="woocommerce-smallscreen-css"
+          href="https://deepcave.io/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=8.2.1"
+          type="text/css"
+          media="only screen and (max-width: 767px)"
+        />
+        <link
+          rel="stylesheet"
+          id="woocommerce-general-css"
+          href="https://deepcave.io/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=8.2.1"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="wgl-extensions-css"
+          href="https://deepcave.io/wp-content/plugins/wgl-extensions/public/css/wgl-extensions-public.css?ver=1.0.6"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="wgl-parent-style-css"
+          href="https://deepcave.io/wp-content/themes/nico/style.css?ver=6.4.1"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="nico-theme-info-css"
+          href="https://deepcave.io/wp-content/themes/nico-child/style.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="font-awesome-5-all-css"
+          href="https://deepcave.io/wp-content/themes/nico/css/font-awesome-5.min.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="nico-flaticon-css"
+          href="https://deepcave.io/wp-content/themes/nico/fonts/flaticon/flaticon.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="nico-main-css"
+          href="https://deepcave.io/wp-content/themes/nico/css/main.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="nico-gutenberg-css"
+          href="https://deepcave.io/wp-content/themes/nico/css/pluggable/gutenberg.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="nico-woocommerce-css"
+          href="https://deepcave.io/wp-content/themes/nico/css/pluggable/woocommerce.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="nico-webgl_fluid-css"
+          href="https://deepcave.io/wp-content/themes/nico/css/pluggable/webgl_fluid.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="nico-responsive-css"
+          href="https://deepcave.io/wp-content/themes/nico/css/responsive.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="nico-dynamic-css"
+          href="https://deepcave.io/wp-content/themes/nico/css/dynamic.css?ver=1.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-icons-css"
+          href="https://deepcave.io/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.23.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-frontend-css"
+          href="https://deepcave.io/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1697641938"
+          type="text/css"
+          media="all"
+        />
+
+        <link
+          rel="stylesheet"
+          id="swiper-css"
+          href="https://deepcave.io/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-post-4329-css"
+          href="https://deepcave.io/wp-content/uploads/elementor/css/post-4329.css?ver=1697641938"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-pro-css"
+          href="https://deepcave.io/wp-content/uploads/elementor/css/custom-pro-frontend.min.css?ver=1698089377"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="font-awesome-4-shim-css"
+          href="https://deepcave.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.16.6"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-global-css"
+          href="https://deepcave.io/wp-content/uploads/elementor/css/global.css?ver=1697641939"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-post-3462-css"
+          href="https://deepcave.io/wp-content/uploads/elementor/css/post-3462.css?ver=1701076524"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-blocks-core-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/blocks/assets/css/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-email-sample-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/email-sample/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-blocks-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/blocks/assets/css/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-email-address-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/email-address/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-phone-number-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/phone-number/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-copy-button-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/copy-button/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-copy-icon-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/copy-icon/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-blockquote-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/blockquote/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-code-snippet-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/code-snippet/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-message-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/message/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-wish-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/wish/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-shayari-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/shayari/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-sms-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/sms/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-deal-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/deal/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-coupon-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/coupon/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="ctc-el-ai-prompt-generator-css"
+          href="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/ai-prompt-generator/style.css?ver=3.2.0"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-post-32-css"
+          href="https://deepcave.io/wp-content/uploads/elementor/css/post-32.css?ver=1700505163"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-post-3264-css"
+          href="https://deepcave.io/wp-content/uploads/elementor/css/post-3264.css?ver=1700505132"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-post-216-css"
+          href="https://deepcave.io/wp-content/uploads/elementor/css/post-216.css?ver=1700340452"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css?family=DM%20Sans:400,400,500,700%7CSpace%20Grotesk:700,500,300,400,700&amp;display=swap&amp;ver=1701077771"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=DM%20Sans:400,400,500,700%7CSpace%20Grotesk:700,500,300,400,700&amp;display=swap&amp;ver=1701077771"
+          media="all"
+        />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=DM%20Sans:400,400,500,700%7CSpace%20Grotesk:700,500,300,400,700&#038;display=swap&#038;ver=1701077771"
+          />
+        </noscript>
+        <link
+          rel="stylesheet"
+          id="google-fonts-1-css"
+          href="https://fonts.googleapis.com/css?family=Space+Grotesk%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CDM+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.4.1"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-icons-shared-0-css"
+          href="https://deepcave.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          id="elementor-icons-fa-brands-css"
+          href="https://deepcave.io/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3"
+          type="text/css"
+          media="all"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com/"
+          crossOrigin=""
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://deepcave.io/wp-content/plugins/nextend-smart-slider3-pro/Public/SmartSlider3/Application/Frontend/Assets/dist/smartslider.min.css?ver=4e06d1a7"
+          media="all"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://fonts.googleapis.com/css?display=swap&amp;family=Roboto%3A300%2C400"
+          media="all"
+        />
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+          id="jquery-core-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+          id="jquery-migrate-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.16.6"
+          id="font-awesome-4-shim-js"
+        ></script>
+        <link rel="https://api.w.org/" href="https://deepcave.io/wp-json/" />
+        <link
+          rel="alternate"
+          type="application/json"
+          href="https://deepcave.io/wp-json/wp/v2/pages/3462"
+        />
+        <link
+          rel="EditURI"
+          type="application/rsd+xml"
+          title="RSD"
+          href="https://deepcave.io/xmlrpc.php?rsd"
+        />
+        <meta name="generator" content="WordPress 6.4.1" />
+        <meta name="generator" content="WooCommerce 8.2.1" />
+        <link rel="canonical" href="https://deepcave.io/" />
+        <link rel="shortlink" href="https://deepcave.io/" />
+        <link
+          rel="alternate"
+          type="application/json+oembed"
+          href="https://deepcave.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeepcave.io%2F"
+        />
+        <link
+          rel="alternate"
+          type="text/xml+oembed"
+          href="https://deepcave.io/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdeepcave.io%2F&amp;format=xml"
+        />
+        <script
+          async={true}
+          src="https://www.googletagmanager.com/gtag/js?id=G-0QW9L7YQH5"
+        ></script>
+        <meta
+          name="generator"
+          content="Elementor 3.16.6; features: e_dom_optimization, e_optimized_assets_loading, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap"
+        />
+        <meta
+          name="generator"
+          content="Powered by Slider Revolution 6.6.16 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface."
+        />
+        <link
+          rel="icon"
+          href="https://deepcave.io/wp-content/uploads/2023/10/cropped-a-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          href="https://deepcave.io/wp-content/uploads/2023/10/cropped-a-192x192.png"
+          sizes="192x192"
+        />
+        <link
+          rel="apple-touch-icon"
+          href="https://deepcave.io/wp-content/uploads/2023/10/cropped-a-180x180.png"
+        />
+        <meta
+          name="msapplication-TileImage"
+          content="https://deepcave.io/wp-content/uploads/2023/10/cropped-a-270x270.png"
+        />
+
+        <script
+          src="https://deepcave.io/wp-content/plugins/nextend-smart-slider3-pro/Public/SmartSlider3/Application/Frontend/Assets/dist/n2.min.js?ver=4e06d1a7"
+          defer={true}
+          async={true}
+        ></script>
+        <script
+          src="https://deepcave.io/wp-content/plugins/nextend-smart-slider3-pro/Public/SmartSlider3/Application/Frontend/Assets/dist/smartslider-frontend.min.js?ver=4e06d1a7"
+          defer={true}
+          async={true}
+        ></script>
+        <script
+          src="https://deepcave.io/wp-content/plugins/nextend-smart-slider3-pro/Public/SmartSlider3Pro/Slider/SliderType/Showcase/Assets/dist/ss-showcase.min.js?ver=4e06d1a7"
+          defer={true}
+          async={true}
+        ></script>
+        <script
+          src="https://deepcave.io/wp-content/plugins/nextend-smart-slider3-pro/Public/SmartSlider3/Widget/Arrow/ArrowImage/Assets/dist/w-arrow-image.min.js?ver=4e06d1a7"
+          defer={true}
+          async={true}
+        ></script>
+        <script
+          src="https://deepcave.io/wp-includes/js/wp-emoji-release.min.js?ver=6.4.1"
+          defer={true}
+        ></script>
       </Head>
-      <body className="scroll-smooth">
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root">
-          <div className="bg-gradient-to-b from-[#0f151c] to-[#151A1C] scrollbar scrollbar-thumb-rose-500">
-            <div className="fixed top-0 left-0 w-full z-20">
-              <div className={style1}>
-                <div className={style2}>
-                  <div className="">
-                    <a href="#">
-                      <img
-                        src="https://niza.io/icons/nizatoken-logo.png"
-                        alt=""
-                        className="h-[50px] md:h-[60px] md:h-[40px]"
-                      />
-                    </a>
-                  </div>
-                  <div className="max-lg:hidden lg:flex items-center gap-[30px]">
-                    <a href="#hero">
-                      <p
-                        className="text-white text-[18px] 2xl:text-lg font-medium leading-5"
-                        style={{ letterSpacing: "-0.72px" }}
-                      >
-                        Home
-                      </p>
-                    </a>
-                    <a href="#about-us">
-                      <p
-                        className="text-white text-[18px] 2xl:text-lg font-medium leading-5"
-                        style={{ letterSpacing: "-0.72px" }}
-                      >
-                        About
-                      </p>
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      href="https://www.dextools.io/app/en/pether/pair-explorer/0x6acb4250ff8c65f0ba95b3001b920370740be940"
-                      target="_blank"
-                    >
-                      <p
-                        className="text-white text-[18px] 2xl:text-lg font-medium leading-5"
-                        style={{ letterSpacing: "-0.72px" }}
-                      >
-                        Charts
-                      </p>
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      href="https://niza.io/docs/NizaCoin_whitepaper.pdf"
-                      target="_blank"
-                    >
-                      <p
-                        className="text-white text-[18px] 2xl:text-lg font-medium leading-5"
-                        style={{ letterSpacing: "-0.72px" }}
-                      >
-                        Whitepaper
-                      </p>
-                    </a>
-                    <a href="#roadmap">
-                      <p
-                        className="text-white text-[18px] 2xl:text-lg font-medium leading-5"
-                        style={{ letterSpacing: "-0.72px" }}
-                      >
-                        Roadmap
-                      </p>
-                    </a>
-                    <a href="#contact-us">
-                      <p
-                        className="text-white text-[18px] 2xl:text-lg font-medium leading-5"
-                        style={{ letterSpacing: "-0.72px" }}
-                      >
-                        Communities
-                      </p>
-                    </a>
-                    <div className="relative cursor-pointer flex items-center">
-                      <p
-                        className="text-white text-[18px] 2xl:text-lg font-medium leading-5 mr-[5px]"
-                        style={{ letterSpacing: "-0.72px" }}
-                      >
-                        Licenses
-                      </p>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="#fff"
-                        height="14px"
-                        width="20px"
-                        version="1.1"
-                        viewBox="0 0 308 308"
-                        stroke="#fff"
-                        className="navbar-arrow-down"
-                      >
-                        <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                        <g
-                          id="SVGRepo_tracerCarrier"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path
-                            id="XMLID_105_"
-                            d="M324.001,209.25L173.997,96.75c-5.334-4-12.667-4-18,0L6.001,209.25c-6.627,4.971-7.971,14.373-3,21 c2.947,3.93,7.451,6.001,12.012,6.001c3.131,0,6.29-0.978,8.988-3.001L164.998,127.5l141.003,105.75c6.629,4.972,16.03,3.627,21-3 C331.972,223.623,330.628,214.221,324.001,209.25z"
-                          ></path>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="flex justify-between max-lg:justify-end">
-                    <div className="flex items-center">
-                      <div className="borderc-div">
-                        <CustomConnect
-                          clickComp={
-                            <div
-                              className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
-                              style={{ lineHeight: "1.25rem" }}
-                            >
-                              <p>Processing...</p>
-                            </div>
-                          }
-                          normalComp={
-                            <div
-                              className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
-                              style={{ lineHeight: "1.25rem" }}
-                            >
-                              <p>Claim $Niza</p>
-                            </div>
-                          }
-                        />
-                      </div>
-                      <div className="items-center max-lg:flex lg:hidden ml-[20px]">
-                        <svg
-                          aria-hidden="true"
-                          focusable="false"
-                          data-prefix="fas"
-                          data-icon="bars"
-                          className="svg-inline--fa fa-bars text-[30px] md:text-[50px] text-white"
-                          role="img"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 448 512"
-                        >
-                          <path
-                            fill="currentColor"
-                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="navbar-menu relative z-50 hidden ">
-                <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25 false"></div>
-                <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-full max-w-sm py-6 px-6 bg-gradient-to-b from-[#0f151c] to-[#151A1C] overflow-y-auto mobileNavAnimation">
-                  <div className="flex items-center mb-8">
-                    <a className="mr-auto text-3xl font-bold leading-none cursor-pointer">
-                      <img
-                        src="https://niza.io/icons/nizatoken-logo.png"
-                        alt=""
-                        className="h-[50px] md:h-[60px] md:h-[40px]"
-                      />
-                    </a>
-                    <button className="navbar-close">
-                      <svg
-                        className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M6 18L18 6M6 6l12 12"
-                        ></path>
-                      </svg>
-                    </button>
-                  </div>
-                  <div>
-                    <ul>
-                      <li className="mb-1">
-                        <a
-                          className="block p-4 text-base font-semibold text-custom-primary hover:bg-[#19232e7e] hover:text-custom-primary rounded"
-                          href="#hero"
-                        >
-                          Home
-                        </a>
-                      </li>
-                      <li className="mb-1">
-                        <a
-                          className="block p-4 text-base font-semibold text-gray-400 hover:bg-[#19232e7e] hover:text-custom-primary rounded"
-                          href="#about-us"
-                        >
-                          About
-                        </a>
-                      </li>
-                      <li className="mb-1">
-                        <a
-                          className="block p-4 text-base font-semibold text-gray-400 hover:bg-[#19232e7e] hover:text-custom-primary rounded"
-                          rel="noopener noreferrer"
-                          href="https://www.dextools.io/app/en/ether/pair-explorer/0x6acb4250ff8c65f0ba95b3001b920370740be940"
-                          target="_blank"
-                        >
-                          Charts
-                        </a>
-                      </li>
-                      <li className="mb-1">
-                        <a
-                          rel="noopener noreferrer"
-                          className="block p-4 text-base font-semibold text-gray-400 hover:bg-[#19232e7e] hover:text-custom-primary rounded"
-                          href="https://niza.io/docs/NizaCoin_whitepaper.pdf"
-                          target="_blank"
-                        >
-                          Whitepaper
-                        </a>
-                      </li>
-                      <li className="mb-1">
-                        <a
-                          className="block p-4 text-base font-semibold text-gray-400 hover:bg-[#19232e7e] hover:text-custom-primary rounded"
-                          href="#roadmap"
-                        >
-                          Roadmap
-                        </a>
-                      </li>
-                      <li className="mb-1">
-                        <a
-                          className="block p-4 text-base font-semibold text-gray-400 hover:bg-[#19232e7e] hover:text-custom-primary rounded"
-                          href="#contact-us"
-                        >
-                          Communities
-                        </a>
-                      </li>
-                      {/* <li className="mb-1 relative">
-                        <a
-                          className="block p-4 text-base font-semibold text-gray-400 hover:bg-[#19232e7e] hover:text-custom-primary rounded"
-                          href="/"
-                        >
-                          Licenses
-                        </a>
-                      </li> */}
-                    </ul>
-                  </div>
-                  <div className="mt-auto">
-                    <div className="pt-6">
-                      <CustomConnect
-                        clickComp={
-                          <div
-                            className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
-                            style={{ lineHeight: "1.25rem" }}
-                          >
-                            <p>Processing...</p>
-                          </div>
-                        }
-                        normalComp={
-                          <div
-                            className="text-black text-sm md:text-lg bg-custom-primary hover:bg-custom-primary-dark transition-colors px-[16px] md:px-[28px] py-[7px] md:py-[16px] rounded-[5px] font-semibold h-fit"
-                            style={{ lineHeight: "1.25rem" }}
-                          >
-                            <p>Claim $Niza</p>
-                          </div>
-                        }
-                      />
-                    </div>
-                    <p className="my-4 text-xs text-center text-gray-400">
-                      <span>Copyright Niza Global © 2023</span>
-                    </p>
-                  </div>
-                </nav>
-              </div>
-            </div>
-            <div className="relative overflow-x-hidden">
+      <body
+        className="home page-template-default page page-id-3462 theme-nico woocommerce-js elementor-default elementor-kit-4329 elementor-page elementor-page-3462 sticky-sidebar_init e--ua-blink e--ua-chrome e--ua-webkit"
+        data-mobile-width="1200"
+        style={{ transform: "none" }}
+        data-elementor-device-mode="desktop"
+      >
+        <header className="wgl-theme-header header_overlap">
+          <div className="wgl-site-header mobile_header_custom">
+            <div className="container-wrapper">
+              {" "}
               <div
-                className="h-[1080px] max-sm:h-[100vh] bg-[#141A20] relative fade-bottom"
-                style={{ background: "rgba(0, 0, 0, 0.08)" }}
-                id="hero"
+                data-elementor-type="wp-post"
+                data-elementor-id="32"
+                className="elementor elementor-32"
+                data-elementor-post-type="header"
               >
-                <div
-                  className="h-full w-full opacity-[0.6]"
-                  style={{
-                    backgroundImage: `url("https://niza.io/gradientBg.svg")`,
-                  }}
-                ></div>
-                <div className="z-[10] absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] w-[100%]">
-                  <div className="flex items-center flex-col md:container m-auto ">
-                    <div className="w-full">
-                      <p className="text-[42px] max-sm:text-[36px] lg:text-[64px] font-[600] text-white text-center max-sm:max-w-[350px] max-sm:m-auto max-sm:font-[700] lg:tracking-[-2.56px] tracking-[-1.28px] max-sm:leading-[40px]">
-                        <div className="max-sm:mb-[20px]">
-                          Not your average{" "}
-                          <span className="text-custom-primary">crypto</span>{" "}
-                          token! <br />
-                        </div>
-                        Invest in your{" "}
-                        <span className="text-custom-primary">future!</span>{" "}
-                      </p>
-                    </div>
-                    <div className="w-[700px] max-lg:w-[550px] max-sm:w-[350px]">
-                      <img src="https://niza.io/heroImage.png" alt="Hero" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="relative flex items-center py-16 min-h-screen bg-[#10171b]"
-                id="about-us"
-              >
-                <div
-                  className="h-full w-full opacity-[0.6] absolute"
-                  style={{
-                    backgroundImage: `url("https://niza.io/gradientBg2.svg")`,
-                    backgroundPosition: "70% 61%",
-                  }}
-                ></div>
-                <div className="container m-auto xl:flex items-center z-[10] fadeIn">
-                  <div className="w-full xl:w-1/2 flex flex-col xl:items-start max-xl:mb-[30px] items-center max-xl:text-center">
-                    <p
-                      className="text-[42px] max-sm:text-[38px] lg:text-[64px] font-[600] text-white text-center lg:mb-[32px] mb-[20px] tracking-[-2.56px]"
-                      style={{ lineHeight: "normal" }}
-                    >
-                      About <span className="text-custom-primary">Niza</span>
-                      Global
-                    </p>
-                    <p
-                      className="text-[20px] max-w-[492px] tracking-[-0.8px]"
-                      style={{
-                        color: "rgba(255, 255, 255, 0.7)",
-                        lineHeight: "normal",
-                      }}
-                    >
-                      Niza Coin (NIZA) a blockchain Ethereum (ERC20) token, is
-                      the native digital currency of our ecosystem. It
-                      facilitates transactions within the Niza Global platform
-                      and serves as a channel of exchange, unit of account, and
-                      store of value. <br />
-                      <br />
-                      With a total supply of 10 billion Niza Coins, we aim to
-                      create a dynamic and versatile digital asset that empowers
-                      users across various financial activities. <br />
-                      <br />
-                      <br />
-                      New Year new vision! Niza Global web and mobile apps go
-                      live on January 1st, 2024.
-                    </p>
-                  </div>
-                  <div className="w-full xl:w-1/2 relative flex justify-center max-lg:h-[400px]">
-                    <img
-                      className="absolute max-w-[1300px] xl:h-[700px] md:h-[600px] h-[500px] xl:right-[-45%] xl:top-[-19%] md:right-[-6%] top-[-2%] right-[-26%] z-[-1] blur-[2px]"
-                      src="https://niza.io/about-us.svg"
-                      alt="About us"
-                    />
-                    <div className="flex flex-col items-center">
-                      <p
-                        className="text-[42px] max-sm:text-[38px] xl:text-[50px] xl:max-w-[650px] max-w-[500px] font-[600] text-white text-center tracking-[-2.56px]"
-                        style={{ lineHeight: "normal" }}
-                      >
-                        Crypto Exchange &amp; Banking{" "}
-                        <span className="text-custom-primary">Coming Soon</span>
-                        !
-                      </p>
-                      <div className="about-us-countdown">
-                        <div className="flex items-center sm:gap-[20px]">
-                          <div className="flex flex-col text-[85px] max-sm:text-[50px] text-[#FFF000]">
-                            <span className="text-[25px] max-sm:text-[16px] text-white mb-[5px]">
-                              Days
-                            </span>
-                            <div className="flex space-x-3 max-sm:space-x-2 about-us-countdown-timer">
-                              <span className="w-[85px] max-sm:w-[45px] max-w-full text-center rounded-[12px] bg-[#ffffff15] max-sm:p-[0px] py-2 px-4 max-sm:flex max-sm:justify-center max-sm:items-center">
-                                3
-                              </span>
-                              <span className="w-[85px] max-sm:w-[45px] max-w-full text-center rounded-[12px] bg-[#ffffff15] max-sm:p-[0px] py-2 px-4 max-sm:flex max-sm:justify-center max-sm:items-center">
-                                5
-                              </span>
-                            </div>
-                          </div>
-                          <span className="text-[55px] max-sm:text-[35px] text-white sm:mt-[35px] max-sm:h-[20px] max-sm:mx-[5px]">
-                            :
-                          </span>
-                          <div className="flex flex-col text-[85px] max-sm:text-[50px] text-[#FFF000]">
-                            <span className="text-[25px] max-sm:text-[16px] text-white mb-[5px]">
-                              Hours
-                            </span>
-                            <div className="flex space-x-3 max-sm:space-x-2 about-us-countdown-timer">
-                              <span className="w-[85px] max-sm:w-[45px] max-w-full text-center rounded-[12px] bg-[#ffffff15] max-sm:p-[0px] py-2 px-4 max-sm:flex max-sm:justify-center max-sm:items-center">
-                                0
-                              </span>
-                              <span className="w-[85px] max-sm:w-[45px] max-w-full text-center rounded-[12px] bg-[#ffffff15] max-sm:p-[0px] py-2 px-4 max-sm:flex max-sm:justify-center max-sm:items-center">
-                                2
-                              </span>
-                            </div>
-                          </div>
-                          <span className="text-[55px] max-sm:text-[35px] text-white sm:mt-[35px] max-sm:h-[20px] max-sm:mx-[5px]">
-                            :
-                          </span>
-                          <div className="flex flex-col text-[85px] max-sm:text-[50px] text-[#FFF000]">
-                            <span className="text-[25px] max-sm:text-[16px] text-white mb-[5px]">
-                              Minutes
-                            </span>
-                            <div className="flex space-x-3 max-sm:space-x-2 about-us-countdown-timer">
-                              <span className="w-[85px] max-sm:w-[45px] max-w-full text-center rounded-[12px] bg-[#ffffff15] max-sm:p-[0px] py-2 px-4 max-sm:flex max-sm:justify-center max-sm:items-center">
-                                2
-                              </span>
-                              <span className="w-[85px] max-sm:w-[45px] max-w-full text-center rounded-[12px] bg-[#ffffff15] max-sm:p-[0px] py-2 px-4 max-sm:flex max-sm:justify-center max-sm:items-center">
-                                7
-                              </span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex justify-center gap-4">
-                        <img
-                          src="https://niza.io/icons/about-us-web.png"
-                          alt="Web"
-                          style={{ filter: "blur(0px)" }}
-                        />
-                        <img
-                          src="https://niza.io/icons/about-us-mobile.png"
-                          alt="Mobile"
-                          style={{ filter: "blur(0px)" }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="relative flex items-center py-16 min-h-screen bg-[#10171b]">
-                <div className="container m-auto lg:flex items-center flex-col fadeIn">
-                  <div className="flex flex-col">
-                    <p
-                      className="text-[42px] max-sm:text-[38px] lg:text-[64px] font-[700] text-white text-center mb-[28px] tracking-[-2.56px]"
-                      style={{ lineHeight: "normal" }}
-                    >
-                      Token Information
-                    </p>
-                  </div>
-                  <div className="flex justify-center max-lg:mb-[30px] mb-[50px] w-full">
-                    {/* <coingecko-coin-ticker-widget
-                      classname="flex justify-center text-white! w-full"
-                      coin-id="niza-global"
-                      currency="usd"
-                      locale="en"
-                      text-color="#ffffff"
-                      background-color="#10171b"
-                      width="400"
-                      vce-ready=""
-                    ></coingecko-coin-ticker-widget> */}
-                  </div>
-                  <div className="w-full flex justify-center max-w-[1130px]">
+                <section
+                  className="elementor-section elementor-top-section elementor-element elementor-element-cbde00d elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default"
+                  data-id="cbde00d"
+                  data-element_type="section"
+                >
+                  <div className="elementor-container elementor-column-gap-default">
                     <div
-                      className="w-full rounded-[16px] relative max-md:h-[495px] max-sm:h-[442px]"
-                      style={{
-                        background: "rgba(9, 68, 181, 0.12)",
-                        border: "1px solid rgba(255, 255, 255, 0.16)",
-                      }}
+                      className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5aebac7"
+                      data-id="5aebac7"
+                      data-element_type="column"
                     >
-                      <div className="max-w-[796px] text-white pt-[67px] pl-[40px] flex flex-col max-sm:pt-[57px] max-lg:px-[36px]">
-                        <p
-                          className="font-medium text-[36px] mb-[24px] max-sm:text-[28px] tracking-[-1.44px]"
-                          style={{ lineHeight: "normal" }}
-                        >
-                          Contract Address
-                        </p>
-                        <p
-                          className="text-[20px] max-sm:text-[18px] tracking-[-0.8px]"
-                          style={{
-                            color: "rgba(255, 255, 255, 0.8)",
-                            lineHeight: "normal",
-                          }}
-                        >
-                          Name:{" "}
-                          <span className="text-[24px] text-white font-medium max-sm:text-[18px] tracking-[-0.96px]">
-                            Niza
-                          </span>
-                        </p>
-                        <p
-                          className="text-[20px] max-sm:text-[18px] tracking-[-0.8px]"
-                          style={{
-                            color: "rgba(255, 255, 255, 0.8)",
-                            lineHeight: "normal",
-                          }}
-                        >
-                          Symbol:{" "}
-                          <span className="text-[24px] text-white font-medium max-sm:text-[18px] tracking-[-0.96px]">
-                            NIZA
-                          </span>
-                        </p>
-                        <p
-                          className="text-[20px] mb-[24px] max-sm:text-[18px] tracking-[-0.8px]"
-                          style={{
-                            color: "rgba(255, 255, 255, 0.8)",
-                            lineHeight: "normal",
-                          }}
-                        >
-                          Total Supply:
-                          <span className="text-[24px] text-white font-medium max-sm:text-[18px] tracking-[-0.96px]">
-                            10,000,000,000
-                          </span>
-                        </p>
+                      <div className="elementor-widget-wrap elementor-element-populated">
                         <div
-                          className="max-w-[720px] p-[16px] rounded-[12px] mb-[32px] flex items-center justify-center cursor-pointer z-10"
-                          style={{ background: "rgba(255, 255, 255, 0.08)" }}
+                          className="elementor-element elementor-element-551346b elementor-widget elementor-widget-wgl-header-logo"
+                          data-id="551346b"
+                          data-element_type="widget"
+                          data-widget_type="wgl-header-logo.default"
                         >
-                          <p className="text-[28px] text-white font-medium tokenInformation">
-                            0xb58e26ac9cc14c0422c2b419b0ca555ee4dcb7cb
-                          </p>
-                        </div>
-                        <div className="absolute top-0 right-0 max-md:top-[65%] max-sm:top-[60%] coinPosition">
-                          <img
-                            src="https://niza.io/informationImg.svg"
-                            className="coinHeight h-[361px] max-md:h-[175px]"
-                            alt="Coins"
-                          />
+                          <div className="elementor-widget-container">
+                            <div className="wgl-logotype-container default_logo">
+                              <a href="https://deepcave.io/">
+                                <img
+                                  className="default_logo"
+                                  src="https://deepcave.io/wp-content/uploads/2023/10/a.png"
+                                  alt="logotype"
+                                  style={{ height: "70px" }}
+                                />
+                              </a>
+                            </div>{" "}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="relative flex items-center py-16 min-h-screen bg-[#10171b]"
-                id="roadmap"
-              >
-                <div className="w-full fadeIn">
-                  <div className="container">
-                    <div className="w-full flex flex-col max-lg:mb-[30px] items-center text-center mb-[64px]">
-                      <p
-                        className="text-[42px] max-sm:text-[38px] lg:text-[64px] font-[700] text-white text-center mb-[24px] tracking-[-2.56px]"
-                        style={{ lineHeight: "normal" }}
-                      >
-                        NIZA Coin Product
-                        <span className="text-custom-primary">Roadmap</span>
-                      </p>
-                      <p
-                        className="text-[20px] max:sm-text-[18px] max-w-[756px] tracking-[-0.8px]"
-                        style={{ color: "rgba(255, 255, 255, 0.7)" }}
-                      >
-                        In the coming months, Niza Global will become the only
-                        all-in-one financial ecosystem. Our approach combines a
-                        cryptocurrency exchange, a secure banking system, and
-                        innovative digital payment solutions—all under one roof.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="w-full mx-auto">
-                    <div className="timeline">
-                      <div className="absolute top-[45%] 2xl:left-[-3%] left-[-1%] z-[10] cursor-pointer timeline-arrow">
-                        <svg
-                          width="72"
-                          height="72"
-                          viewBox="0 0 1024 1024"
-                          className="icon rotate-180"
-                          version="1.1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="#ffffff"
-                          stroke="#ffffff"
+                    <div
+                      className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ff3e74d"
+                      data-id="ff3e74d"
+                      data-element_type="column"
+                    >
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                        <div
+                          className="elementor-element elementor-element-571f10c elementor-widget elementor-widget-wgl-menu"
+                          data-id="571f10c"
+                          data-element_type="widget"
+                          data-widget_type="wgl-menu.default"
                         >
-                          <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                          <g
-                            id="SVGRepo_tracerCarrier"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          ></g>
-                          <g id="SVGRepo_iconCarrier">
-                            <path
-                              d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z"
-                              fill="#fff"
-                            ></path>
-                          </g>
-                        </svg>
+                          <div className="elementor-widget-container">
+                            <nav className="primary-nav">
+                              <ul id="menu-main" className="menu">
+                                <li
+                                  id="menu-item-4396"
+                                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3462 current_page_item menu-item-4396 mega-menu mega-menu-links mega-columns-5col "
+                                >
+                                  <a href="https://deepcave.io/">
+                                    <span>
+                                      <span className="item_text">Home</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li
+                                  id="menu-item-5644"
+                                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5644"
+                                >
+                                  <a href="https://deepcave.io/dc-tool/">
+                                    <span>
+                                      <span className="item_text">DC Tool</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li
+                                  id="menu-item-4636"
+                                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4636"
+                                >
+                                  <a href="https://deepcave.io/shop/">
+                                    <span>
+                                      <span className="item_text">
+                                        NFT Shop
+                                      </span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li
+                                  id="menu-item-4803"
+                                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4803"
+                                >
+                                  <a href="https://deepcave.io/whitepaper/">
+                                    <span>
+                                      <span className="item_text">
+                                        Whitepaper
+                                      </span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li
+                                  id="menu-item-5415"
+                                  className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5415"
+                                >
+                                  <a href="#">
+                                    <span>
+                                      <span className="item_text">Docs</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                  <ul className="sub-menu wgl-submenu-position-default">
+                                    {" "}
+                                    <li
+                                      id="menu-item-4716"
+                                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4716"
+                                    >
+                                      <a href="https://deepcave.io/revenue-model/">
+                                        <span>
+                                          <span className="item_text">
+                                            Revenue Model
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>{" "}
+                                    <li
+                                      id="menu-item-5416"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5416"
+                                    >
+                                      <a href="#">
+                                        <span>
+                                          <span className="item_text">
+                                            Developers
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>{" "}
+                                    <li
+                                      id="menu-item-5417"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5417"
+                                    >
+                                      <a href="https://deepcave-documentation.gitbook.io">
+                                        <span>
+                                          <span className="item_text">
+                                            Gitbook
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>{" "}
+                                    <li
+                                      id="menu-item-5516"
+                                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5516"
+                                    >
+                                      <a href="https://deepcave.io/kyc/">
+                                        <span>
+                                          <span className="item_text">KYC</span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>{" "}
+                                    <li
+                                      id="menu-item-5419"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5419"
+                                    >
+                                      <a href="https://github.com/Coinsult/solidity/blob/main/Coinsult_Deepcave_0xBc...fD5D_Audit.pdf">
+                                        <span>
+                                          <span className="item_text">
+                                            Audit
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li
+                                  id="menu-item-5335"
+                                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5335"
+                                >
+                                  <a href="https://deepcave.io/utility/">
+                                    <span>
+                                      <span className="item_text">Utility</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li
+                                  id="menu-item-4813"
+                                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4813"
+                                >
+                                  <a href="https://deepcave.io/contacts/">
+                                    <span>
+                                      <span className="item_text">Contact</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                              </ul>{" "}
+                            </nav>
+                            <div className="mobile-hamburger-toggle">
+                              <div className="hamburger-box">
+                                <div className="hamburger-inner"></div>
+                              </div>
+                            </div>{" "}
+                          </div>
+                        </div>
                       </div>
-                      <ol className="timeline-scroller">
-                        <li>
-                          <div className="flex flex-col">
-                            <span className="pb-2 text-gray-300 self-end">
-                              Q3 2023
-                            </span>
-                            <h2 className="m-0 mb-6 uppercase flex items-center gap-x-3">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlnsXlink="http://www.w3.org/1999/xlink"
-                                width="50"
-                                height="50"
-                                x="0"
-                                y="0"
-                                viewBox="0 0 511 512"
-                                xmlSpace="preserve"
-                                className=""
-                              >
-                                <g>
-                                  <path
-                                    fill="#ff5b5b"
-                                    d="M157.086 266.195c-.324 0-.649-.011-.977-.03l-140.96-8.802a15.617 15.617 0 0 1-12.657-23.222c.738-1.32 18.504-32.645 52.336-59.965 45.719-36.914 98.867-48.887 153.695-34.621a15.622 15.622 0 0 1 10.063 22.05l-47.504 95.903a15.627 15.627 0 0 1-13.996 8.687zm0 0"
-                                    opacity="1"
-                                    data-original="#ff5b5b"
-                                    className=""
-                                  ></path>
-                                  <path
-                                    fill="#ff193d"
-                                    d="M270.723 512a15.623 15.623 0 0 1-15.59-14.648l-8.797-140.961a15.626 15.626 0 0 1 8.656-14.973l95.903-47.508a15.618 15.618 0 0 1 13.418-.21 15.603 15.603 0 0 1 8.632 10.277c14.27 54.828 2.297 107.976-34.62 153.695-27.317 33.832-58.645 51.594-59.966 52.336a15.619 15.619 0 0 1-7.636 1.992zm0 0"
-                                    opacity="1"
-                                    data-original="#ff193d"
-                                  ></path>
-                                  <path
-                                    fill="#e1f1fa"
-                                    d="m487.441 126.059-101-101a15.623 15.623 0 0 0-15.472-3.934c-67.614 20-123.117 51.367-164.98 93.227-8.731 8.734-17.118 18.199-24.923 28.128-22.695 28.856-41.652 62.973-56.34 101.407-9.355 24.496-16.972 50.738-22.64 77.996-9.899 47.613-10.43 81.738-10.45 83.168a15.63 15.63 0 0 0 4.575 11.238 15.626 15.626 0 0 0 11.047 4.574h.191c1.434-.015 35.559-.547 83.168-10.445 27.258-5.668 53.5-13.285 78-22.645 38.43-14.687 72.547-33.64 101.395-56.332 9.937-7.808 19.402-16.195 28.136-24.93 41.864-41.863 73.23-97.366 93.227-164.98a15.615 15.615 0 0 0-3.934-15.472zm0 0"
-                                    opacity="1"
-                                    data-original="#e1f1fa"
-                                  ></path>
-                                  <path
-                                    fill="#fff261"
-                                    d="m201.29 386.883-75.673-75.672c-5.586-5.586-14.465-6.121-20.683-1.246a152.26 152.26 0 0 0-13.664 12.094c-52.653 52.652-54.282 134.234-54.325 137.68a15.6 15.6 0 0 0 4.575 11.241 15.605 15.605 0 0 0 11.042 4.579c.067 0 .133 0 .2-.004 3.445-.043 85.031-1.672 137.68-54.325a152.26 152.26 0 0 0 12.093-13.664c4.875-6.218 4.34-15.097-1.246-20.683zm0 0"
-                                    opacity="1"
-                                    data-original="#fff261"
-                                  ></path>
-                                  <path
-                                    fill="#1b3b6b"
-                                    d="m125.934 240.762-46.426 46.43a15.607 15.607 0 0 0 0 22.085l123.715 123.715c2.925 2.93 6.898 4.574 11.043 4.574s8.113-1.644 11.043-4.574l46.425-46.426zm0 0"
-                                    opacity="1"
-                                    data-original="#1b3b6b"
-                                  ></path>
-                                  <path
-                                    fill="#06ccab"
-                                    d="M328.602 231.55c-12.727 0-24.696-4.956-33.696-13.956-18.578-18.578-18.578-48.805 0-67.387 9-9 20.969-13.957 33.696-13.957 12.726 0 24.695 4.957 33.695 13.957s13.957 20.965 13.957 33.695c0 12.727-4.957 24.692-13.957 33.692s-20.969 13.957-33.695 13.957zm0 0"
-                                    opacity="1"
-                                    data-original="#06ccab"
-                                  ></path>
-                                  <path
-                                    fill="#1b3b6b"
-                                    d="M328.598 246.828c-16.809 0-32.61-6.547-44.493-18.43-24.535-24.535-24.535-64.457 0-88.992 11.883-11.883 27.688-18.43 44.493-18.43 16.808 0 32.609 6.547 44.496 18.43 11.886 11.887 18.43 27.688 18.43 44.496s-6.544 32.61-18.43 44.496c-11.887 11.883-27.688 18.43-44.496 18.43zm0-94.613c-8.461 0-16.422 3.297-22.407 9.281-12.351 12.356-12.351 32.457 0 44.813 5.985 5.984 13.946 9.28 22.407 9.28 8.464 0 16.422-3.296 22.406-9.28s9.281-13.942 9.281-22.407-3.297-16.422-9.281-22.406-13.942-9.281-22.406-9.281zm0 0"
-                                    opacity="1"
-                                    data-original="#1b3b6b"
-                                  ></path>
-                                  <path
-                                    fill="#ff5b5b"
-                                    d="M507.926 4.578c-2.98-2.98-7.059-4.656-11.246-4.574-2.317.027-57.532.957-125.711 21.121l120.406 120.406c20.164-68.18 21.094-123.394 21.121-125.71a15.613 15.613 0 0 0-4.57-11.243zm0 0"
-                                    opacity="1"
-                                    data-original="#ff5b5b"
-                                    className=""
-                                  ></path>
-                                  <path
-                                    fill="#cdebfc"
-                                    d="m487.441 126.059-50.5-50.5-340.73 340.73a15.617 15.617 0 0 0 11.043 4.574h.195c1.43-.015 35.555-.547 83.168-10.445 27.258-5.668 53.496-13.285 77.996-22.645 38.434-14.687 72.551-33.64 101.399-56.332 9.933-7.808 19.402-16.195 28.133-24.93 41.863-41.863 73.23-97.366 93.226-164.98a15.604 15.604 0 0 0-3.93-15.472zm0 0"
-                                    opacity="1"
-                                    data-original="#cdebfc"
-                                  ></path>
-                                  <path
-                                    fill="#fdbf00"
-                                    d="m201.29 386.883-37.837-37.836L41.516 470.98v.004a15.633 15.633 0 0 0 11.047 4.575h.195c3.449-.043 85.031-1.676 137.683-54.329a151.615 151.615 0 0 0 12.09-13.664c4.88-6.218 4.348-15.097-1.242-20.683zm0 0"
-                                    opacity="1"
-                                    data-original="#fdbf00"
-                                  ></path>
-                                  <path
-                                    fill="#001035"
-                                    d="m198.836 313.664-57.473 57.473 61.86 61.86a15.62 15.62 0 0 0 22.086 0l46.425-46.43zm0 0"
-                                    opacity="1"
-                                    data-original="#001035"
-                                  ></path>
-                                  <path
-                                    fill="#1cadb5"
-                                    d="M362.297 150.207h-.004l-67.387 67.387h.004c8.996 9 20.965 13.957 33.692 13.957 12.726 0 24.695-4.957 33.695-13.957s13.957-20.965 13.957-33.692c-.004-12.726-4.957-24.695-13.957-33.695zm0 0"
-                                    opacity="1"
-                                    data-original="#1cadb5"
-                                  ></path>
-                                  <path
-                                    fill="#001035"
-                                    d="m373.094 139.406-22.09 22.09c5.984 5.984 9.281 13.941 9.281 22.406s-3.297 16.422-9.281 22.407-13.941 9.28-22.406 9.28-16.422-3.296-22.407-9.28v-.004l-22.09 22.09v.003c11.887 11.883 27.688 18.43 44.497 18.43s32.609-6.547 44.496-18.43c11.883-11.886 18.43-27.687 18.43-44.496s-6.547-32.609-18.43-44.496zm0 0"
-                                    opacity="1"
-                                    data-original="#001035"
-                                  ></path>
-                                  <path
-                                    fill="#ff193d"
-                                    d="m507.922 4.574-76.75 76.754 60.203 60.203c20.164-68.18 21.094-123.394 21.121-125.71a15.616 15.616 0 0 0-4.574-11.247zm0 0"
-                                    opacity="1"
-                                    data-original="#ff193d"
-                                  ></path>
-                                </g>
-                              </svg>{" "}
-                              Niza Coin Launch
-                            </h2>
-                            <p className="m-0">
-                              NIZA token creation, website launch, and
-                              establishment of community groups and social
-                              channels.
-                            </p>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="flex flex-col">
-                            <span className="pb-2 text-gray-300 self-end">
-                              Q4 2023
-                            </span>
-                            <h2 className="m-0 mb-6 uppercase flex items-center gap-x-3">
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlnsXlink="http://www.w3.org/1999/xlink"
-                                width="50"
-                                height="50"
-                                x="0"
-                                y="0"
-                                viewBox="0 0 64 64"
-                                xmlSpace="preserve"
-                                className=""
-                              >
-                                <g>
-                                  <path
-                                    fill="#f4f5f7"
-                                    d="M22.34 53.58h-4.03v-.01h-4.04c-.94 0-1.4-1.13-.73-1.79l.43-.42a5.266 5.266 0 0 0 1.54-4.22l-.63-6.925h1.14c1.93 0 3.77.259 5.66.539v.126l-.58 6.26c-.13 1.56.43 3.12 1.55 4.22l.42.42c.68.66.21 1.8-.73 1.8zM11.71 24.04c-3.63 0-6.57 2.6-6.57 5.81v.02c0 3.21 2.94 5.81 6.57 5.81h.576V24.04z"
-                                    opacity="1"
-                                    data-original="#f4f5f7"
-                                    className=""
-                                  ></path>
-                                  <path
-                                    fill="#fed2a5"
-                                    d="M45.25 24.47h-.982v10.78h.982c2.98 0 5.39-2.42 5.39-5.39 0-2.98-2.41-5.39-5.39-5.39z"
-                                    opacity="1"
-                                    data-original="#fed2a5"
-                                  ></path>
-                                  <path
-                                    fill="#e95b6b"
-                                    d="M45.25 10.42V49.3h-4.04a40.247 40.247 0 0 0-15.87-7.73c-1.2-.3-2.42-.53-3.66-.7-1.89-.28-3.8-.42-5.73-.42h-2.14c-1.16 0-2.1-.94-2.1-2.09v-17c0-1.16.94-2.1 2.1-2.1h2.14c3.19 0 6.34-.38 9.39-1.12a40.092 40.092 0 0 0 15.87-7.72h4.04z"
-                                    opacity="1"
-                                    data-original="#e95b6b"
-                                    className=""
-                                  ></path>
-                                  <path
-                                    fill="#c3ccdb"
-                                    d="M9.71 35.404a7.358 7.358 0 0 0 2 .276V24.04c-.698 0-1.369.098-2 .276z"
-                                    opacity="1"
-                                    data-original="#c3ccdb"
-                                    className=""
-                                  ></path>
-                                  <path
-                                    fill="#f4f5f7"
-                                    d="M41.21 10.42V49.3a40.247 40.247 0 0 0-15.87-7.73V18.14a40.092 40.092 0 0 0 15.87-7.72z"
-                                    opacity="1"
-                                    data-original="#f4f5f7"
-                                    className=""
-                                  ></path>
-                                  <path
-                                    fill="#c3ccdb"
-                                    d="m14.9 40.45.274 3h.777c1.776 0 3.556.13 5.322.392.044.006.087.015.131.021l.276-2.984v-.01c-1.89-.28-3.8-.42-5.73-.42H14.9z"
-                                    opacity="1"
-                                    data-original="#c3ccdb"
-                                    className=""
-                                  ></path>
-                                  <g fill="#767c94">
-                                    <path
-                                      d="M52.595 21.249a.997.997 0 0 0 .707-.293l3.055-3.054a.999.999 0 1 0-1.414-1.414l-3.055 3.054a.999.999 0 0 0 .707 1.707zM53.302 37.303a.999.999 0 1 0-1.414 1.414l3.055 3.054a.997.997 0 0 0 1.414 0 .999.999 0 0 0 0-1.414zM58.857 28.129h-4.32a1 1 0 1 0 0 2h4.32a1 1 0 1 0 0-2z"
-                                      fill="#767c94"
-                                      opacity="1"
-                                      data-original="#767c94"
-                                    ></path>
-                                  </g>
-                                  <path
-                                    fill="#e2ae7f"
-                                    d="M47.25 24.862a5.363 5.363 0 0 0-2-.392v10.78c.708 0 1.381-.145 2-.394z"
-                                    opacity="1"
-                                    data-original="#e2ae7f"
-                                  ></path>
-                                </g>
-                              </svg>{" "}
-                              Listing and Marketing
-                            </h2>
-                            <p className="m-0">
-                              Listing NIZA token on both decentralized (DEX) and
-                              centralized (CEX) exchanges, implementing targeted
-                              marketing strategies, and bring up partnerships
-                              with investors.
-                            </p>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="flex flex-col">
-                            <span className="pb-2 text-gray-300 self-end">
-                              Q1 2024
-                            </span>
-                            <h2 className="m-0 mb-6 uppercase flex items-center gap-x-3">
-                              <svg
-                                width="50"
-                                height="50"
-                                viewBox="0 0 48 42"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M36.0111 1.00122L35.7989 0.576843H12.6173L1 21L12.5643 41.4232H35.7459L47.3632 21L36.0111 1.00122ZM15.3227 7.89735L2.9097 19.7799L12.7765 2.38045L15.3227 7.89735ZM35.1624 2.3274L38.5574 21.2652L17.2324 8.16259L35.1624 2.3274ZM16.4898 8.95829L38.2391 22.3262L16.4898 34.6862V8.95829ZM38.5043 23.3871L34.6849 39.7257L17.3916 35.4288L38.5043 23.3871ZM15.4288 34.2618L2.9097 21.2652L15.4288 9.22353V34.2618ZM15.2697 35.641L12.8295 39.7257L3.75845 23.7054L15.2697 35.641ZM16.2245 36.1715L32.8813 40.3622H13.6783L16.2245 36.1715ZM39.7244 22.7506L45.8779 21.4244L35.905 39.036L39.7244 22.7506ZM45.7718 20.4165L39.7244 21.7427L36.5946 4.18405L45.7718 20.4165ZM16.2245 7.36688L13.5722 1.63779H33.8362L16.2245 7.36688Z"
-                                  fill="url(#paint0_linear_656_85883)"
-                                  stroke="url(#paint1_linear_656_85883)"
-                                  strokeWidth="0.736766"
-                                ></path>
-                                <defs>
-                                  <linearGradient
-                                    id="paint0_linear_656_85883"
-                                    x1="47.6251"
-                                    y1="9.0116"
-                                    x2="0.795288"
-                                    y2="6.13364"
-                                    gradientUnits="userSpaceOnUse"
-                                  >
-                                    <stop stopColor="#F2F230"></stop>
-                                    <stop offset="1" stopColor="#888827"></stop>
-                                  </linearGradient>
-                                  <linearGradient
-                                    id="paint1_linear_656_85883"
-                                    x1="47.6251"
-                                    y1="9.0116"
-                                    x2="0.795288"
-                                    y2="6.13364"
-                                    gradientUnits="userSpaceOnUse"
-                                  >
-                                    <stop stopColor="#F2F230"></stop>
-                                    <stop offset="1" stopColor="#888827"></stop>
-                                  </linearGradient>
-                                </defs>
-                              </svg>{" "}
-                              Niza Global CEX Platform Launch
-                            </h2>
-                            <p className="m-0">
-                              Launch Niza Global UAB&apos;s CEX (Web and
-                              Mobile), listing NIZA Coin on our platform. We
-                              will also continue our marketing and bring up
-                              investors to our company.
-                            </p>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="flex flex-col">
-                            <span className="pb-2 text-gray-300 self-end">
-                              Q2 2024
-                            </span>
-                            <h2 className="m-0 mb-6 uppercase flex items-center gap-x-3">
-                              <svg
-                                width="64"
-                                height="64"
-                                viewBox="0 0 64 64"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  fillRule="evenodd"
-                                  clipRule="evenodd"
-                                  d="M2 23.8776V44.7552H32.5H63V23.8776V3H32.5H2V23.8776ZM25.5505 14.7023L30.7106 17.3797L30.6819 23.8626L30.6533 30.3453L26.0664 32.7469C23.5436 34.0678 21.2061 35.2867 20.8719 35.4556L20.2644 35.7627L15.0032 33.0234L9.7421 30.2842L9.7729 23.8496L9.8037 17.4148L14.9268 14.727C17.7444 13.2486 20.1264 12.0358 20.2202 12.032C20.3138 12.028 22.7126 13.2297 25.5505 14.7023ZM17.9304 17.2317C16.6388 17.9023 15.5827 18.4806 15.5837 18.5169C15.5847 18.5533 16.637 19.1315 17.9223 19.8017L20.2593 21.0206L22.6241 19.8017C23.9246 19.1315 24.9889 18.5559 24.9889 18.5228C24.989 18.4897 23.9293 17.9114 22.6338 17.2376L20.2787 16.0125L17.9304 17.2317ZM46.382 17.9937C47.3939 18.2214 47.8691 18.3806 47.8691 18.4919C47.8691 18.6324 45.4493 29.4303 45.2973 29.9678C45.2485 30.14 45.0547 30.118 43.572 29.7719C42.6532 29.5575 41.876 29.3563 41.8448 29.3248C41.8136 29.2934 42.3884 26.6296 43.1222 23.4054C44.3279 18.1074 44.4773 17.5489 44.6756 17.6012C44.7963 17.6331 45.5641 17.8097 46.382 17.9937ZM40.3633 22.5539L39.0526 23.8816L40.3632 25.2011L41.6738 26.5208L40.4548 27.7563C39.7843 28.4358 39.1807 28.9917 39.1134 28.9917C38.9569 28.9917 34.0488 24.0355 34.0488 23.8776C34.0488 23.8125 35.1875 22.6083 36.579 21.2017L39.1093 18.6441L40.3916 19.9352L41.6739 21.2263L40.3633 22.5539ZM53.1419 26.494L50.5515 29.1124L49.3011 27.8494L48.0506 26.5864L49.3299 25.2902C50.0337 24.5773 50.6094 23.9416 50.6094 23.8776C50.6094 23.8136 50.0339 23.1782 49.3306 22.4657L48.052 21.1702L49.2993 19.9062L50.5467 18.642L53.1396 21.2588L55.7324 23.8755L53.1419 26.494ZM13.3203 24.8102L13.3222 28.0892L15.8082 29.3828C17.1755 30.0942 18.3273 30.6763 18.3678 30.6763C18.4083 30.6763 18.4403 29.2008 18.439 27.3973L18.4366 24.1183L15.9483 22.8247C14.5796 22.1133 13.428 21.5311 13.3891 21.5311C13.3502 21.5311 13.3192 23.0066 13.3203 24.8102ZM24.5176 22.8516L22.0752 24.1442L22.0435 27.4103C22.0249 29.3251 22.0568 30.6763 22.1207 30.6763C22.1805 30.6763 23.334 30.1034 24.6841 29.4032L27.1387 28.1302V24.8306C27.1387 23.0159 27.0984 21.5374 27.0493 21.545C27.0002 21.5527 25.8609 22.1406 24.5176 22.8516ZM26.6621 52.8776V57.39H22.0752H17.4883V59.195V61H32.5H47.5117V59.195V57.39H42.9248H38.3379V52.8776V48.3651H32.5H26.6621V52.8776Z"
-                                  fill="white"
-                                ></path>
-                              </svg>{" "}
-                              DEX Wallet Launch
-                            </h2>
-                            <p className="m-0">
-                              We are excited to launch the Niza DEX Wallet as a
-                              separate web and mobile application.
-                            </p>
-                          </div>
-                        </li>
-                        <li></li>
-                      </ol>
-                      <div className="absolute top-[45%] right-[-3%] z-[10] 2xl:right-[-3%] right-[-1%] cursor-pointer timeline-arrow">
-                        <svg
-                          width="72"
-                          height="72"
-                          viewBox="0 0 1024 1024"
-                          className="icon"
-                          version="1.1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="#ffffff"
-                          stroke="#ffffff"
+                    </div>
+                    <div
+                      className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-bb928e3"
+                      data-id="bb928e3"
+                      data-element_type="column"
+                    >
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                        <div
+                          className="elementor-element elementor-element-54f0f40 full-height-yes elementor-widget elementor-widget-wgl-header-search"
+                          data-id="54f0f40"
+                          data-element_type="widget"
+                          data-widget_type="wgl-header-search.default"
                         >
-                          <g strokeWidth="0"></g>
-                          <g
-                            id="SVGRepo_tracerCarrier"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          ></g>
-                          <g>
-                            <path
-                              d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z"
-                              fill="#fff"
-                            ></path>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="relative flex items-center py-16 min-h-screen bg-[#10171b]"
-                id="contact-us"
-              >
-                <div
-                  className="h-full w-full absolute"
-                  style={{
-                    backgroundImage: `url("https://niza.io/gradientBg5.svg")`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "0% 90%",
-                  }}
-                ></div>
-                <div className="container m-auto lg:flex items-center flex-col z-10 fadeIn">
-                  <div className="max-md:w-[90%] max-md:m-auto">
-                    <p
-                      className="text-[42px] lg:text-[54px] xl:text-[64px] font-bold text-center text-white"
-                      style={{ letterSpacing: "-2.16px" }}
-                    >
-                      Communities
-                    </p>
-                  </div>
-                  <div className="flex justify-center mt-[46px]">
-                    <div className="max-md:w-[90%] grid lg:grid-cols-3 gap-6">
-                      <div className="px-[34px] py-[35px] rounded-xl communities-twitter">
-                        <div className="flex items-center gap-3">
-                          <svg
-                            width="36"
-                            height="37"
-                            viewBox="0 0 36 37"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clipPath="url(#clip0_64_2356)">
-                              <path
-                                d="M21.4284 15.6687L34.8324 0H31.6572L20.0136 13.6022L10.7208 0H0L14.0556 20.5708L0 36.9999H3.1752L15.4632 22.6325L25.2792 36.9999H36M4.3212 2.40792H9.1992L31.6548 34.7103H26.7756"
-                                fill="white"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_64_2356">
-                                <rect
-                                  width="36"
-                                  height="37"
-                                  fill="white"
-                                ></rect>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                          <h2 className="text-white text-2xl font-bold leading-7 tracking-[-0.48px] my-0 max-sm:text-[20px] max-sm:gap-4">
-                            X.com{" "}
-                            <span className="text-white text-opacity-50 font-normal">
-                              (Ex Twitter)
-                            </span>
-                          </h2>
+                          <div className="elementor-widget-container">
+                            <div className="header_search search_standard">
+                              <div
+                                className="wgl-search elementor-search header_search-button-wrapper"
+                                role="button"
+                              >
+                                <div className="header_search-button flaticon-search "></div>
+                                <div className="header_search-close flaticon-close-1"></div>
+                              </div>{" "}
+                              <div className="header_search-field">
+                                <div className="header_search-close flaticon-close-1"></div>
+                                <form
+                                  role="search"
+                                  method="get"
+                                  action="https://deepcave.io/"
+                                  className="search-form"
+                                >
+                                  <input
+                                    required={true}
+                                    type="text"
+                                    id="search-form-6566af7799e1e"
+                                    className="search-field"
+                                    placeholder="Search …"
+                                    value=""
+                                    name="s"
+                                  />
+                                  <input
+                                    className="search-button"
+                                    type="submit"
+                                    value="Search"
+                                  />
+                                  <i className="search__icon flaticon-search"></i>
+                                </form>{" "}
+                              </div>{" "}
+                            </div>{" "}
+                          </div>
                         </div>
-                        <div className="mt-6">
-                          <a
-                            href="https://twitter.com/nizacoin"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-6 text-white text-2xl leading-7 tracking-[-0.48px] max-sm:text-[20px] max-sm:gap-4"
-                          >
-                            x.com/nizacoin
-                            <svg
-                              width="34"
-                              height="35"
-                              viewBox="0 0 34 35"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
+                        <div
+                          className="elementor-element elementor-element-4e5de7e elementor-widget__width-auto aleft elementor-widget elementor-widget-wgl-button"
+                          data-id="4e5de7e"
+                          data-element_type="widget"
+                          data-widget_type="wgl-button.default"
+                        >
+                          <div className="elementor-widget-container">
+                            <a
+                              className="wgl-button btn-size-lg "
+                              role="button"
+                              href="https://www.pinksale.finance/launchpad/0x4b010864E55DF415d6f3d8F7f47a3E35143c8C78?chain=ETH"
                             >
-                              <path
-                                d="M26.5626 8.9375V22.75C26.5626 23.0318 26.4507 23.302 26.2514 23.5013C26.0521 23.7006 25.7819 23.8125 25.5001 23.8125C25.2183 23.8125 24.9481 23.7006 24.7488 23.5013C24.5495 23.302 24.4376 23.0318 24.4376 22.75V11.5021L9.25182 26.6892C9.05245 26.8886 8.78205 27.0006 8.5001 27.0006C8.21815 27.0006 7.94775 26.8886 7.74838 26.6892C7.54902 26.4899 7.43701 26.2194 7.43701 25.9375C7.43701 25.6556 7.54902 25.3851 7.74838 25.1858L22.9355 10H11.6876C11.4058 10 11.1356 9.88806 10.9363 9.6888C10.737 9.48954 10.6251 9.21929 10.6251 8.9375C10.6251 8.65571 10.737 8.38546 10.9363 8.1862C11.1356 7.98694 11.4058 7.875 11.6876 7.875H25.5001C25.7819 7.875 26.0521 7.98694 26.2514 8.1862C26.4507 8.38546 26.5626 8.65571 26.5626 8.9375Z"
-                                fill="white"
-                              ></path>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="px-[34px] py-[35px] rounded-xl communities-telegram">
-                        <div className="flex items-center gap-3">
-                          <svg
-                            width="36"
-                            height="37"
-                            viewBox="0 0 36 37"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <g clipPath="url(#clip0_64_2365)">
-                              <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M27.5761 34.6687C28.0591 35.0107 28.6816 35.0962 29.2366 34.8862C29.7916 34.6747 30.1996 34.2007 30.3226 33.6262C31.6261 27.5002 34.7881 11.9947 35.9746 6.42222C36.0646 6.00222 35.9146 5.56572 35.5846 5.28522C35.2546 5.00472 34.7971 4.92372 34.3891 5.07522C28.0996 7.40322 8.73011 14.6707 0.813108 17.6002C0.310608 17.7862 -0.0163915 18.2692 0.000108499 18.7987C0.0181085 19.3297 0.375108 19.7902 0.889608 19.9447C4.44011 21.0067 9.10061 22.4842 9.10061 22.4842C9.10061 22.4842 11.2786 29.0617 12.4141 32.4067C12.5566 32.8267 12.8851 33.1567 13.3186 33.2707C13.7506 33.3832 14.2126 33.2647 14.5351 32.9602C16.3591 31.2382 19.1791 28.5757 19.1791 28.5757C19.1791 28.5757 24.5371 32.5042 27.5761 34.6687ZM11.0611 21.6532L13.5796 29.9602L14.1391 24.6997C14.1391 24.6997 23.8696 15.9232 29.4166 10.9207C29.5786 10.7737 29.6011 10.5277 29.4661 10.3552C29.3326 10.1827 29.0866 10.1422 28.9021 10.2592C22.4731 14.3647 11.0611 21.6532 11.0611 21.6532Z"
-                                fill="white"
-                              ></path>
-                            </g>
-                            <defs>
-                              <clipPath id="clip0_64_2365">
-                                <rect
-                                  width="36"
-                                  height="36"
-                                  fill="white"
-                                  transform="translate(0 0.5)"
-                                ></rect>
-                              </clipPath>
-                            </defs>
-                          </svg>
-                          <h2 className="text-white text-2xl font-bold leading-7 tracking-[-0.48px] my-0 max-sm:text-[20px] max-sm:gap-4">
-                            Telegram{" "}
-                            <span className="text-white text-opacity-50 font-normal"></span>
-                          </h2>
-                        </div>
-                        <div className="mt-6">
-                          <a
-                            href="https://t.me/nizaio"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-6 text-white text-2xl leading-7 tracking-[-0.48px] max-sm:text-[20px] max-sm:gap-4"
-                          >
-                            t.me/nizaio
-                            <svg
-                              width="34"
-                              height="35"
-                              viewBox="0 0 34 35"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M26.5626 8.9375V22.75C26.5626 23.0318 26.4507 23.302 26.2514 23.5013C26.0521 23.7006 25.7819 23.8125 25.5001 23.8125C25.2183 23.8125 24.9481 23.7006 24.7488 23.5013C24.5495 23.302 24.4376 23.0318 24.4376 22.75V11.5021L9.25182 26.6892C9.05245 26.8886 8.78205 27.0006 8.5001 27.0006C8.21815 27.0006 7.94775 26.8886 7.74838 26.6892C7.54902 26.4899 7.43701 26.2194 7.43701 25.9375C7.43701 25.6556 7.54902 25.3851 7.74838 25.1858L22.9355 10H11.6876C11.4058 10 11.1356 9.88806 10.9363 9.6888C10.737 9.48954 10.6251 9.21929 10.6251 8.9375C10.6251 8.65571 10.737 8.38546 10.9363 8.1862C11.1356 7.98694 11.4058 7.875 11.6876 7.875H25.5001C25.7819 7.875 26.0521 7.98694 26.2514 8.1862C26.4507 8.38546 26.5626 8.65571 26.5626 8.9375Z"
-                                fill="white"
-                              ></path>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="px-[34px] py-[35px] rounded-xl communities-discord">
-                        <div className="flex items-center gap-3">
-                          <svg
-                            width="36"
-                            height="29"
-                            viewBox="0 0 36 29"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M30.4954 2.8964C28.1651 1.80609 25.6734 1.0137 23.0683 0.5625C22.7484 1.14092 22.3746 1.9189 22.117 2.53778C19.3477 2.12133 16.604 2.12133 13.8857 2.53778C13.6281 1.9189 13.2458 1.14092 12.923 0.5625C10.3152 1.0137 7.82063 1.809 5.49029 2.90217C0.789964 10.005 -0.484217 16.9314 0.152875 23.7594C3.27038 26.0875 6.29161 27.5017 9.26186 28.4271C9.99523 27.4178 10.6493 26.3449 11.2128 25.2141C10.1396 24.8063 9.11179 24.3031 8.14061 23.7189C8.39826 23.528 8.65028 23.3285 8.89377 23.1231C14.8173 25.8937 21.2533 25.8937 27.1061 23.1231C27.3525 23.3285 27.6044 23.528 27.8593 23.7189C26.8852 24.306 25.8546 24.8092 24.7814 25.217C25.3449 26.3449 25.9962 27.4207 26.7323 28.43C29.7054 27.5046 32.7295 26.0904 35.847 23.7594C36.5945 15.844 34.57 8.98119 30.4954 2.8964ZM12.0198 19.5602C10.2416 19.5602 8.78333 17.9002 8.78333 15.8787C8.78333 13.8571 10.2104 12.1942 12.0198 12.1942C13.8291 12.1942 15.2873 13.8542 15.2562 15.8787C15.259 17.9002 13.8291 19.5602 12.0198 19.5602ZM23.9801 19.5602C22.2019 19.5602 20.7437 17.9002 20.7437 15.8787C20.7437 13.8571 22.1707 12.1942 23.9801 12.1942C25.7894 12.1942 27.2477 13.8542 27.2165 15.8787C27.2165 17.9002 25.7894 19.5602 23.9801 19.5602Z"
-                              fill="white"
-                            ></path>
-                          </svg>
-                          <h2 className="text-white text-2xl font-bold leading-7 tracking-[-0.48px] my-0 max-sm:text-[20px] max-sm:gap-4">
-                            Discord{" "}
-                            <span className="text-white text-opacity-50 font-normal"></span>
-                          </h2>
-                        </div>
-                        <div className="mt-6">
-                          <a
-                            href="https://discord.gg/Niza"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-6 text-white text-2xl leading-7 tracking-[-0.48px] max-sm:text-[20px] max-sm:gap-4"
-                          >
-                            discord.gg/Niza
-                            <svg
-                              width="34"
-                              height="35"
-                              viewBox="0 0 34 35"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M26.5626 8.9375V22.75C26.5626 23.0318 26.4507 23.302 26.2514 23.5013C26.0521 23.7006 25.7819 23.8125 25.5001 23.8125C25.2183 23.8125 24.9481 23.7006 24.7488 23.5013C24.5495 23.302 24.4376 23.0318 24.4376 22.75V11.5021L9.25182 26.6892C9.05245 26.8886 8.78205 27.0006 8.5001 27.0006C8.21815 27.0006 7.94775 26.8886 7.74838 26.6892C7.54902 26.4899 7.43701 26.2194 7.43701 25.9375C7.43701 25.6556 7.54902 25.3851 7.74838 25.1858L22.9355 10H11.6876C11.4058 10 11.1356 9.88806 10.9363 9.6888C10.737 9.48954 10.6251 9.21929 10.6251 8.9375C10.6251 8.65571 10.737 8.38546 10.9363 8.1862C11.1356 7.98694 11.4058 7.875 11.6876 7.875H25.5001C25.7819 7.875 26.0521 7.98694 26.2514 8.1862C26.4507 8.38546 26.5626 8.65571 26.5626 8.9375Z"
-                                fill="white"
-                              ></path>
-                            </svg>
-                          </a>
+                              <div className="button__content ">
+                                <span className="button__text">Presale</span>
+                              </div>
+                            </a>{" "}
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="bg-[#131719] pt-[54px] pb-[30px]">
-              <div className="container m-auto block lg:flex justify-between max-lg:px-[20px] max-lg:py-[32px] max-lg:rounded-[32px]">
-                <div>
-                  <img
-                    src="https://niza.io/icons/nizatoken-logo.png"
-                    alt=""
-                    className="h-[60px] mb-4 translate-x-[-10px] max-md:h-[90px] max-md:translate-x-[-15px]"
-                  />
-                  <p className="text-[18px] max-w-[500px] xl:w-[500px] font-[500] text-white/80 mb-4 tracking-[-0.36px] leading-[30px]">
-                    Niza Coin is owned and operated by Niza Global UAB with
-                    registration number 306048866 and license number 306048866
-                    for Providing virtual currency service. <br />
-                    Adress: Architektų g.56-101, LT-04111 Vilnius, Lithuania.
-                  </p>
-                  <div className="flex gap-[15px] pb-[13px]">
-                    <a
-                      rel="noopener noreferrer"
-                      href="https://twitter.com/nizacoin"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://niza.io/icons/twitter.png"
-                        alt=""
-                        className="p-[7.5px] bg-[#26242C] rounded-[3px] w-[40px]"
-                      />
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      href="https://t.me/nizaio"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://niza.io/icons/plne.png"
-                        alt=""
-                        className="p-[7.5px] bg-[#26242C] rounded-[3px] w-[40px]"
-                      />
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      href="https://discord.gg/Niza"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://niza.io/icons/discord.png"
-                        alt=""
-                        className="p-[7.5px] bg-[#26242C] rounded-[3px] w-[40px]"
-                      />
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      className="ml-[20px]"
-                      href="https://coinmarketcap.com/currencies/niza-global/"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://niza.io/icons/coin-market-logo.png"
-                        alt=""
-                        className="w-[40px]"
-                      />
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      href="https://www.coingecko.com/en/coins/niza-global"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://niza.io/icons/coin-gecko-logo.png"
-                        alt=""
-                        className="w-[40px]"
-                      />
-                    </a>
-                    <a
-                      rel="noopener noreferrer"
-                      href="https://www.cyberscope.io/audits/niza"
-                      target="_blank"
-                    >
-                      <img
-                        src="https://niza.io/icons/cyber-scope-logo.svg"
-                        alt=""
-                        className="w-[40px]"
-                      />
-                    </a>
-                  </div>
-                </div>
-                <div className="flex lg:gap-[70px]">
-                  <div className="w-[132px] max-lg:mt-[25px]">
-                    <p className="text-lg text-custom-primary tracking-[-0.36px]">
-                      Navigation
-                    </p>
-                    <div className="flex flex-col gap-2.5 mt-4">
-                      <a
-                        className="hover:underline hover:text-white"
-                        href="#hero"
-                      >
-                        <p className="text-white/60 tracking-[-0.64px]">Home</p>
-                      </a>
-                      <a
-                        className="hover:underline hover:text-white"
-                        href="#about-us"
-                      >
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          About
-                        </p>
-                      </a>
-                      <a
-                        rel="noopener noreferrer"
-                        className="hover:underline hover:text-white"
-                        href="https://www.dextools.io/app/en/ether/pair-explorer/0x6acb4250ff8c65f0ba95b3001b920370740be940"
-                        target="_blank"
-                      >
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Charts
-                        </p>
-                      </a>
-                      <a
-                        rel="noopener noreferrer"
-                        className="hover:underline hover:text-white"
-                        href="https://niza.io/docs/NizaCoin_whitepaper.pdf"
-                        target="_blank"
-                      >
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Whitepaper
-                        </p>
-                      </a>
-                      <a
-                        className="hover:underline hover:text-white"
-                        href="#roadmap"
-                      >
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Roadmap
-                        </p>
-                      </a>
-                      <a
-                        className="hover:underline hover:text-white"
-                        href="#contact-us"
-                      >
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Communites
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="w-[132px] max-lg:mt-[25px]">
-                    <p className="text-lg text-custom-primary tracking-[-0.36px]">
-                      Licenses
-                    </p>
-                    <div className="flex flex-col gap-2.5 mt-4">
-                      <button className="hover:underline hover:text-white w-[155px] text-left">
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          U.S.A
-                        </p>
-                      </button>
-                      <button className="hover:underline hover:text-white w-[155px] text-left">
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Canada
-                        </p>
-                      </button>
-                      <button className="hover:underline hover:text-white w-[155px] text-left">
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Lithuania
-                        </p>
-                      </button>
-                      <button className="hover:underline hover:text-white w-[155px] text-left">
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Bulgaria
-                        </p>
-                      </button>
-                      <button className="hover:underline hover:text-white w-[155px] text-left">
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Costa Rica
-                        </p>
-                      </button>
-                      <button className="hover:underline hover:text-white w-[155px] text-left">
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Iban services: UK FCA
-                        </p>
-                      </button>
-                      <button className="hover:underline hover:text-white w-[155px] text-left">
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          Italy
-                        </p>
-                      </button>
-                    </div>
-                  </div>
-                  <div className="w-[132px] max-lg:mt-[25px] tracking-[-0.36px]">
-                    <p className="text-lg text-custom-primary">Contact</p>
-                    <div className="flex flex-col gap-2.5 mt-4">
-                      <a
-                        className="hover:underline hover:text-white"
-                        href="mailto:info@niza.io"
-                      >
-                        <p className="text-white/60 tracking-[-0.64px]">
-                          info@niza.io
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <p className="my-4 text-xs text-center text-gray-400">
-                  <span>Copyright Niza Global © 2023</span>
-                </p>
+                </section>
               </div>
             </div>
           </div>
+          <div
+            className="wgl-sticky-header wgl-sticky-element"
+            data-style="scroll_up"
+          >
+            <div className="container-wrapper">
+              {" "}
+              <div
+                data-elementor-type="wp-post"
+                data-elementor-id="3264"
+                className="elementor elementor-3264"
+                data-elementor-post-type="header"
+              >
+                <section
+                  className="elementor-section elementor-top-section elementor-element elementor-element-cbde00d elementor-section-full_width elementor-section-content-middle elementor-section-height-default elementor-section-height-default"
+                  data-id="cbde00d"
+                  data-element_type="section"
+                  data-settings='{"background_background":"classic"}'
+                >
+                  <div className="elementor-container elementor-column-gap-default">
+                    <div
+                      className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5aebac7"
+                      data-id="5aebac7"
+                      data-element_type="column"
+                    >
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                        <div
+                          className="elementor-element elementor-element-551346b elementor-widget elementor-widget-wgl-header-logo"
+                          data-id="551346b"
+                          data-element_type="widget"
+                          data-widget_type="wgl-header-logo.default"
+                        >
+                          <div className="elementor-widget-container">
+                            <div className="wgl-logotype-container default_logo">
+                              <a href="https://deepcave.io/">
+                                <img
+                                  className="default_logo"
+                                  src="https://deepcave.io/wp-content/uploads/2023/10/a.png"
+                                  alt="logotype"
+                                  style={{ height: "70px" }}
+                                />
+                              </a>
+                            </div>{" "}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ff3e74d"
+                      data-id="ff3e74d"
+                      data-element_type="column"
+                    >
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                        <div
+                          className="elementor-element elementor-element-571f10c elementor-widget elementor-widget-wgl-menu"
+                          data-id="571f10c"
+                          data-element_type="widget"
+                          data-widget_type="wgl-menu.default"
+                        >
+                          <div className="elementor-widget-container">
+                            <nav className="primary-nav">
+                              <ul id="menu-main-1" className="menu">
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3462 current_page_item menu-item-4396 mega-menu mega-menu-links mega-columns-5col ">
+                                  <a href="https://deepcave.io/">
+                                    <span>
+                                      <span className="item_text">Home</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5644">
+                                  <a href="https://deepcave.io/dc-tool/">
+                                    <span>
+                                      <span className="item_text">DC Tool</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4636">
+                                  <a href="https://deepcave.io/shop/">
+                                    <span>
+                                      <span className="item_text">
+                                        NFT Shop
+                                      </span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4803">
+                                  <a href="https://deepcave.io/whitepaper/">
+                                    <span>
+                                      <span className="item_text">
+                                        Whitepaper
+                                      </span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5415">
+                                  <a href="#">
+                                    <span>
+                                      <span className="item_text">Docs</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                  <ul className="sub-menu wgl-submenu-position-default">
+                                    {" "}
+                                    <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4716">
+                                      <a href="https://deepcave.io/revenue-model/">
+                                        <span>
+                                          <span className="item_text">
+                                            Revenue Model
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>{" "}
+                                    <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5416">
+                                      <a href="#">
+                                        <span>
+                                          <span className="item_text">
+                                            Developers
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>{" "}
+                                    <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5417">
+                                      <a href="https://deepcave-documentation.gitbook.io">
+                                        <span>
+                                          <span className="item_text">
+                                            Gitbook
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>{" "}
+                                    <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5516">
+                                      <a href="https://deepcave.io/kyc/">
+                                        <span>
+                                          <span className="item_text">KYC</span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>{" "}
+                                    <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5419">
+                                      <a href="https://github.com/Coinsult/solidity/blob/main/Coinsult_Deepcave_0xBc...fD5D_Audit.pdf">
+                                        <span>
+                                          <span className="item_text">
+                                            Audit
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>
+                                  </ul>
+                                </li>
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5335">
+                                  <a href="https://deepcave.io/utility/">
+                                    <span>
+                                      <span className="item_text">Utility</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4813">
+                                  <a href="https://deepcave.io/contacts/">
+                                    <span>
+                                      <span className="item_text">Contact</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                              </ul>{" "}
+                            </nav>
+                            <div className="mobile-hamburger-toggle">
+                              <div className="hamburger-box">
+                                <div className="hamburger-inner"></div>
+                              </div>
+                            </div>{" "}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-bb928e3"
+                      data-id="bb928e3"
+                      data-element_type="column"
+                    >
+                      <div className="elementor-widget-wrap elementor-element-populated">
+                        <div
+                          className="elementor-element elementor-element-54f0f40 full-height-yes elementor-widget elementor-widget-wgl-header-search"
+                          data-id="54f0f40"
+                          data-element_type="widget"
+                          data-widget_type="wgl-header-search.default"
+                        >
+                          <div className="elementor-widget-container">
+                            <div className="header_search search_standard">
+                              <div
+                                className="wgl-search elementor-search header_search-button-wrapper"
+                                role="button"
+                              >
+                                <div className="header_search-button flaticon-search "></div>
+                                <div className="header_search-close flaticon-close-1"></div>
+                              </div>{" "}
+                              <div className="header_search-field">
+                                <div className="header_search-close flaticon-close-1"></div>
+                                <form
+                                  role="search"
+                                  method="get"
+                                  action="https://deepcave.io/"
+                                  className="search-form"
+                                >
+                                  <input
+                                    required={true}
+                                    type="text"
+                                    id="search-form-6566af779d3dd"
+                                    className="search-field"
+                                    placeholder="Search …"
+                                    value=""
+                                    name="s"
+                                  />
+                                  <input
+                                    className="search-button"
+                                    type="submit"
+                                    value="Search"
+                                  />
+                                  <i className="search__icon flaticon-search"></i>
+                                </form>{" "}
+                              </div>{" "}
+                            </div>{" "}
+                          </div>
+                        </div>
+                        <div
+                          className="elementor-element elementor-element-4e5de7e elementor-widget__width-auto aleft elementor-widget elementor-widget-wgl-button"
+                          data-id="4e5de7e"
+                          data-element_type="widget"
+                          data-widget_type="wgl-button.default"
+                        >
+                          <div className="elementor-widget-container">
+                            <a
+                              className="wgl-button btn-size-lg "
+                              role="button"
+                              href="https://www.pinksale.finance/launchpad/0x4b010864E55DF415d6f3d8F7f47a3E35143c8C78?chain=ETH"
+                            >
+                              <div className="button__content ">
+                                <span className="button__text">Presale</span>
+                              </div>
+                            </a>{" "}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div className="wgl-mobile-header">
+            {" "}
+            <div className="container-wrapper">
+              <div className="wgl-header-row wgl-header-row-section">
+                <div className="wgl-container">
+                  <div
+                    className="wgl-header-row_wrapper"
+                    style={{ height: "60px" }}
+                  >
+                    <div className="position_left header_side">
+                      <div className="header_area_container">
+                        <div className="wgl-logotype-container logo-mobile">
+                          <a href="https://deepcave.io/">
+                            <img
+                              className="logo-mobile"
+                              src="https://deepcave.io/wp-content/uploads/2023/10/a.png"
+                              alt="logotype"
+                              style={{ height: "36px" }}
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="position_center header_side">
+                      <div className="header_area_container">
+                        <div className="mobile_header html1_editor header_render_editor header_render">
+                          <div className="wrapper">
+                            <a
+                              className="wgl-button btn-size-lg "
+                              role="button"
+                              href="https://www.pinksale.finance/launchpad/0x4b010864E55DF415d6f3d8F7f47a3E35143c8C78?chain=ETH"
+                            >
+                              <div className="button__content ">
+                                <span className="button__text">Presale</span>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="position_right header_side">
+                      <div className="header_area_container">
+                        <nav className="primary-nav" style={{ height: "60px" }}>
+                          <ul id="menu-main-2" className="menu">
+                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3462 current_page_item menu-item-4396 mega-menu mega-menu-links mega-columns-5col ">
+                              <a href="https://deepcave.io/">
+                                <span>
+                                  <span className="item_text">Home</span>
+                                  <span className="menu-item_dots"></span>
+                                </span>
+                                <i className="menu-item__plus"></i>
+                              </a>
+                            </li>
+                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5644">
+                              <a href="https://deepcave.io/dc-tool/">
+                                <span>
+                                  <span className="item_text">DC Tool</span>
+                                  <span className="menu-item_dots"></span>
+                                </span>
+                                <i className="menu-item__plus"></i>
+                              </a>
+                            </li>
+                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4636">
+                              <a href="https://deepcave.io/shop/">
+                                <span>
+                                  <span className="item_text">NFT Shop</span>
+                                  <span className="menu-item_dots"></span>
+                                </span>
+                                <i className="menu-item__plus"></i>
+                              </a>
+                            </li>
+                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4803">
+                              <a href="https://deepcave.io/whitepaper/">
+                                <span>
+                                  <span className="item_text">Whitepaper</span>
+                                  <span className="menu-item_dots"></span>
+                                </span>
+                                <i className="menu-item__plus"></i>
+                              </a>
+                            </li>
+                            <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5415">
+                              <a href="#">
+                                <span>
+                                  <span className="item_text">Docs</span>
+                                  <span className="menu-item_dots"></span>
+                                </span>
+                                <i className="menu-item__plus"></i>
+                              </a>
+                              <ul className="sub-menu wgl-submenu-position-default">
+                                {" "}
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4716">
+                                  <a href="https://deepcave.io/revenue-model/">
+                                    <span>
+                                      <span className="item_text">
+                                        Revenue Model
+                                      </span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>{" "}
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5416">
+                                  <a href="#">
+                                    <span>
+                                      <span className="item_text">
+                                        Developers
+                                      </span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>{" "}
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5417">
+                                  <a href="https://deepcave-documentation.gitbook.io">
+                                    <span>
+                                      <span className="item_text">Gitbook</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>{" "}
+                                <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5516">
+                                  <a href="https://deepcave.io/kyc/">
+                                    <span>
+                                      <span className="item_text">KYC</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>{" "}
+                                <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5419">
+                                  <a href="https://github.com/Coinsult/solidity/blob/main/Coinsult_Deepcave_0xBc...fD5D_Audit.pdf">
+                                    <span>
+                                      <span className="item_text">Audit</span>
+                                      <span className="menu-item_dots"></span>
+                                    </span>
+                                    <i className="menu-item__plus"></i>
+                                  </a>
+                                </li>
+                              </ul>
+                            </li>
+                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5335">
+                              <a href="https://deepcave.io/utility/">
+                                <span>
+                                  <span className="item_text">Utility</span>
+                                  <span className="menu-item_dots"></span>
+                                </span>
+                                <i className="menu-item__plus"></i>
+                              </a>
+                            </li>
+                            <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4813">
+                              <a href="https://deepcave.io/contacts/">
+                                <span>
+                                  <span className="item_text">Contact</span>
+                                  <span className="menu-item_dots"></span>
+                                </span>
+                                <i className="menu-item__plus"></i>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                        <div className="hamburger-box">
+                          <div className="hamburger-inner">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="mobile_nav_wrapper" data-mobile-width="1200">
+                <div className="container-wrapper">
+                  <div className="wgl-menu_overlay"></div>
+                  <div className="wgl-menu_outer menu-position_left">
+                    <div className="wgl-menu-outer_header">
+                      <div className="mobile-hamburger-close">
+                        <div className="hamburger-box">
+                          <div className="hamburger-inner">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="wgl-menu-outer_content">
+                      <div className="wgl-logotype-container logo-menu">
+                        <a href="https://deepcave.io/">
+                          <img
+                            className="logo-menu"
+                            src="https://deepcave.io/wp-content/uploads/2023/10/a.png"
+                            alt="logotype"
+                            style={{ height: "36px" }}
+                          />
+                        </a>
+                      </div>
+                      <nav className="primary-nav">
+                        <ul
+                          id="menu-main-3"
+                          className="menu"
+                          style={{ display: "block" }}
+                        >
+                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-3462 current_page_item menu-item-4396 mega-menu mega-menu-links mega-columns-5col ">
+                            <a href="https://deepcave.io/">
+                              <span>
+                                <span className="item_text">Home</span>
+                                <span className="menu-item_dots"></span>
+                              </span>
+                              <i className="menu-item__plus"></i>
+                            </a>
+                          </li>
+                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5644">
+                            <a href="https://deepcave.io/dc-tool/">
+                              <span>
+                                <span className="item_text">DC Tool</span>
+                                <span className="menu-item_dots"></span>
+                              </span>
+                              <i className="menu-item__plus"></i>
+                            </a>
+                          </li>
+                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4636">
+                            <a href="https://deepcave.io/shop/">
+                              <span>
+                                <span className="item_text">NFT Shop</span>
+                                <span className="menu-item_dots"></span>
+                              </span>
+                              <i className="menu-item__plus"></i>
+                            </a>
+                          </li>
+                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4803">
+                            <a href="https://deepcave.io/whitepaper/">
+                              <span>
+                                <span className="item_text">Whitepaper</span>
+                                <span className="menu-item_dots"></span>
+                              </span>
+                              <i className="menu-item__plus"></i>
+                            </a>
+                          </li>
+                          <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-5415">
+                            <a href="#">
+                              <span>
+                                <span className="item_text">Docs</span>
+                                <span className="menu-item_dots"></span>
+                              </span>
+                              <i className="menu-item__plus"></i>
+                              <span className="button_switcher"></span>
+                            </a>
+                            <ul className="sub-menu wgl-submenu-position-default">
+                              {" "}
+                              <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4716">
+                                <a href="https://deepcave.io/revenue-model/">
+                                  <span>
+                                    <span className="item_text">
+                                      Revenue Model
+                                    </span>
+                                    <span className="menu-item_dots"></span>
+                                  </span>
+                                  <i className="menu-item__plus"></i>
+                                </a>
+                              </li>{" "}
+                              <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5416">
+                                <a href="#">
+                                  <span>
+                                    <span className="item_text">
+                                      Developers
+                                    </span>
+                                    <span className="menu-item_dots"></span>
+                                  </span>
+                                  <i className="menu-item__plus"></i>
+                                </a>
+                              </li>{" "}
+                              <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5417">
+                                <a href="https://deepcave-documentation.gitbook.io">
+                                  <span>
+                                    <span className="item_text">Gitbook</span>
+                                    <span className="menu-item_dots"></span>
+                                  </span>
+                                  <i className="menu-item__plus"></i>
+                                </a>
+                              </li>{" "}
+                              <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5516">
+                                <a href="https://deepcave.io/kyc/">
+                                  <span>
+                                    <span className="item_text">KYC</span>
+                                    <span className="menu-item_dots"></span>
+                                  </span>
+                                  <i className="menu-item__plus"></i>
+                                </a>
+                              </li>{" "}
+                              <li className="menu-item menu-item-type-custom menu-item-object-custom menu-item-5419">
+                                <a href="https://github.com/Coinsult/solidity/blob/main/Coinsult_Deepcave_0xBc...fD5D_Audit.pdf">
+                                  <span>
+                                    <span className="item_text">Audit</span>
+                                    <span className="menu-item_dots"></span>
+                                  </span>
+                                  <i className="menu-item__plus"></i>
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-5335">
+                            <a href="https://deepcave.io/utility/">
+                              <span>
+                                <span className="item_text">Utility</span>
+                                <span className="menu-item_dots"></span>
+                              </span>
+                              <i className="menu-item__plus"></i>
+                            </a>
+                          </li>
+                          <li className="menu-item menu-item-type-post_type menu-item-object-page menu-item-4813">
+                            <a href="https://deepcave.io/contacts/">
+                              <span>
+                                <span className="item_text">Contact</span>
+                                <span className="menu-item_dots"></span>
+                              </span>
+                              <i className="menu-item__plus"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                      <div className="header_search search_mobile_menu">
+                        <div className="header_search-field">
+                          <form
+                            role="search"
+                            method="get"
+                            action="https://deepcave.io/"
+                            className="search-form"
+                          >
+                            <input
+                              required={true}
+                              type="text"
+                              id="search-form-6566af779f0f2"
+                              className="search-field"
+                              placeholder="Search..."
+                              value=""
+                              name="s"
+                            />
+                            <input
+                              className="search-button"
+                              type="submit"
+                              value="Search"
+                            />
+                            <i className="search__icon flaticon-search"></i>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>{" "}
+            </div>
+          </div>
+          <div
+            className="wgl_notices_wrapper stick_home"
+            style={{ height: "112px", opacity: "1" }}
+          >
+            <div className="woocommerce-notices-wrapper closable"></div>
+          </div>
+        </header>{" "}
+        <main id="main" className="site-main" style={{ transform: "none" }}>
+          <div className="wgl-container" style={{ transform: "none" }}>
+            <div className="row  sidebar_none" style={{ transform: "none" }}>
+              <div
+                id="main-content"
+                className="wgl_col-12"
+                style={{ transform: "none" }}
+              >
+                {" "}
+                <div
+                  data-elementor-type="wp-page"
+                  data-elementor-id="3462"
+                  className="elementor elementor-3462"
+                  data-elementor-post-type="page"
+                  style={{ transform: "none" }}
+                >
+                  <section
+                    className="elementor-section elementor-top-section elementor-element elementor-element-bb1f74d elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="bb1f74d"
+                    data-element_type="section"
+                    data-settings='{"background_background":"classic"}'
+                  >
+                    <div className="elementor-container elementor-column-gap-default">
+                      <div
+                        className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d65c7cf"
+                        data-id="d65c7cf"
+                        data-element_type="column"
+                      >
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                          <div
+                            className="elementor-element elementor-element-1ccc14a elementor-widget elementor-widget-spacer"
+                            data-id="1ccc14a"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-36c9670 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="36c9670"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e3e91a9"
+                                data-id="e3e91a9"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-f638bb0 aleft elementor-widget elementor-widget-wgl-double-heading"
+                                    data-id="f638bb0"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-double-heading.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-double-heading">
+                                        <h2 className="dblh__title-wrapper">
+                                          <span className="dblh__title dblh__title-1">
+                                            Turn Your Words Into{" "}
+                                          </span>
+                                          <span className="dblh__title dblh__title-2">
+                                            Art{" "}
+                                          </span>
+                                          <span className="dblh__title dblh__title-3">
+                                            With DeepCave
+                                          </span>
+                                        </h2>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-d304bcd elementor-widget elementor-widget-text-editor"
+                                    data-id="d304bcd"
+                                    data-element_type="widget"
+                                    data-widget_type="text-editor.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <p>
+                                        Simply describe your vision in words,
+                                        and let our Artificial Intelligence
+                                        bring it to life
+                                      </p>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-acdb2e7 aleft elementor-widget elementor-widget-wgl-button"
+                                    data-id="acdb2e7"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-button.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <a
+                                        className="wgl-button btn-size-xl "
+                                        role="button"
+                                        href="https://app.uniswap.org/swap?outputCurrency=0x63f3795f332be0b27580EDB6b33613CF4E5a7C30"
+                                      >
+                                        <div className="button__content ">
+                                          <span className="button__text">
+                                            Buy $DeepCave
+                                          </span>
+                                        </div>
+                                      </a>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-4c6f3a9 elementor-widget elementor-widget-spacer"
+                                    data-id="4c6f3a9"
+                                    data-element_type="widget"
+                                    data-widget_type="spacer.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="elementor-spacer">
+                                        <div className="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-4ff8994 elementor-widget elementor-widget-text-editor"
+                                    data-id="4ff8994"
+                                    data-element_type="widget"
+                                    data-widget_type="text-editor.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <p>
+                                        <span style={{ color: "#ffffff" }}>
+                                          {" "}
+                                          <span
+                                            className="ctc-inline-copy "
+                                            aria-label="Copied"
+                                          >
+                                            <span className="ctc-inline-copy-text ">
+                                              0x63f3795f332be0b27580EDB6b33613CF4E5a7C30
+                                            </span>
+                                            <span
+                                              className="ctc-inline-copy-icon"
+                                              role="button"
+                                              aria-label="Copied"
+                                            >
+                                              <svg
+                                                aria-hidden="true"
+                                                focusable="false"
+                                                role="img"
+                                                className="copy-icon"
+                                                viewBox="0 0 16 16"
+                                                width="16"
+                                                height="16"
+                                                fill="currentColor"
+                                              >
+                                                <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path>
+                                                <path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+                                              </svg>{" "}
+                                              <svg
+                                                aria-hidden="true"
+                                                height="16"
+                                                viewBox="0 0 16 16"
+                                                version="1.1"
+                                                width="16"
+                                                data-view-component="true"
+                                                className="check-icon"
+                                                fill="currentColor"
+                                              >
+                                                <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+                                              </svg>{" "}
+                                            </span>
+                                          </span>
+                                        </span>
+                                      </p>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d565a00"
+                                data-id="d565a00"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap"></div>
+                              </div>
+                            </div>
+                          </section>
+                          <div
+                            className="elementor-element elementor-element-ef1d346 elementor-widget elementor-widget-spacer"
+                            data-id="ef1d346"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section
+                    className="elementor-section elementor-top-section elementor-element elementor-element-9720c89 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="9720c89"
+                    data-element_type="section"
+                    style={{ transform: "none" }}
+                  >
+                    <div
+                      className="elementor-container elementor-column-gap-default"
+                      style={{ transform: "none" }}
+                    >
+                      <div
+                        className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-15fe468 sticky-sidebar elementor-hidden-tablet elementor-hidden-mobile"
+                        data-id="15fe468"
+                        data-element_type="column"
+                        style={{
+                          position: "relative",
+                          overflow: "visible",
+                          boxSizing: "border-box",
+                          minHeight: "1px",
+                        }}
+                      >
+                        <div
+                          className="theiaStickySidebar"
+                          style={{
+                            paddingTop: "0px",
+                            paddingBottom: "1px",
+                            position: "static",
+                            transform: "none",
+                          }}
+                        >
+                          <div className="elementor-widget-wrap elementor-element-populated">
+                            <div
+                              className="elementor-element elementor-element-129e69f menu_yes elementor-hidden-tablet elementor-hidden-mobile animation_fluid elementor-widget elementor-widget-wgl-menu"
+                              data-id="129e69f"
+                              data-element_type="widget"
+                              data-widget_type="wgl-menu.default"
+                            >
+                              <div className="elementor-widget-container">
+                                <nav className="primary-nav">
+                                  <ul id="menu-home5-menu" className="menu">
+                                    <li
+                                      id="menu-item-4330"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4330"
+                                    >
+                                      <a href="#about-us">
+                                        <span>
+                                          <span className="item_text">
+                                            About Us
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>
+                                    <li
+                                      id="menu-item-4332"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4332"
+                                    >
+                                      <a href="#offer">
+                                        <span>
+                                          <span className="item_text">
+                                            Revenue Sharing Model
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>
+                                    <li
+                                      id="menu-item-4331"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4331"
+                                    >
+                                      <a href="#shop">
+                                        <span>
+                                          <span className="item_text">
+                                            Most popular NFTs
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>
+                                    <li
+                                      id="menu-item-4333"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4333"
+                                    >
+                                      <a href="#team">
+                                        <span>
+                                          <span className="item_text">
+                                            Team
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>
+                                    <li
+                                      id="menu-item-4336"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4336"
+                                    >
+                                      <a href="#partners">
+                                        <span>
+                                          <span className="item_text">
+                                            Partners
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>
+                                    <li
+                                      id="menu-item-4337"
+                                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-4337"
+                                    >
+                                      <a href="#community">
+                                        <span>
+                                          <span className="item_text">
+                                            Community
+                                          </span>
+                                          <span className="menu-item_dots"></span>
+                                        </span>
+                                        <i className="menu-item__plus"></i>
+                                      </a>
+                                    </li>
+                                  </ul>{" "}
+                                </nav>
+                                <div className="mobile-hamburger-toggle">
+                                  <div className="hamburger-box">
+                                    <div className="hamburger-inner"></div>
+                                  </div>
+                                </div>{" "}
+                              </div>
+                            </div>
+                            <div
+                              className="elementor-element elementor-element-37b71e9 elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-spacer"
+                              data-id="37b71e9"
+                              data-element_type="widget"
+                              data-widget_type="spacer.default"
+                            >
+                              <div className="elementor-widget-container">
+                                <div className="elementor-spacer">
+                                  <div className="elementor-spacer-inner"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="elementor-column elementor-col-66 elementor-top-column elementor-element elementor-element-fd2de2f"
+                        data-id="fd2de2f"
+                        data-element_type="column"
+                      >
+                        <div className="elementor-widget-wrap elementor-element-populated e-swiper-container">
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-ee64a67 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="ee64a67"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-062f962"
+                                data-id="062f962"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-b14a1db aleft elementor-widget elementor-widget-wgl-info-box"
+                                    data-id="b14a1db"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-info-box.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-infobox">
+                                        <div className="wgl-infobox_wrapper">
+                                          <div className="content_wrapper">
+                                            <div className="wgl-infobox-title_wrapper">
+                                              <h3 className="wgl-infobox_title">
+                                                <span className="wgl-infobox_title-idle">
+                                                  Text-to-Image AI{" "}
+                                                </span>
+                                              </h3>
+                                            </div>
+                                            <div className="wgl-infobox_content">
+                                              <p>
+                                                Whether you want GIFs, animated
+                                                NFTs, or stickers, DeepCave
+                                                creates them for you. Why not
+                                                create NFTs for free and sell
+                                                them on OpenSea?
+                                              </p>
+                                            </div>
+                                            <div className="wgl-infobox_bg_text_wrapper">
+                                              <span className="wgl-infobox_bg_text">
+                                                01
+                                              </span>
+                                            </div>
+                                            <div className="wgl-infobox-button_wrapper">
+                                              <a className="wgl-infobox_button button-read-more"></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-6556531"
+                                data-id="6556531"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-d0b36ab aleft elementor-widget elementor-widget-wgl-info-box"
+                                    data-id="d0b36ab"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-info-box.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-infobox">
+                                        <div className="wgl-infobox_wrapper">
+                                          <div className="content_wrapper">
+                                            <div className="wgl-infobox-title_wrapper">
+                                              <h3 className="wgl-infobox_title">
+                                                <span className="wgl-infobox_title-idle">
+                                                  No Paid Plan, Always Free
+                                                </span>
+                                              </h3>
+                                            </div>
+                                            <div className="wgl-infobox_content">
+                                              <p>
+                                                DeepCave distinguishes itself
+                                                from paid services like
+                                                Midjourney and Leonardo by
+                                                remaining free and accessible to
+                                                all.
+                                              </p>
+                                            </div>
+                                            <div className="wgl-infobox_bg_text_wrapper">
+                                              <span className="wgl-infobox_bg_text">
+                                                02
+                                              </span>
+                                            </div>
+                                            <div className="wgl-infobox-button_wrapper">
+                                              <a className="wgl-infobox_button button-read-more"></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-206bf93"
+                                data-id="206bf93"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-3326e95 aleft elementor-widget elementor-widget-wgl-info-box"
+                                    data-id="3326e95"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-info-box.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-infobox">
+                                        <div className="wgl-infobox_wrapper">
+                                          <div className="content_wrapper">
+                                            <div className="wgl-infobox-title_wrapper">
+                                              <h3 className="wgl-infobox_title">
+                                                <span className="wgl-infobox_title-idle">
+                                                  Established Advertising
+                                                  Partnerships
+                                                </span>
+                                              </h3>
+                                            </div>
+                                            <div className="wgl-infobox_content">
+                                              <p>
+                                                DeepCave has partnered with
+                                                major brands to offer innovative
+                                                digital marketing for
+                                                businesses.
+                                              </p>
+                                            </div>
+                                            <div className="wgl-infobox_bg_text_wrapper">
+                                              <span className="wgl-infobox_bg_text">
+                                                03
+                                              </span>
+                                            </div>
+                                            <div className="wgl-infobox-button_wrapper">
+                                              <a className="wgl-infobox_button button-read-more"></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <div
+                            className="elementor-element elementor-element-02359b7 elementor-widget elementor-widget-spacer"
+                            data-id="02359b7"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-a89ecfb elementor-widget elementor-widget-spacer"
+                            data-id="a89ecfb"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-bd4e0d5 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="bd4e0d5"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-5a7b892"
+                                data-id="5a7b892"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-ef6808d elementor-widget elementor-widget-spacer"
+                                    data-id="ef6808d"
+                                    data-element_type="widget"
+                                    data-widget_type="spacer.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="elementor-spacer">
+                                        <div className="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-cbb263d aleft elementor-widget elementor-widget-wgl-double-heading"
+                                    data-id="cbb263d"
+                                    data-element_type="widget"
+                                    id="about-us"
+                                    data-widget_type="wgl-double-heading.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-double-heading">
+                                        <h2 className="dblh__title-wrapper">
+                                          <span className="dblh__title dblh__title-1">
+                                            Turn Ideas into Art with DeepCave
+                                          </span>
+                                        </h2>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-eecca66 elementor-widget elementor-widget-text-editor"
+                                    data-id="eecca66"
+                                    data-element_type="widget"
+                                    data-widget_type="text-editor.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <p>
+                                        DeepCave is a smart tool for creating
+                                        images and NFTs. It’s incredibly
+                                        userfriendly, allowing you to produce
+                                        stunning images and videos with a single
+                                        click.
+                                      </p>
+                                      <p>
+                                        We’re making image and NFT creation
+                                        faster and more accessible than ever,
+                                        even for those who aren’t tech-savvy.
+                                      </p>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a5320e8"
+                                data-id="a5320e8"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-c7a4d6a elementor-widget elementor-widget-wgl-image-layers"
+                                    data-id="c7a4d6a"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-image-layers.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-image-layers img-layer_animate">
+                                        <a
+                                          className="image_link"
+                                          href="https://deepcave.io/shop"
+                                        >
+                                          <div
+                                            className="img-layer_image-wrapper"
+                                            style={{ zIndex: "1" }}
+                                          >
+                                            <div
+                                              className="img-layer_item"
+                                              style={{
+                                                transform: "translate(0px, 0%)",
+                                              }}
+                                            >
+                                              <div
+                                                className="img-layer_image"
+                                                style={{
+                                                  transition: "all 800ms",
+                                                  transitionDelay: "600ms",
+                                                }}
+                                              >
+                                                <img
+                                                  decoding="async"
+                                                  src="https://deepcave.io/wp-content/uploads/2022/06/home5-il-1-1.png"
+                                                  alt="home5-il-1-1"
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>{" "}
+                                          <div
+                                            className="img-layer_image-wrapper slide_left"
+                                            style={{ zIndex: "1" }}
+                                          >
+                                            <div
+                                              className="img-layer_item"
+                                              style={{
+                                                transform: "translate(0px, 0%)",
+                                              }}
+                                            >
+                                              <div
+                                                className="img-layer_image"
+                                                style={{
+                                                  transition: "all 800ms",
+                                                  transitionDelay: "1200ms",
+                                                }}
+                                              >
+                                                <img
+                                                  decoding="async"
+                                                  src="https://deepcave.io/wp-content/uploads/2023/11/dreamscape.png"
+                                                  alt=""
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>{" "}
+                                          <div
+                                            className="img-layer_image-wrapper slide_left"
+                                            style={{ zIndex: "1" }}
+                                          >
+                                            <div
+                                              className="img-layer_item"
+                                              style={{
+                                                transform: "translate(0px, 0%)",
+                                              }}
+                                            >
+                                              <div
+                                                className="img-layer_image"
+                                                style={{
+                                                  transition: "all 800ms",
+                                                  transitionDelay: "1800ms",
+                                                }}
+                                              >
+                                                <img
+                                                  decoding="async"
+                                                  src="https://deepcave.io/wp-content/uploads/2023/11/rainforest.png"
+                                                  alt=""
+                                                />
+                                              </div>
+                                            </div>
+                                          </div>{" "}
+                                        </a>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-a5d4145 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="a5d4145"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-34b84d0"
+                                data-id="34b84d0"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-aa3c3d9 elementor-widget elementor-widget-text-editor"
+                                    data-id="aa3c3d9"
+                                    data-element_type="widget"
+                                    data-widget_type="text-editor.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <h3 style={{ textAlign: "center" }}>
+                                        <span style={{ color: "#ffffff" }}>
+                                          Created by DeepCave AI
+                                        </span>
+                                      </h3>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-ccf72e2 elementor-widget elementor-widget-text-editor"
+                                    data-id="ccf72e2"
+                                    data-element_type="widget"
+                                    data-widget_type="text-editor.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <p className="p1">
+                                        <span className="s1"></span>
+                                      </p>
+                                      <div
+                                        className="n2-section-smartslider fitvidsignore n2_clear"
+                                        data-ssid="2"
+                                        tabIndex={0}
+                                        role="region"
+                                        aria-label="Slider"
+                                      >
+                                        <div
+                                          id="n2-ss-2-align"
+                                          className="n2-ss-align n2-ss-align-visible"
+                                        >
+                                          <div className="n2-padding">
+                                            <div
+                                              id="n2-ss-2"
+                                              data-creator="Smart Slider 3"
+                                              data-responsive="fullwidth"
+                                              className="n2-ss-slider n2-ow n2-has-hover n2-ss-showcase-horizontal n2-ss-desktopPortrait n2-ss-loaded"
+                                              data-device-mode="desktopPortrait"
+                                            >
+                                              <div className="n2-ss-slider-wrapper-inside">
+                                                {" "}
+                                                <div
+                                                  className="n2-ss-slider-1 n2_ss__touch_element n2-ow"
+                                                  style={{
+                                                    cursor: "grab",
+                                                    touchAction: "pan-y",
+                                                  }}
+                                                >
+                                                  <div className="n2-ss-slider-2 n2-ow">
+                                                    <div className="n2-ss-slider-3 n2-ow">
+                                                      <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 800 400"
+                                                        data-related-device="desktopPortrait"
+                                                        className="n2-ow n2-ss-preserve-size n2-ss-preserve-size--slider n2-ss-slide-limiter"
+                                                        style={{
+                                                          maxWidth: "800px",
+                                                        }}
+                                                      ></svg>{" "}
+                                                      <div className="n2-ss-showcase-slides n2-ow n2-ss-showcase-slides--ready">
+                                                        <svg
+                                                          xmlns="http://www.w3.org/2000/svg"
+                                                          viewBox="0 0 400 400"
+                                                          className="n2-ow n2-ss-preserve-size n2-ss-slide-limiter"
+                                                        ></svg>
+                                                        <div
+                                                          data-first="1"
+                                                          data-slide-duration="0"
+                                                          data-id="24"
+                                                          data-slide-public-id="1"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-1600px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "108",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-24 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="1"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_0763.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-0bNLAxC1VUmK"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-SANY7qxcNKoW"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-SANY7qxcNKoW-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-9ZglXxkWCkNA"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-9ZglXxkWCkNA-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-lCMYiepCQYkn"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-lCMYiepCQYkn-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-UdTcVCKTyxOY"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item1"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="3"
+                                                          data-slide-public-id="2"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-1150px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "109",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-3 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="2"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/4598170837663042742.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            ></div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-SNp4vdccol6f"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-4SROyhY3nEzi"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-4SROyhY3nEzi-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-DuuIMSrCi8LM"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-DuuIMSrCi8LM-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-bn0WMTEzEWLC"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-bn0WMTEzEWLC-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-SzwIpzbRI8Ar"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item2"
+                                                                                  className="n2-font-09ae1d06fe17786443d9c8a0d5ec4820-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="5"
+                                                          data-slide-public-id="3"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-700px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "110",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-5 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="3"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_0759.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-hL5VDkaH3jRa"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-McW5XVSmbMEW"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-McW5XVSmbMEW-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-lS0JWMvbgwDr"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-lS0JWMvbgwDr-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-Ag5rtYEt3Y1K"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-Ag5rtYEt3Y1K-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-ev3VWHLWf4J5"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item3"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="25"
+                                                          data-slide-public-id="4"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-250px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "111",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-25 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="4"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_3596.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-FCk5THLf0lVc"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-wGG2cSqF9YaK"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-wGG2cSqF9YaK-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-XkdQMNpnqRbG"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-XkdQMNpnqRbG-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-Z7a7rxhXL9yD"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-Z7a7rxhXL9yD-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-FvCi7Z2Mlsek"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item4"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="26"
+                                                          data-slide-public-id="5"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(0px, 0px, 0px); zIndex: 112",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-26 n2-ow n2-ss-slide-active"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="5"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_0762.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-itnb47QpvIqP"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-c3xkvt3TLEvv"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-c3xkvt3TLEvv-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-EPN2LQcmB5AC"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-EPN2LQcmB5AC-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-1YWwGYZ2Y5aU"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-1YWwGYZ2Y5aU-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-mbSNhduwyJjZ"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item5"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="18"
+                                                          data-slide-public-id="6"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(250px, 0px, 0px) rotateY(-30deg) scale(0.8, 0.8)",
+                                                            zIndex: "111",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-18 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="6"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_3592.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-iuvI0AEFb2M4"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-AnS1ty1rwwJ1"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-AnS1ty1rwwJ1-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-kXnWE7n7M6xi"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-kXnWE7n7M6xi-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-M5liswkUk0Mg"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-M5liswkUk0Mg-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-WdS3LuloC2zw"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item6"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="17"
+                                                          data-slide-public-id="7"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(700px, 0px, 0px) rotateY(-30deg) scale(0.8, 0.8)",
+                                                            zIndex: "110",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-17 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="7"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_0758.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-edqVJehAqxiy"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-sAcERgM6ZRXV"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-sAcERgM6ZRXV-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-Sgvit57gWA6n"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-Sgvit57gWA6n-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-k6jcnT9iKZlX"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-k6jcnT9iKZlX-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-E88rSerJWrKM"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item7"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="27"
+                                                          data-slide-public-id="8"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(1150px, 0px, 0px) rotateY(-30deg) scale(0.8, 0.8)",
+                                                            zIndex: "109",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-27 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="8"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/3617410726321743193.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-HBmMjph8WP4s"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-6RyzP3CXkL4X"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-6RyzP3CXkL4X-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-5q72aICn4vjI"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-5q72aICn4vjI-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-0xOvHigmj88P"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-0xOvHigmj88P-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-XAubobXTHOCR"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item8"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="19"
+                                                          data-slide-public-id="9"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(1600px, 0px, 0px) rotateY(-30deg) scale(0.8, 0.8)",
+                                                            zIndex: "108",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-19 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="9"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_3598.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-6MdqK84K2lzv"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-wylSo3KOZqNZ"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-wylSo3KOZqNZ-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-GqeBwFEAhH8N"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-GqeBwFEAhH8N-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-WkI8Adu2tWFP"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-WkI8Adu2tWFP-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-ckMxDir4cNsU"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item9"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="22"
+                                                          data-slide-public-id="10"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-4750px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "101",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-22 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="10"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_3599.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-INBNiL7ACmao"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-Ow1a9Xo4DwjW"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-Ow1a9Xo4DwjW-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-iPldSxrg8CnD"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-iPldSxrg8CnD-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-EQmdO9CsNGbZ"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-EQmdO9CsNGbZ-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-3OxOcE5B4mrG"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item10"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="31"
+                                                          data-slide-public-id="11"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-4300px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "102",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-31 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="11"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_3650.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-D07IvXbZ4nzh"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-wbdx2cfgHnSH"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-wbdx2cfgHnSH-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-UW175fWOWhNe"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-UW175fWOWhNe-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-30ucsQtbRRPE"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-30ucsQtbRRPE-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-OxpnYkRQxQPB"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item11"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="23"
+                                                          data-slide-public-id="12"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-3850px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "103",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-23 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="12"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_3600.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-KQryicaf5X1f"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-VJCdaR5NyO41"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-VJCdaR5NyO41-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-l7pk8iHAk2Y3"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-l7pk8iHAk2Y3-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-3Ob2wH5iraFS"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-3Ob2wH5iraFS-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-SmbGmrjPRgX4"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item12"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="28"
+                                                          data-slide-public-id="13"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-3400px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "104",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-28 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="13"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_0753.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-C7wX7Sk4Zt4o"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-mJT5uYR4L9vw"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-mJT5uYR4L9vw-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-UU9KmQZ0RBoB"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-UU9KmQZ0RBoB-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-mi2DguUmk22o"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-mi2DguUmk22o-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-OoJfAVPr7geT"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item13"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="30"
+                                                          data-slide-public-id="14"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-2950px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "105",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-30 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="14"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/gif.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-8HJFIBJ6aNM6"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-Gei56CjpiYUe"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-Gei56CjpiYUe-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-mC3rism0xNw5"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-mC3rism0xNw5-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-bHxJJv9dgjLT"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-bHxJJv9dgjLT-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-0EOEIlcfo7gE"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item14"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="32"
+                                                          data-slide-public-id="15"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-2500px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "106",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-32 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="15"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_3687.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-tXACOmyMN64c"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-NbkYPpojArC1"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-NbkYPpojArC1-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-pEVXbP5yU3NG"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-pEVXbP5yU3NG-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-F1wJqy5VJqYF"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-F1wJqy5VJqYF-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-nM208hu6SAqS"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item15"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                        <div
+                                                          data-slide-duration="0"
+                                                          data-id="33"
+                                                          data-slide-public-id="16"
+                                                          data-title="Slide 1"
+                                                          style={{
+                                                            boxShadow:
+                                                              "rgba(0, 0, 0, 0.1) 0px 1px 20px",
+                                                            opacity: "1",
+                                                            transform:
+                                                              "translate3d(-2050px, 0px, 0px) rotateY(30deg) scale(0.8, 0.8)",
+                                                            zIndex: "107",
+                                                            width: "400px",
+                                                            height: "400px",
+                                                          }}
+                                                          className="n2-ss-slide n2-ss-slide-33 n2-ow"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <div
+                                                            className="n2-ss-slide-background"
+                                                            data-public-id="16"
+                                                            data-mode="fill"
+                                                          >
+                                                            <video
+                                                              className="n2-ss-slide-background-video intrinsic-ignore data-tf-not-load"
+                                                              style={{
+                                                                opacity: "1",
+                                                              }}
+                                                              data-mode="fill"
+                                                              playsInline={true}
+                                                              webkit-playsinline="webkit-playsinline"
+                                                              data-keepplaying="1"
+                                                              preload="none"
+                                                              muted={true}
+                                                              loop={true}
+                                                              data-reset-slide-change="1"
+                                                            >
+                                                              <source
+                                                                src="https://deepcave.io/wp-content/uploads/2023/11/IMG_3688.mp4"
+                                                                type="video/mp4"
+                                                              />
+                                                            </video>
+                                                            <div
+                                                              data-color="RGBA(255,255,255,0)"
+                                                              style={{
+                                                                backgroundColor:
+                                                                  "RGBA(255,255,255,0)",
+                                                              }}
+                                                              className="n2-ss-slide-background-color"
+                                                            ></div>
+                                                          </div>
+                                                          <div className="n2-ss-slide-inner">
+                                                            <div
+                                                              role="note"
+                                                              className="n2-ss-slide--focus"
+                                                              tabIndex={-1}
+                                                            >
+                                                              Slide 1
+                                                            </div>
+                                                            <div className="n2-ss-layers-container n2-ss-slide-limiter n2-ow">
+                                                              <div
+                                                                className="n2-ss-layer n2-ow n-uc-Y58AvyTsI1uJ"
+                                                                data-sstype="slide"
+                                                                data-pm="default"
+                                                                style={{
+                                                                  perspective:
+                                                                    "2000px",
+                                                                }}
+                                                              >
+                                                                <div
+                                                                  className="n2-ss-layer n2-ow n-uc-Szs70VO0bfYK"
+                                                                  data-pm="default"
+                                                                  data-sstype="content"
+                                                                  data-hasbackground="0"
+                                                                >
+                                                                  <div
+                                                                    className="n2-ss-section-main-content n2-ss-layer-with-background n2-ss-layer-content n2-ow n-uc-Szs70VO0bfYK-inner"
+                                                                    style={{
+                                                                      perspective:
+                                                                        "2000px",
+                                                                    }}
+                                                                  >
+                                                                    <div
+                                                                      className="n2-ss-layer n2-ow n2-ss-layer--block n2-ss-has-self-align n-uc-wp1tI7Ots1jw"
+                                                                      data-pm="normal"
+                                                                      data-sstype="row"
+                                                                    >
+                                                                      <div className="n2-ss-layer-row n2-ss-layer-with-background n-uc-wp1tI7Ots1jw-inner">
+                                                                        <div
+                                                                          className="n2-ss-layer-row-inner "
+                                                                          style={{
+                                                                            perspective:
+                                                                              "2000px",
+                                                                          }}
+                                                                        >
+                                                                          <div
+                                                                            className="n2-ss-layer n2-ow n-uc-5COzL59Q5yZu"
+                                                                            data-pm="default"
+                                                                            data-sstype="col"
+                                                                          >
+                                                                            <div
+                                                                              className="n2-ss-layer-col n2-ss-layer-with-background n2-ss-layer-content n-uc-5COzL59Q5yZu-inner"
+                                                                              style={{
+                                                                                perspective:
+                                                                                  "2000px",
+                                                                              }}
+                                                                            >
+                                                                              <div
+                                                                                className="n2-ss-layer n2-ow n-uc-JTYDstHegbW3"
+                                                                                data-pm="normal"
+                                                                                data-sstype="layer"
+                                                                              >
+                                                                                <div
+                                                                                  id="n2-ss-2item16"
+                                                                                  className="n2-font-e1981a3d777f65db3014482f9bfc0b12-hover n2-style-c9c30b5f71c49b70706b6a6c4aede6a9-heading   n2-ss-item-content n2-ss-text n2-ow"
+                                                                                  style={{
+                                                                                    display:
+                                                                                      "block",
+                                                                                  }}
+                                                                                ></div>
+                                                                              </div>
+                                                                            </div>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div className="n2-ss-showcase-overlay n2-ow"></div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div className="n2-ss-slider-controls n2-ss-slider-controls-absolute-left-center">
+                                                  <div
+                                                    className="n2-ss-widget n2-style-107cb0e4b96e295f0c4852cfc0854d07-heading nextend-arrow n2-ow-all nextend-arrow-previous  nextend-arrow-animated-fade"
+                                                    data-hide-mobilelandscape="1"
+                                                    data-hide-mobileportrait="1"
+                                                    id="n2-ss-2-arrow-previous"
+                                                    role="button"
+                                                    aria-label="previous arrow"
+                                                    tabIndex={0}
+                                                  >
+                                                    <img
+                                                      decoding="async"
+                                                      width="32"
+                                                      height="32"
+                                                      className="skip-lazy"
+                                                      data-skip-lazy="1"
+                                                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4NCiAgICA8cGF0aCBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjgiIGZpbGwtcnVsZT0iZXZlbm9kZCINCiAgICAgICAgICBkPSJNMTguOTk1OCA4Ljk5MDdjMC0uNDI0LS4yMDQtLjcyMy0uNjEtLjg5OC0uNDA5LS4xNzMtLjc3Mi0uMTA0LTEuMDkzLjIwOWwtNy4wMDYgNi45NzVjLS4yMDEuMTk5LS4yOTcuNDM3LS4yODYuNzE2IDAgLjI2Ny4wOTYuNDk4LjI4Ni42ODlsNy4wMDYgNy4wMDFjLjMyMS4zMjEuNjg0LjM4OSAxLjA5My4yMDkuNDA2LS4xNzQuNjEtLjQ4Mi42MS0uOTIyVjguOTkwN3oiLz4NCjwvc3ZnPg=="
+                                                      alt="previous arrow"
+                                                    />
+                                                  </div>
+                                                </div>
+                                                <div className="n2-ss-slider-controls n2-ss-slider-controls-absolute-right-center">
+                                                  <div
+                                                    className="n2-ss-widget n2-style-107cb0e4b96e295f0c4852cfc0854d07-heading nextend-arrow n2-ow-all nextend-arrow-next  nextend-arrow-animated-fade"
+                                                    data-hide-mobilelandscape="1"
+                                                    data-hide-mobileportrait="1"
+                                                    id="n2-ss-2-arrow-next"
+                                                    role="button"
+                                                    aria-label="next arrow"
+                                                    tabIndex={0}
+                                                  >
+                                                    <img
+                                                      decoding="async"
+                                                      width="32"
+                                                      height="32"
+                                                      className="skip-lazy"
+                                                      data-skip-lazy="1"
+                                                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCiAgICA8cGF0aCBkPSJNMTIgOC45OWMwLS40MjMuMjA0LS43MjIuNjEtLjg5Ny40MDgtLjE3My43NzItLjEwNCAxLjA5Mi4yMWw3LjAwNiA2Ljk3NGMuMjAyLjIuMjk4LjQzNy4yODcuNzE2IDAgLjI2Ny0uMDk2LjQ5OC0uMjg3LjY5bC03LjAwNiA3Yy0uMzIuMzItLjY4NC4zOS0xLjA5Mi4yMS0uNDA2LS4xNzUtLjYxLS40ODMtLjYxLS45MjNWOC45OXoiDQogICAgICAgICAgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMC44IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz4NCjwvc3ZnPg=="
+                                                      alt="next arrow"
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div className="n2_clear"></div>
+                                      </div>
+                                      <p></p>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-45a4713 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="45a4713"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-d1545fc"
+                                data-id="d1545fc"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-ee693ef aleft elementor-widget elementor-widget-wgl-double-heading"
+                                    data-id="ee693ef"
+                                    data-element_type="widget"
+                                    id="shop"
+                                    data-widget_type="wgl-double-heading.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-double-heading">
+                                        <div className="dblh__subtitle">
+                                          <span>DeepCave NFT&apos;s</span>
+                                        </div>
+                                        <h2 className="dblh__title-wrapper">
+                                          <span className="dblh__title dblh__title-1">
+                                            Most Popular NFTs
+                                          </span>
+                                        </h2>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-7d13176 elementor-grid-3 elementor-grid-tablet-3 elementor-grid-mobile-2 elementor-products-grid elementor-wc-products elementor-widget elementor-widget-woocommerce-products"
+                                    data-id="7d13176"
+                                    data-element_type="widget"
+                                    data-widget_type="woocommerce-products.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="woocommerce columns-3 ">
+                                        <div className="wgl-products  anim-slide-left">
+                                          <div className="product type-product post-5150 status-publish first instock product_cat-deepcave has-post-thumbnail shipping-taxable product-type-external">
+                                            <div className="woo_product_inner_wrapper">
+                                              {" "}
+                                              <div className="woo_product_image shop_media">
+                                                <div className="picture no_effects">
+                                                  {" "}
+                                                  <a
+                                                    className="woo_post-link"
+                                                    href="https://deepcave.io/product/deepcave-99017/"
+                                                  >
+                                                    <img
+                                                      decoding="async"
+                                                      width="540"
+                                                      height="540"
+                                                      src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8216-540x540.png"
+                                                      className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                      alt=""
+                                                      srcSet="https://deepcave.io/wp-content/uploads/2023/10/IMG_8216-540x540.png 540w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8216-300x300.png 300w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8216-150x150.png 150w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8216-768x768.png 768w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8216-240x240.png 240w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8216.png 800w"
+                                                      sizes="(max-width: 540px) 100vw, 540px"
+                                                    />
+                                                  </a>{" "}
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content primary">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99017/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99017
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                                <div className="wgl_woo_button_wrapper">
+                                                  <a
+                                                    href="https://opensea.io/assets/matic/0xa381d58b0f009814e3c59241d43b052cc7612696/15"
+                                                    data-quantity="1"
+                                                    className="button product_type_external"
+                                                    data-product_id="5150"
+                                                    data-product_sku=""
+                                                    aria-label="Make offer"
+                                                    aria-describedby=""
+                                                    rel="nofollow"
+                                                  >
+                                                    Make offer
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content emulate">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99017/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99017
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div className="product type-product post-5149 status-publish instock product_cat-deepcave has-post-thumbnail shipping-taxable product-type-external">
+                                            <div className="woo_product_inner_wrapper">
+                                              {" "}
+                                              <div className="woo_product_image shop_media">
+                                                <div className="picture no_effects">
+                                                  {" "}
+                                                  <a
+                                                    className="woo_post-link"
+                                                    href="https://deepcave.io/product/deepcave-99016/"
+                                                  >
+                                                    <img
+                                                      loading="lazy"
+                                                      decoding="async"
+                                                      width="540"
+                                                      height="540"
+                                                      src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8215-540x540.png"
+                                                      className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                      alt=""
+                                                      srcSet="https://deepcave.io/wp-content/uploads/2023/10/IMG_8215-540x540.png 540w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8215-300x300.png 300w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8215-150x150.png 150w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8215-768x768.png 768w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8215-240x240.png 240w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8215.png 800w"
+                                                      sizes="(max-width: 540px) 100vw, 540px"
+                                                    />{" "}
+                                                  </a>{" "}
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content primary">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99016/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99016
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                                <div className="wgl_woo_button_wrapper">
+                                                  <a
+                                                    href="https://opensea.io/assets/matic/0xa381d58b0f009814e3c59241d43b052cc7612696/14"
+                                                    data-quantity="1"
+                                                    className="button product_type_external"
+                                                    data-product_id="5149"
+                                                    data-product_sku=""
+                                                    aria-label="Make offer"
+                                                    aria-describedby=""
+                                                    rel="nofollow"
+                                                  >
+                                                    Make offer
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content emulate">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99016/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99016
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div className="product type-product post-5148 status-publish last instock product_cat-deepcave has-post-thumbnail shipping-taxable product-type-external">
+                                            <div className="woo_product_inner_wrapper">
+                                              {" "}
+                                              <div className="woo_product_image shop_media">
+                                                <div className="picture no_effects">
+                                                  {" "}
+                                                  <a
+                                                    className="woo_post-link"
+                                                    href="https://deepcave.io/product/deepcave-99015/"
+                                                  >
+                                                    <img
+                                                      loading="lazy"
+                                                      decoding="async"
+                                                      width="540"
+                                                      height="540"
+                                                      src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8214-540x540.png"
+                                                      className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                      alt=""
+                                                      srcSet="https://deepcave.io/wp-content/uploads/2023/10/IMG_8214-540x540.png 540w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8214-300x300.png 300w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8214-150x150.png 150w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8214-768x768.png 768w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8214-240x240.png 240w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8214.png 800w"
+                                                      sizes="(max-width: 540px) 100vw, 540px"
+                                                    />{" "}
+                                                  </a>{" "}
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content primary">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99015/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99015
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                                <div className="wgl_woo_button_wrapper">
+                                                  <a
+                                                    href="https://opensea.io/assets/matic/0xa381d58b0f009814e3c59241d43b052cc7612696/13"
+                                                    data-quantity="1"
+                                                    className="button product_type_external"
+                                                    data-product_id="5148"
+                                                    data-product_sku=""
+                                                    aria-label="Make offer"
+                                                    aria-describedby=""
+                                                    rel="nofollow"
+                                                  >
+                                                    Make offer
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content emulate">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99015/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99015
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div className="product type-product post-5147 status-publish first instock product_cat-deepcave has-post-thumbnail shipping-taxable product-type-external">
+                                            <div className="woo_product_inner_wrapper">
+                                              {" "}
+                                              <div className="woo_product_image shop_media">
+                                                <div className="picture no_effects">
+                                                  {" "}
+                                                  <a
+                                                    className="woo_post-link"
+                                                    href="https://deepcave.io/product/deepcave-99014/"
+                                                  >
+                                                    <img
+                                                      loading="lazy"
+                                                      decoding="async"
+                                                      width="540"
+                                                      height="540"
+                                                      src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8213-540x540.png"
+                                                      className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                      alt=""
+                                                      srcSet="https://deepcave.io/wp-content/uploads/2023/10/IMG_8213-540x540.png 540w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8213-300x300.png 300w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8213-150x150.png 150w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8213-768x768.png 768w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8213-240x240.png 240w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8213.png 800w"
+                                                      sizes="(max-width: 540px) 100vw, 540px"
+                                                    />{" "}
+                                                  </a>{" "}
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content primary">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99014/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99014
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                                <div className="wgl_woo_button_wrapper">
+                                                  <a
+                                                    href="https://opensea.io/assets/matic/0xa381d58b0f009814e3c59241d43b052cc7612696/12"
+                                                    data-quantity="1"
+                                                    className="button product_type_external"
+                                                    data-product_id="5147"
+                                                    data-product_sku=""
+                                                    aria-label="Make offer"
+                                                    aria-describedby=""
+                                                    rel="nofollow"
+                                                  >
+                                                    Make offer
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content emulate">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99014/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99014
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div className="product type-product post-5146 status-publish instock product_cat-deepcave has-post-thumbnail shipping-taxable product-type-external">
+                                            <div className="woo_product_inner_wrapper">
+                                              {" "}
+                                              <div className="woo_product_image shop_media">
+                                                <div className="picture no_effects">
+                                                  {" "}
+                                                  <a
+                                                    className="woo_post-link"
+                                                    href="https://deepcave.io/product/deepcave-99013/"
+                                                  >
+                                                    <img
+                                                      loading="lazy"
+                                                      decoding="async"
+                                                      width="540"
+                                                      height="540"
+                                                      src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8212-540x540.png"
+                                                      className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                      alt=""
+                                                      srcSet="https://deepcave.io/wp-content/uploads/2023/10/IMG_8212-540x540.png 540w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8212-300x300.png 300w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8212-150x150.png 150w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8212-768x768.png 768w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8212-240x240.png 240w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8212.png 800w"
+                                                      sizes="(max-width: 540px) 100vw, 540px"
+                                                    />{" "}
+                                                  </a>{" "}
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content primary">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99013/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99013
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                                <div className="wgl_woo_button_wrapper">
+                                                  <a
+                                                    href="https://opensea.io/assets/matic/0xa381d58b0f009814e3c59241d43b052cc7612696/11"
+                                                    data-quantity="1"
+                                                    className="button product_type_external"
+                                                    data-product_id="5146"
+                                                    data-product_sku=""
+                                                    aria-label="Make offer"
+                                                    aria-describedby=""
+                                                    rel="nofollow"
+                                                  >
+                                                    Make offer
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content emulate">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99013/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99013
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <div className="product type-product post-5145 status-publish last instock product_cat-deepcave has-post-thumbnail shipping-taxable product-type-external">
+                                            <div className="woo_product_inner_wrapper">
+                                              {" "}
+                                              <div className="woo_product_image shop_media">
+                                                <div className="picture no_effects">
+                                                  {" "}
+                                                  <a
+                                                    className="woo_post-link"
+                                                    href="https://deepcave.io/product/deepcave-99012/"
+                                                  >
+                                                    <img
+                                                      loading="lazy"
+                                                      decoding="async"
+                                                      width="540"
+                                                      height="540"
+                                                      src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8211-540x540.png"
+                                                      className="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                      alt=""
+                                                      srcSet="https://deepcave.io/wp-content/uploads/2023/10/IMG_8211-540x540.png 540w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8211-300x300.png 300w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8211-150x150.png 150w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8211-768x768.png 768w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8211-240x240.png 240w, https://deepcave.io/wp-content/uploads/2023/10/IMG_8211.png 800w"
+                                                      sizes="(max-width: 540px) 100vw, 540px"
+                                                    />
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content primary">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99012/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99012
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                                <div className="wgl_woo_button_wrapper">
+                                                  <a
+                                                    href="https://opensea.io/assets/matic/0xa381d58b0f009814e3c59241d43b052cc7612696/10"
+                                                    data-quantity="1"
+                                                    className="button product_type_external"
+                                                    data-product_id="5145"
+                                                    data-product_sku=""
+                                                    aria-label="Make offer"
+                                                    aria-describedby=""
+                                                    rel="nofollow"
+                                                  >
+                                                    Make offer
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div className="woo_product_content emulate">
+                                                <div className="woocommerce-loop-product__wrapper title_wrapper">
+                                                  <h2 className="woocommerce-loop-product__title">
+                                                    <a
+                                                      href="https://deepcave.io/product/deepcave-99012/"
+                                                      className="woocommerce-LoopProduct-link woocommerce-loop-product__link"
+                                                    >
+                                                      Mickey Mesh #99012
+                                                    </a>
+                                                  </h2>
+                                                  <div className="woocommerce-loop-product__price"></div>
+                                                </div>
+                                                <div className="woocommerce-loop-product__cats_wrapper">
+                                                  <div className="woocommerce-loop-product__cats">
+                                                    <a
+                                                      href="https://deepcave.io/product-categorie/deepcave/"
+                                                      className="woocommerce-LoopProduct-cat"
+                                                    >
+                                                      Deepcave
+                                                    </a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-b75a03b elementor-widget elementor-widget-spacer"
+                                    data-id="b75a03b"
+                                    data-element_type="widget"
+                                    data-widget_type="spacer.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="elementor-spacer">
+                                        <div className="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-a67f053 aleft elementor-widget-icon-box wgl-icon-box elementor-widget elementor-widget-wgl-button"
+                                    data-id="a67f053"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-button.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <a
+                                        className="wgl-button btn-size-lg "
+                                        role="button"
+                                        href="/shop/"
+                                      >
+                                        <div className="button__content align-icon-left">
+                                          <div className="media-wrapper icon-wrapper"></div>
+                                          <span className="button__text">
+                                            View More
+                                          </span>
+                                        </div>
+                                      </a>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <div
+                            className="elementor-element elementor-element-38aae0e elementor-widget elementor-widget-spacer"
+                            data-id="38aae0e"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-07d12ca elementor-widget elementor-widget-spacer"
+                            data-id="07d12ca"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-62bf750 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="62bf750"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-82552ac"
+                                data-id="82552ac"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-87de8b8 aleft elementor-widget elementor-widget-wgl-double-heading"
+                                    data-id="87de8b8"
+                                    data-element_type="widget"
+                                    id="offer"
+                                    data-widget_type="wgl-double-heading.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-double-heading">
+                                        <h2 className="dblh__title-wrapper">
+                                          <span className="dblh__title dblh__title-1">
+                                            Revenue Sharing Model
+                                          </span>
+                                        </h2>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-5accbe5 elementor-widget elementor-widget-text-editor"
+                                    data-id="5accbe5"
+                                    data-element_type="widget"
+                                    data-widget_type="text-editor.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <p>
+                                        <span
+                                          style={{
+                                            display: "block",
+                                            color: "var(--nico-tertiary-color)",
+                                            fontSize: "20px",
+                                            marginBottom: "4px",
+                                          }}
+                                        >
+                                          DeepCave is reshaping how investors,
+                                          artists, and creators earn money.
+                                          Here’s how you can generate income
+                                          with DeepCave.
+                                        </span>
+                                      </p>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-6f836c3 aleft elementor-widget elementor-widget-wgl-button"
+                                    data-id="6f836c3"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-button.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <a
+                                        className="wgl-button btn-size-lg "
+                                        role="button"
+                                        href="/revenue-model/"
+                                      >
+                                        <div className="button__content ">
+                                          <span className="button__text">
+                                            Read More
+                                          </span>
+                                        </div>
+                                      </a>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-807a07f elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="807a07f"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-d772535"
+                                data-id="d772535"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-8e5d029 elementor-widget elementor-widget-spacer"
+                                    data-id="8e5d029"
+                                    data-element_type="widget"
+                                    data-widget_type="spacer.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="elementor-spacer">
+                                        <div className="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-2dee445 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="2dee445"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9ef0e67"
+                                data-id="9ef0e67"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated e-swiper-container">
+                                  <div
+                                    className="elementor-element elementor-element-3905565 aleft elementor-widget elementor-widget-wgl-double-heading"
+                                    data-id="3905565"
+                                    data-element_type="widget"
+                                    id="team"
+                                    data-widget_type="wgl-double-heading.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-double-heading">
+                                        <div className="dblh__subtitle">
+                                          <span>OUR TEAM MEMBERS</span>
+                                        </div>
+                                        <h2 className="dblh__title-wrapper">
+                                          <span className="dblh__title dblh__title-1">
+                                            Meet DeepCave
+                                          </span>
+                                        </h2>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-84898a8 acenter elementor-widget elementor-widget-wgl-team e-widget-swiper"
+                                    data-id="84898a8"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-team.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <section className="wgl_module_team">
+                                        <div className="team__members grid-col--4 carousel">
+                                          <div className="wgl-carousel_wrapper navigation-position-nearby">
+                                            <div
+                                              className="wgl-carousel swiper wgl-carousel_swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events"
+                                              data-swiper='{"animationDuration":300,"watchOverflow":true,"infinite":true,"variableWidth":false,"autoplay":false,"autoplaySpeed":null,"autoplayPause":true,"autoplayReverse":false,"arrows":true,"dots":false,"adaptiveHeight":false,"responsive":[{"breakpoint":1601,"slidesToShow":"4","slidesToScroll":1},{"breakpoint":1201,"slidesToShow":"4","slidesToScroll":1},{"breakpoint":768,"slidesToShow":"2","slidesToScroll":1},{"breakpoint":280,"slidesToShow":"1","slidesToScroll":1}]}'
+                                              data-item-carousel="wgl_carousel_6566af77be41e"
+                                            >
+                                              <div
+                                                className="swiper-wrapper"
+                                                id="swiper-wrapper-9f0c104fdd5a7b8b3"
+                                                aria-live="off"
+                                                style={{
+                                                  transform:
+                                                    "translate3d(-1301px, 0px, 0px)",
+                                                  transitionDuration: "0ms",
+                                                }}
+                                              >
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate"
+                                                  data-swiper-slide-index="7"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="8 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/liam-mccallister/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8109-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/liam-mccallister/">
+                                                          Liam McCallister
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CFO
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate"
+                                                  data-swiper-slide-index="8"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="9 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/camille-dubois/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8106-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/camille-dubois/">
+                                                          Camille Dubois
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          Visual Storytelling
+                                                          Officer
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate"
+                                                  data-swiper-slide-index="9"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="10 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/siobhan-oneill/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8107-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/siobhan-oneill/">
+                                                          Siobhan O’Neill
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          Chief Design
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate swiper-slide-prev"
+                                                  data-swiper-slide-index="10"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="11 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/elenore-fournier-lacroix/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8108-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/elenore-fournier-lacroix/">
+                                                          Elénore
+                                                          Fournier-Lacroix
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          Chief VR Animator
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-active"
+                                                  data-swiper-slide-index="0"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="1 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/gabriel-kalifi/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8098-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/gabriel-kalifi/">
+                                                          Gabriel Kalifi
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CCO &amp; Board
+                                                          Advisor
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-next"
+                                                  data-swiper-slide-index="1"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="2 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/balthazar-saint-pierre/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8103-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/balthazar-saint-pierre/">
+                                                          Balthazar Saint-Pierre
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CEO &amp; Lead
+                                                          Blockchain
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide"
+                                                  data-swiper-slide-index="2"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="3 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/niamh-mc-farland/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8105-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/niamh-mc-farland/">
+                                                          Niamh Mc Farland
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CRO
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide"
+                                                  data-swiper-slide-index="3"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="4 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/niels-de-ruiter/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8104-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/niels-de-ruiter/">
+                                                          Niels de Ruiter
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CMO
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide"
+                                                  data-swiper-slide-index="4"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="5 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/francois-xavier-leclair/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8102-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/francois-xavier-leclair/">
+                                                          François-Xavier
+                                                          Leclair
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          COO
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide"
+                                                  data-swiper-slide-index="5"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="6 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/raphael-duvalier/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8101-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/raphael-duvalier/">
+                                                          Raphaël Duvalier
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CTO &amp; Senior
+                                                          Developer
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide"
+                                                  data-swiper-slide-index="6"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="7 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/aiden-omally/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8100-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/aiden-omally/">
+                                                          Aiden O’Mally
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CSO
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide"
+                                                  data-swiper-slide-index="7"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="8 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/liam-mccallister/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8109-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/liam-mccallister/">
+                                                          Liam McCallister
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CFO
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide"
+                                                  data-swiper-slide-index="8"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="9 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/camille-dubois/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8106-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/camille-dubois/">
+                                                          Camille Dubois
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          Visual Storytelling
+                                                          Officer
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide"
+                                                  data-swiper-slide-index="9"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="10 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/siobhan-oneill/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8107-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/siobhan-oneill/">
+                                                          Siobhan O’Neill
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          Chief Design
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate-prev"
+                                                  data-swiper-slide-index="10"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="11 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/elenore-fournier-lacroix/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8108-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/elenore-fournier-lacroix/">
+                                                          Elénore
+                                                          Fournier-Lacroix
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          Chief VR Animator
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                                                  data-swiper-slide-index="0"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="1 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/gabriel-kalifi/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8098-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/gabriel-kalifi/">
+                                                          Gabriel Kalifi
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CCO &amp; Board
+                                                          Advisor
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                                                  data-swiper-slide-index="1"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="2 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/balthazar-saint-pierre/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8103-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/balthazar-saint-pierre/">
+                                                          Balthazar Saint-Pierre
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CEO &amp; Lead
+                                                          Blockchain
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate"
+                                                  data-swiper-slide-index="2"
+                                                  style={{ width: "325.25px" }}
+                                                  role="group"
+                                                  aria-label="3 / 11"
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/niamh-mc-farland/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8105-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/niamh-mc-farland/">
+                                                          Niamh Mc Farland
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CRO
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                                <article
+                                                  className="team__member swiper-slide swiper-slide-duplicate"
+                                                  data-swiper-slide-index="3"
+                                                  role="group"
+                                                  aria-label="4 / 11"
+                                                  style={{ width: "325.25px" }}
+                                                >
+                                                  <div className="member__wrapper">
+                                                    <div className="member__media">
+                                                      <a
+                                                        href="https://deepcave.io/team/niels-de-ruiter/"
+                                                        className="member__thumbnail"
+                                                      >
+                                                        <img
+                                                          decoding="async"
+                                                          src="https://deepcave.io/wp-content/uploads/2023/10/IMG_8104-580x540.jpg"
+                                                          className="thumbnail__featured"
+                                                          alt=""
+                                                        />
+                                                      </a>
+                                                    </div>
+                                                    <div className="member__info">
+                                                      <h2 className="member__name">
+                                                        <a href="https://deepcave.io/team/niels-de-ruiter/">
+                                                          Niels de Ruiter
+                                                        </a>
+                                                      </h2>
+                                                      <div className="info__wrapper">
+                                                        <div className="info__highlighted">
+                                                          CMO
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </article>
+                                              </div>
+                                              <span
+                                                className="swiper-notification"
+                                                aria-live="assertive"
+                                                aria-atomic="true"
+                                              ></span>
+                                            </div>
+                                            <div className="wgl-navigation_wrapper">
+                                              <button
+                                                className="elementor-swiper-button elementor-swiper-button-prev"
+                                                data-carousel="wgl_carousel_6566af77be41e"
+                                                tabIndex={0}
+                                                aria-label="Previous slide"
+                                                aria-controls="swiper-wrapper-9f0c104fdd5a7b8b3"
+                                              >
+                                                <i className="flaticon flaticon-left-arrow"></i>
+                                              </button>
+                                              <button
+                                                className="elementor-swiper-button elementor-swiper-button-next"
+                                                data-carousel="wgl_carousel_6566af77be41e"
+                                                tabIndex={0}
+                                                aria-label="Next slide"
+                                                aria-controls="swiper-wrapper-9f0c104fdd5a7b8b3"
+                                              >
+                                                <i className="flaticon flaticon-left-arrow"></i>
+                                              </button>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </section>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <div
+                            className="elementor-element elementor-element-2f5231f elementor-widget elementor-widget-spacer"
+                            data-id="2f5231f"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-5289fd7 elementor-widget elementor-widget-wgl-clients e-widget-swiper"
+                            data-id="5289fd7"
+                            data-element_type="widget"
+                            id="partners"
+                            data-widget_type="wgl-clients.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div
+                                className="wgl-clients clearfix anim-ex_images items-5"
+                                data-carousel="yes"
+                              >
+                                <div className="wgl-carousel_wrapper">
+                                  <div
+                                    className="wgl-carousel swiper wgl-carousel_swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+                                    data-swiper='{"animationDuration":300,"watchOverflow":true,"infinite":false,"variableWidth":false,"autoplay":false,"autoplaySpeed":null,"autoplayPause":true,"autoplayReverse":false,"arrows":false,"dots":false,"adaptiveHeight":false,"responsive":[{"breakpoint":1601,"slidesToShow":"5","slidesToScroll":"5"},{"breakpoint":1201,"slidesToShow":"6","slidesToScroll":"6"},{"breakpoint":768,"slidesToShow":"4","slidesToScroll":"4"},{"breakpoint":280,"slidesToShow":"2","slidesToScroll":"2"}]}'
+                                    data-item-carousel="wgl_carousel_6566af77c0882"
+                                  >
+                                    <div
+                                      className="swiper-wrapper"
+                                      id="swiper-wrapper-c7adb7645d587ccc"
+                                      aria-live="off"
+                                      style={{
+                                        transform: "translate3d(0px, 0px, 0px)",
+                                      }}
+                                    >
+                                      <div
+                                        className="clients_image elementor-repeater-item-22034c1 swiper-slide swiper-slide-active"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="1 / 7"
+                                      >
+                                        <a
+                                          className="image_link image_wrapper"
+                                          href="https://www.dexview.com/eth/0x63f3795f332be0b27580EDB6b33613CF4E5a7C30"
+                                        >
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="Laag 2"
+                                            src="https://deepcave.io/wp-content/uploads/2023/11/Laag-2-1.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="Laag 2 kopie"
+                                            src="https://deepcave.io/wp-content/uploads/2023/11/Laag-2-kopie.png"
+                                          />
+                                        </a>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-a096703 swiper-slide swiper-slide-next"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="2 / 7"
+                                      >
+                                        <a
+                                          className="image_link image_wrapper"
+                                          href="https://www.pinksale.finance/launchpad/0x4b010864E55DF415d6f3d8F7f47a3E35143c8C78?chain=ETH"
+                                        >
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="Laag 3 kopie"
+                                            src="https://deepcave.io/wp-content/uploads/2023/11/Laag-3-kopie.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="Laag 3 kopie 3"
+                                            src="https://deepcave.io/wp-content/uploads/2023/11/Laag-3-kopie-3.png"
+                                          />
+                                        </a>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-755e332 swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="3 / 7"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1-2"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-2-2.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1-2"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-2.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-49f8a9e swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="4 / 7"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-9.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-ec6811a swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="5 / 7"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="1_dUnZZzFB-_csrzhehx82iQ@2x"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/1_dUnZZzFB-_csrzhehx82iQ@2x-1.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="1_dUnZZzFB-_csrzhehx82iQ@2x"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/1_dUnZZzFB-_csrzhehx82iQ@2x.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-55acae9 swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="6 / 7"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="clients_5-4"
+                                            src="https://deepcave.io/wp-content/uploads/2022/04/clients_5-4.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="clients_5-3"
+                                            src="https://deepcave.io/wp-content/uploads/2022/04/clients_5-3.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-6dc7763 swiper-slide"
+                                        role="group"
+                                        aria-label="7 / 7"
+                                        style={{ width: "190.5px" }}
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="clients_6-4"
+                                            src="https://deepcave.io/wp-content/uploads/2022/04/clients_6-4.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="clients_6-3"
+                                            src="https://deepcave.io/wp-content/uploads/2022/04/clients_6-3.png"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <span
+                                      className="swiper-notification"
+                                      aria-live="assertive"
+                                      aria-atomic="true"
+                                    ></span>
+                                  </div>
+                                </div>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-4b6e464 elementor-widget elementor-widget-wgl-clients e-widget-swiper"
+                            data-id="4b6e464"
+                            data-element_type="widget"
+                            data-widget_type="wgl-clients.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div
+                                className="wgl-clients clearfix anim-ex_images items-5"
+                                data-carousel="yes"
+                              >
+                                <div className="wgl-carousel_wrapper">
+                                  <div
+                                    className="wgl-carousel swiper wgl-carousel_swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+                                    data-swiper='{"animationDuration":300,"watchOverflow":true,"infinite":false,"variableWidth":false,"autoplay":false,"autoplaySpeed":null,"autoplayPause":true,"autoplayReverse":false,"arrows":false,"dots":false,"adaptiveHeight":false,"responsive":[{"breakpoint":1601,"slidesToShow":"5","slidesToScroll":"5"},{"breakpoint":1201,"slidesToShow":"6","slidesToScroll":"6"},{"breakpoint":768,"slidesToShow":"4","slidesToScroll":"4"},{"breakpoint":280,"slidesToShow":"2","slidesToScroll":"2"}]}'
+                                    data-item-carousel="wgl_carousel_6566af77c193a"
+                                  >
+                                    <div
+                                      className="swiper-wrapper"
+                                      id="swiper-wrapper-7fe932f3f3d66de5"
+                                      aria-live="off"
+                                      style={{
+                                        transform: "translate3d(0px, 0px, 0px)",
+                                      }}
+                                    >
+                                      <div
+                                        className="clients_image elementor-repeater-item-22034c1 swiper-slide swiper-slide-active"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="1 / 5"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1-1"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-1-2.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1-1"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-1.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-49f8a9e swiper-slide swiper-slide-next"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="2 / 5"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1-1 (1)"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-1-1-2.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1-1 (1)"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-1-1.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-ec6811a swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="3 / 5"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1-3 (1)"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-3-1-2.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1-3 (1)"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-3-1.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-55acae9 swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="4 / 5"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1-4"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-4-2.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1-4"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-4.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-6dc7763 swiper-slide"
+                                        role="group"
+                                        aria-label="5 / 5"
+                                        style={{ width: "190.5px" }}
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1-5-1"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-5-1-1.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1-5-1"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-5-1.png"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <span
+                                      className="swiper-notification"
+                                      aria-live="assertive"
+                                      aria-atomic="true"
+                                    ></span>
+                                  </div>
+                                </div>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-9f0552a elementor-widget elementor-widget-wgl-clients e-widget-swiper"
+                            data-id="9f0552a"
+                            data-element_type="widget"
+                            data-widget_type="wgl-clients.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div
+                                className="wgl-clients clearfix anim-ex_images items-5"
+                                data-carousel="yes"
+                              >
+                                <div className="wgl-carousel_wrapper">
+                                  <div
+                                    className="wgl-carousel swiper wgl-carousel_swiper swiper-container swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+                                    data-swiper='{"animationDuration":300,"watchOverflow":true,"infinite":false,"variableWidth":false,"autoplay":false,"autoplaySpeed":null,"autoplayPause":true,"autoplayReverse":false,"arrows":false,"dots":false,"adaptiveHeight":false,"responsive":[{"breakpoint":1601,"slidesToShow":"5","slidesToScroll":"5"},{"breakpoint":1201,"slidesToShow":"6","slidesToScroll":"6"},{"breakpoint":768,"slidesToShow":"4","slidesToScroll":"4"},{"breakpoint":280,"slidesToShow":"2","slidesToScroll":"2"}]}'
+                                    data-item-carousel="wgl_carousel_6566af77c2bcc"
+                                  >
+                                    <div
+                                      className="swiper-wrapper"
+                                      id="swiper-wrapper-bd14482c6d288b28"
+                                      aria-live="off"
+                                      style={{
+                                        transform: "translate3d(0px, 0px, 0px)",
+                                      }}
+                                    >
+                                      <div
+                                        className="clients_image elementor-repeater-item-22034c1 swiper-slide swiper-slide-active"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="1 / 6"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1-6"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-6-1.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1-6"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-6.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-755e332 swiper-slide swiper-slide-next"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="2 / 6"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="l1-5"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-5-2.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="l1-5"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/l1-5.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-49f8a9e swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="3 / 6"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="clients_3-4"
+                                            src="https://deepcave.io/wp-content/uploads/2022/04/clients_3-4.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="clients_3-3"
+                                            src="https://deepcave.io/wp-content/uploads/2022/04/clients_3-3.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-ec6811a swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="4 / 6"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="Mina (MINA)"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/Mina-MINA-1.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="Mina (MINA)"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/Mina-MINA.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-55acae9 swiper-slide"
+                                        style={{ width: "190.5px" }}
+                                        role="group"
+                                        aria-label="5 / 6"
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="clients_4-4"
+                                            src="https://deepcave.io/wp-content/uploads/2022/04/clients_4-4.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="clients_4-3"
+                                            src="https://deepcave.io/wp-content/uploads/2022/04/clients_4-3.png"
+                                          />
+                                        </div>
+                                      </div>
+                                      <div
+                                        className="clients_image elementor-repeater-item-6dc7763 swiper-slide"
+                                        role="group"
+                                        aria-label="6 / 6"
+                                        style={{ width: "190.5px" }}
+                                      >
+                                        <div className="image_wrapper">
+                                          <img
+                                            decoding="async"
+                                            className="hover_image"
+                                            alt="cardano (1)"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/cardano-1-1.png"
+                                          />
+                                          <img
+                                            decoding="async"
+                                            className="main_image"
+                                            alt="cardano"
+                                            src="https://deepcave.io/wp-content/uploads/2023/10/cardano-2.png"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <span
+                                      className="swiper-notification"
+                                      aria-live="assertive"
+                                      aria-atomic="true"
+                                    ></span>
+                                  </div>
+                                </div>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-c14c3f6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="c14c3f6"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a8b3061"
+                                data-id="a8b3061"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-04409a2 elementor-widget elementor-widget-spacer"
+                                    data-id="04409a2"
+                                    data-element_type="widget"
+                                    data-widget_type="spacer.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="elementor-spacer">
+                                        <div className="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-c2a4738 aleft elementor-widget elementor-widget-wgl-double-heading"
+                                    data-id="c2a4738"
+                                    data-element_type="widget"
+                                    id="community"
+                                    data-widget_type="wgl-double-heading.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-double-heading">
+                                        <div className="dblh__subtitle">
+                                          <span>OUR COMMUNITY</span>
+                                        </div>
+                                        <h2 className="dblh__title-wrapper">
+                                          <span className="dblh__title dblh__title-1">
+                                            Join Our Thriving Community
+                                          </span>
+                                        </h2>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="elementor-element elementor-element-0b5ddbb aleft elementor-widget elementor-widget-wgl-button"
+                                    data-id="0b5ddbb"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-button.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <a
+                                        className="wgl-button btn-size-lg "
+                                        role="button"
+                                        href="https://t.me/deepcaveglobalgroup"
+                                      >
+                                        <div className="button__content ">
+                                          <span className="button__text">
+                                            Join Community
+                                          </span>
+                                        </div>
+                                      </a>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e7c0f91"
+                                data-id="e7c0f91"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-bee6d49 elementor-widget elementor-widget-wgl-image-layers"
+                                    data-id="bee6d49"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-image-layers.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-image-layers">
+                                        <div
+                                          className="img-layer_image-wrapper"
+                                          style={{ zIndex: "1" }}
+                                        >
+                                          <div
+                                            className="img-layer_item"
+                                            style={{
+                                              transform: "translate(0px, 0%)",
+                                            }}
+                                          >
+                                            <div
+                                              className="img-layer_image"
+                                              style={{
+                                                transition: "all 800ms",
+                                                transitionDelay: "600ms",
+                                              }}
+                                            >
+                                              <img
+                                                decoding="async"
+                                                src="https://deepcave.io/wp-content/uploads/2022/06/home5-il-2-1.png"
+                                                alt="home5-il-2-1"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>{" "}
+                                        <div
+                                          className="img-layer_image-wrapper"
+                                          style={{ zIndex: "1" }}
+                                        >
+                                          <div
+                                            className="img-layer_item"
+                                            style={{
+                                              transform: "translate(0px, 0%)",
+                                            }}
+                                          >
+                                            <div
+                                              className="img-layer_image"
+                                              style={{
+                                                transition: "all 800ms",
+                                                transitionDelay: "1200ms",
+                                              }}
+                                            >
+                                              <img
+                                                decoding="async"
+                                                src="https://deepcave.io/wp-content/uploads/2023/10/deepcave-2-2.png"
+                                                alt="deepcave (2)"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>{" "}
+                                        <div
+                                          className="img-layer_image-wrapper"
+                                          style={{ zIndex: "1" }}
+                                        >
+                                          <div
+                                            className="img-layer_item"
+                                            style={{
+                                              transform: "translate(0px, 0%)",
+                                            }}
+                                          >
+                                            <div
+                                              className="img-layer_image"
+                                              style={{
+                                                transition: "all 800ms",
+                                                transitionDelay: "1800ms",
+                                              }}
+                                            >
+                                              <img
+                                                decoding="async"
+                                                src="https://deepcave.io/wp-content/uploads/2023/10/deepcave-2-1.png"
+                                                alt="deepcave (2)"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>{" "}
+                                        <div
+                                          className="img-layer_image-wrapper"
+                                          style={{ zIndex: "1" }}
+                                        >
+                                          <div
+                                            className="img-layer_item"
+                                            style={{
+                                              transform: "translate(0px, 0%)",
+                                            }}
+                                          >
+                                            <div
+                                              className="img-layer_image"
+                                              style={{
+                                                transition: "all 800ms",
+                                                transitionDelay: "2400ms",
+                                              }}
+                                            >
+                                              <img
+                                                decoding="async"
+                                                src="https://deepcave.io/wp-content/uploads/2023/10/deepcave-3-1.png"
+                                                alt="deepcave (3)"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>{" "}
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <div
+                            className="elementor-element elementor-element-4556a30 elementor-widget elementor-widget-spacer"
+                            data-id="4556a30"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <div
+                    className="elementor-element elementor-element-d35ffb9 e-flex e-con-boxed e-con e-parent"
+                    data-id="d35ffb9"
+                    data-element_type="container"
+                    data-settings='{"content_width":"boxed"}'
+                    data-core-v316-plus="true"
+                  >
+                    <div className="e-con-inner">
+                      <div
+                        className="elementor-element elementor-element-58892fa e-con-full e-flex e-con e-child"
+                        data-id="58892fa"
+                        data-element_type="container"
+                        data-settings='{"content_width":"full"}'
+                      >
+                        <div
+                          className="elementor-element elementor-element-16ce645 elementor-widget elementor-widget-video"
+                          data-id="16ce645"
+                          data-element_type="widget"
+                          data-settings='{"youtube_url":"https:\/\/www.youtube.com\/watch?v=nxlk6BdacRA","video_type":"youtube","controls":"yes"}'
+                          data-widget_type="video.default"
+                        >
+                          <div className="elementor-widget-container">
+                            <div className="elementor-wrapper elementor-open-inline">
+                              <iframe
+                                className="elementor-video"
+                                allowFullScreen={true}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                title="COMO CREAR UN NFT EN UN CLICK con IA | Deepcave"
+                                width="640"
+                                height="360"
+                                src="https://www.youtube.com/embed/nxlk6BdacRA?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fdeepcave.io&amp;widgetid=1"
+                                id="widget2"
+                                data-gtm-yt-inspected-6="true"
+                              ></iframe>{" "}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="elementor-element elementor-element-9a87242 e-con-full e-flex e-con e-child"
+                        data-id="9a87242"
+                        data-element_type="container"
+                        data-settings='{"content_width":"full"}'
+                      >
+                        <div
+                          className="elementor-element elementor-element-3d7ace5 elementor-widget elementor-widget-video"
+                          data-id="3d7ace5"
+                          data-element_type="widget"
+                          data-settings='{"youtube_url":"https:\/\/www.youtube.com\/watch?v=gBgUo-X_Yy8","video_type":"youtube","controls":"yes"}'
+                          data-widget_type="video.default"
+                        >
+                          <div className="elementor-widget-container">
+                            <div className="elementor-wrapper elementor-open-inline">
+                              <iframe
+                                className="elementor-video"
+                                allowFullScreen={true}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                title="ESSA CRIPTOMOEDA NÃO PARA DE SUBIR - 200% EM 24 HORAS - EU AVISEI E VOCÊ NÃO ESCUTOU!"
+                                width="640"
+                                height="360"
+                                src="https://www.youtube.com/embed/gBgUo-X_Yy8?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fdeepcave.io&amp;widgetid=3"
+                                id="widget4"
+                                data-gtm-yt-inspected-6="true"
+                              ></iframe>{" "}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="elementor-element elementor-element-1b6d3bb e-con-full e-flex e-con e-child"
+                        data-id="1b6d3bb"
+                        data-element_type="container"
+                        data-settings='{"content_width":"full"}'
+                      >
+                        <div
+                          className="elementor-element elementor-element-3599f08 elementor-widget elementor-widget-video"
+                          data-id="3599f08"
+                          data-element_type="widget"
+                          data-settings='{"youtube_url":"https:\/\/www.youtube.com\/watch?v=zzmScxkhmr8","video_type":"youtube","controls":"yes"}'
+                          data-widget_type="video.default"
+                        >
+                          <div className="elementor-widget-container">
+                            <div className="elementor-wrapper elementor-open-inline">
+                              <iframe
+                                className="elementor-video"
+                                allowFullScreen={true}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                title="LET AI BRING YOUR WORD INTO LIFE! ! 🔥 Deep Cave 🔥 TURNS YOUR WORD INTO ART! 🔥"
+                                width="640"
+                                height="360"
+                                src="https://www.youtube.com/embed/zzmScxkhmr8?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fdeepcave.io&amp;widgetid=5"
+                                id="widget6"
+                                data-gtm-yt-inspected-6="true"
+                              ></iframe>{" "}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        className="elementor-element elementor-element-878ec40 e-con-full e-flex e-con e-child"
+                        data-id="878ec40"
+                        data-element_type="container"
+                        data-settings='{"content_width":"full"}'
+                      ></div>
+                      <div
+                        className="elementor-element elementor-element-d6a1989 e-con-full e-flex e-con e-child"
+                        data-id="d6a1989"
+                        data-element_type="container"
+                        data-settings='{"content_width":"full"}'
+                      ></div>
+                      <div
+                        className="elementor-element elementor-element-845f3ba e-con-full e-flex e-con e-child"
+                        data-id="845f3ba"
+                        data-element_type="container"
+                        data-settings='{"content_width":"full"}'
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer className="footer clearfix" id="footer">
+          <div className="footer_top-area">
+            <div className="wgl-container">
+              <div className="row-footer">
+                {" "}
+                <div
+                  data-elementor-type="wp-post"
+                  data-elementor-id="216"
+                  className="elementor elementor-216"
+                  data-elementor-post-type="footer"
+                >
+                  <section
+                    className="elementor-section elementor-top-section elementor-element elementor-element-3fc5bcf wgl-add-background-text elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="3fc5bcf"
+                    data-element_type="section"
+                    data-settings='{"background_background":"gradient"}'
+                  >
+                    <div className="elementor-container elementor-column-gap-default">
+                      <div
+                        className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9a99fef"
+                        data-id="9a99fef"
+                        data-element_type="column"
+                      >
+                        <div className="elementor-widget-wrap elementor-element-populated">
+                          <div
+                            className="elementor-element elementor-element-08e62ac elementor-widget elementor-widget-spacer"
+                            data-id="08e62ac"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <section
+                            className="elementor-section elementor-inner-section elementor-element elementor-element-cc7e72e hover_links elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="cc7e72e"
+                            data-element_type="section"
+                          >
+                            <div className="elementor-container elementor-column-gap-default">
+                              <div
+                                className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-ce87a90"
+                                data-id="ce87a90"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-95d85c5 elementor-view-stacked acenter elementor-widget-icon-box wgl-icon-box elementor-shape-circle elementor-widget elementor-widget-wgl-info-box"
+                                    data-id="95d85c5"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-info-box.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-infobox">
+                                        <div className="wgl-infobox_wrapper wgl-layout-top">
+                                          <div className="media-wrapper icon-wrapper">
+                                            <span className="wgl-icon">
+                                              <i
+                                                className="icon elementor-icon flaticon flaticon-email"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </span>
+                                          </div>
+                                          <div className="content_wrapper">
+                                            <div className="wgl-infobox-title_wrapper"></div>
+                                            <div className="wgl-infobox_content">
+                                              <p>contact@deepcave.io</p>
+                                              <p>marketing@deepcave.io</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-3a30ef6"
+                                data-id="3a30ef6"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-a20a5a6 elementor-view-stacked acenter elementor-widget-icon-box wgl-icon-box elementor-shape-circle elementor-widget elementor-widget-wgl-info-box"
+                                    data-id="a20a5a6"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-info-box.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-infobox">
+                                        <a
+                                          className="wgl-infobox__link"
+                                          href="https://t.me/deepcaveglobalgroup"
+                                        ></a>
+                                        <div className="wgl-infobox_wrapper wgl-layout-top">
+                                          <div className="media-wrapper icon-wrapper">
+                                            <span className="wgl-icon">
+                                              <i
+                                                className="icon elementor-icon flaticon flaticon-telegram"
+                                                aria-hidden="true"
+                                              ></i>
+                                            </span>
+                                          </div>
+                                          <div className="content_wrapper">
+                                            <div className="wgl-infobox-title_wrapper"></div>
+                                            <div className="wgl-infobox_content">
+                                              <p>
+                                                We are on Telegram
+                                                <br />
+                                                @deepcaveglobalgroup
+                                              </p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-0679ae0"
+                                data-id="0679ae0"
+                                data-element_type="column"
+                              >
+                                <div className="elementor-widget-wrap elementor-element-populated">
+                                  <div
+                                    className="elementor-element elementor-element-217151e acenter elementor-widget-image-box wgl-image-box elementor-widget elementor-widget-wgl-info-box"
+                                    data-id="217151e"
+                                    data-element_type="widget"
+                                    data-widget_type="wgl-info-box.default"
+                                  >
+                                    <div className="elementor-widget-container">
+                                      <div className="wgl-infobox">
+                                        <a
+                                          className="wgl-infobox__link"
+                                          href="https://twitter.com/DeepCaveAI"
+                                        ></a>
+                                        <div className="wgl-infobox_wrapper wgl-layout-top">
+                                          <div className="media-wrapper img-wrapper">
+                                            <figure className="wgl-image-box_img">
+                                              <span>
+                                                <img
+                                                  src="https://deepcave.io/wp-content/uploads/elementor/thumbs/x-1-qen236seeelks0mmj97eye6c8eb9e0rnxfs7z6objo.png"
+                                                  title="x (1)"
+                                                  alt="x (1)"
+                                                  loading="lazy"
+                                                />
+                                              </span>
+                                            </figure>
+                                          </div>
+                                          <div className="content_wrapper">
+                                            <div className="wgl-infobox-title_wrapper"></div>
+                                            <div className="wgl-infobox_content">
+                                              <p>
+                                                <br />
+                                                Follow us on Twitter
+                                              </p>
+                                              <p>@DeepCaveAI</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>{" "}
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <div
+                            className="elementor-element elementor-element-aa839f4 elementor-widget elementor-widget-spacer"
+                            data-id="aa839f4"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-e99e823 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                            data-id="e99e823"
+                            data-element_type="widget"
+                            data-widget_type="divider.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-divider">
+                                <span className="elementor-divider-separator"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-c8e8c3f elementor-widget elementor-widget-spacer"
+                            data-id="c8e8c3f"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-0b6fe4d elementor-widget__width-auto hover_links aleft elementor-widget elementor-widget-wgl-double-heading"
+                            data-id="0b6fe4d"
+                            data-element_type="widget"
+                            data-widget_type="wgl-double-heading.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="wgl-double-heading">
+                                <a
+                                  className="dbl__link"
+                                  href="https://deepcave.io/"
+                                >
+                                  <h2 className="dblh__title-wrapper">
+                                    <span className="dblh__title dblh__title-1">
+                                      Home
+                                    </span>
+                                  </h2>
+                                </a>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-7f9e7ef elementor-widget__width-auto hover_links aleft elementor-widget elementor-widget-wgl-double-heading"
+                            data-id="7f9e7ef"
+                            data-element_type="widget"
+                            data-widget_type="wgl-double-heading.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="wgl-double-heading">
+                                <a
+                                  className="dbl__link"
+                                  href="https://deepcave.io/dc-tool/"
+                                >
+                                  <h2 className="dblh__title-wrapper">
+                                    <span className="dblh__title dblh__title-1">
+                                      DC Tool
+                                    </span>
+                                  </h2>
+                                </a>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-1127cd4 elementor-widget__width-auto hover_links aleft elementor-widget elementor-widget-wgl-double-heading"
+                            data-id="1127cd4"
+                            data-element_type="widget"
+                            data-widget_type="wgl-double-heading.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="wgl-double-heading">
+                                <a
+                                  className="dbl__link"
+                                  href="https://deepcave.io/shop/"
+                                >
+                                  <h2 className="dblh__title-wrapper">
+                                    <span className="dblh__title dblh__title-1">
+                                      NFT Shop
+                                    </span>
+                                  </h2>
+                                </a>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-7cf528e elementor-widget__width-auto hover_links aleft elementor-widget elementor-widget-wgl-double-heading"
+                            data-id="7cf528e"
+                            data-element_type="widget"
+                            data-widget_type="wgl-double-heading.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="wgl-double-heading">
+                                <a
+                                  className="dbl__link"
+                                  href="https://deepcave.io/whitepaper/"
+                                >
+                                  <h2 className="dblh__title-wrapper">
+                                    <span className="dblh__title dblh__title-1">
+                                      Whitepaper
+                                    </span>
+                                  </h2>
+                                </a>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-6287c7e elementor-widget__width-auto hover_links aleft elementor-widget elementor-widget-wgl-double-heading"
+                            data-id="6287c7e"
+                            data-element_type="widget"
+                            data-widget_type="wgl-double-heading.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="wgl-double-heading">
+                                <a
+                                  className="dbl__link"
+                                  href="https://deepcave.io/docs"
+                                >
+                                  <h2 className="dblh__title-wrapper">
+                                    <span className="dblh__title dblh__title-1">
+                                      Docs
+                                    </span>
+                                  </h2>
+                                </a>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-f51d5b9 elementor-widget__width-auto hover_links aleft elementor-widget elementor-widget-wgl-double-heading"
+                            data-id="f51d5b9"
+                            data-element_type="widget"
+                            data-widget_type="wgl-double-heading.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="wgl-double-heading">
+                                <a
+                                  className="dbl__link"
+                                  href="https://deepcave.io/utility/"
+                                >
+                                  <h2 className="dblh__title-wrapper">
+                                    <span className="dblh__title dblh__title-1">
+                                      Utility
+                                    </span>
+                                  </h2>
+                                </a>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-57576a7 elementor-widget__width-auto hover_links aleft elementor-widget elementor-widget-wgl-double-heading"
+                            data-id="57576a7"
+                            data-element_type="widget"
+                            data-widget_type="wgl-double-heading.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="wgl-double-heading">
+                                <a
+                                  className="dbl__link"
+                                  href="https://deepcave.io/contacts/"
+                                >
+                                  <h2 className="dblh__title-wrapper">
+                                    <span className="dblh__title dblh__title-1">
+                                      Contact
+                                    </span>
+                                  </h2>
+                                </a>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-02d0e5a elementor-widget elementor-widget-spacer"
+                            data-id="02d0e5a"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-e91ff57 elementor-widget elementor-widget-text-editor"
+                            data-id="e91ff57"
+                            data-element_type="widget"
+                            data-widget_type="text-editor.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <p>
+                                Copyright © 2023 by DeepCave Inc. All Rights
+                                Reserved |&nbsp; &nbsp;
+                                <a href="https://deepcave.io/disclaimer/">
+                                  Disclaimer
+                                </a>
+                                &nbsp; &nbsp;|&nbsp; &nbsp;
+                                <a href="https://deepcave.io/privacy-policy/">
+                                  Privacy Policy
+                                </a>
+                                &nbsp; &nbsp;|&nbsp; &nbsp;
+                                <a href="https://deepcave.io/terms-of-use/">
+                                  Terms of Use
+                                </a>
+                              </p>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-9354eeb elementor-widget elementor-widget-spacer"
+                            data-id="9354eeb"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-ff66273 elementor-shape-circle elementor-widget elementor-widget-wgl-social-icons"
+                            data-id="ff66273"
+                            data-element_type="widget"
+                            data-widget_type="wgl-social-icons.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="wgl-social-icons elementor-social-icons-wrapper">
+                                <a
+                                  className="elementor-icon elementor-social-icon elementor-social-icon-telegram-plane elementor-repeater-item-61ca096"
+                                  href="https://t.me/deepcaveglobalgroup"
+                                  title="Telegram"
+                                >
+                                  <span className="elementor-screen-only">
+                                    Telegram-plane
+                                  </span>
+                                  <i className="fab fa-telegram-plane"></i>
+                                </a>
+                                <a
+                                  className="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-9efb64d"
+                                  href="https://www.youtube.com/@DeepCaveInc."
+                                  title="Youtube"
+                                >
+                                  <span className="elementor-screen-only">
+                                    Youtube
+                                  </span>
+                                  <i className="fab fa-youtube"></i>
+                                </a>
+                                <a
+                                  className="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-2a3628f"
+                                  href="https://twitter.com/DeepCaveAI"
+                                  title="Twitter"
+                                >
+                                  <span className="elementor-screen-only">
+                                    Twitter
+                                  </span>
+                                  <i className="fab fa-twitter"></i>
+                                </a>
+                                <a
+                                  className="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-62a93a5"
+                                  href="https://www.instagram.com/"
+                                  title="Instagram"
+                                >
+                                  <span className="elementor-screen-only">
+                                    Instagram
+                                  </span>
+                                  <i className="fab fa-instagram"></i>
+                                </a>
+                              </div>{" "}
+                            </div>
+                          </div>
+                          <div
+                            className="elementor-element elementor-element-75e7cd7 elementor-widget elementor-widget-spacer"
+                            data-id="75e7cd7"
+                            data-element_type="widget"
+                            data-widget_type="spacer.default"
+                          >
+                            <div className="elementor-widget-container">
+                              <div className="elementor-spacer">
+                                <div className="elementor-spacer-inner"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <div id="scroll_up" className="scroll_up-icon">
+          <i className="flaticon flaticon-left-arrow"></i>
         </div>
+        <div className="wgl-canvas-outer">
+          <canvas id="wgl-webgl-fluid" width="1349" height="629"></canvas>
+        </div>
+        <script id="tmpl-rwmb-media-item" type="text/html">
+          <input
+            type="hidden"
+            name="{{{ data.controller.fieldName }}}"
+            value="{{{ data.id }}}"
+            className="rwmb-media-input"
+          />
+          <div className="rwmb-media-preview attachment-preview">
+            <div className="rwmb-media-content thumbnail">
+              <div className="centered"></div>
+            </div>
+          </div>
+          <div className="rwmb-media-info">
+            <a href="{{{ data.url }}}" className="rwmb-media-title"></a>
+            <p className="rwmb-media-name"></p>
+            <p className="rwmb-media-actions">
+              <a
+                className="rwmb-edit-media"
+                title="{{{ i18nRwmbMedia.edit }}}"
+                href="{{{ data.editLink }}}"
+              >
+                <span className="dashicons dashicons-edit"></span>
+              </a>
+              <a
+                href="#"
+                className="rwmb-remove-media"
+                title="{{{ i18nRwmbMedia.remove }}}"
+              >
+                <span className="dashicons dashicons-no-alt"></span>
+              </a>
+            </p>
+          </div>
+        </script>
+        <script id="tmpl-rwmb-media-button" type="text/html"></script>
+        <script id="tmpl-rwmb-image-item" type="text/html">
+          <input
+            type="hidden"
+            name="{{{ data.controller.fieldName }}}"
+            value="{{{ data.id }}}"
+            className="rwmb-media-input"
+          />
+          <div className="attachment-preview">
+            <div className="thumbnail">
+              <div className="centered"></div>
+            </div>
+          </div>
+          <div className="rwmb-image-overlay"></div>
+          <div className="rwmb-image-actions">
+            <a
+              className="rwmb-image-edit rwmb-edit-media"
+              title="{{{ i18nRwmbMedia.edit }}}"
+              href="{{{ data.editLink }}}"
+            >
+              <span className="dashicons dashicons-edit"></span>
+            </a>
+            <a
+              href="#"
+              className="rwmb-image-delete rwmb-remove-media"
+              title="{{{ i18nRwmbMedia.remove }}}"
+            >
+              <span className="dashicons dashicons-no-alt"></span>
+            </a>
+          </div>
+        </script>
+        <link
+          rel="stylesheet"
+          id="rs-plugin-settings-css"
+          href="https://deepcave.io/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.16"
+          type="text/css"
+          media="all"
+        />
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/copy-the-code/assets/js/copy-the-code.js?ver=3.2.0"
+          id="copy-the-code-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/copy-the-code/assets/js/clipboard.js?ver=3.2.0"
+          id="ctc-clipboard-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/copy-the-code/assets/js/copy-inline.js?ver=3.2.0"
+          id="ctc-copy-inline-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.8.1"
+          id="swv-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.8.1"
+          id="contact-form-7-js"
+        ></script>
+        <script
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.16"
+          defer={true}
+          async={true}
+          id="tp-tools-js"
+        ></script>
+        <script
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.16"
+          defer={true}
+          async={true}
+          id="revmin-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.8.2.1"
+          id="jquery-blockui-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=8.2.1"
+          id="wc-add-to-cart-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.8.2.1"
+          id="js-cookie-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=8.2.1"
+          id="woocommerce-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/themes/nico/js/theme-addons.js?ver=1.0"
+          id="nico-theme-addons-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/themes/nico/js/theme.js?ver=1.0"
+          id="nico-theme-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/copy-the-code/classes/blocks/assets/js/core.js?ver=3.2.0"
+          id="ctc-blocks-core-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/deal/script.js?ver=3.2.0"
+          id="ctc-el-deal-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/coupon/script.js?ver=3.2.0"
+          id="ctc-el-coupon-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/copy-the-code/classes/elementor/widgets/ai-prompt-generator/script.js?ver=3.2.0"
+          id="ctc-el-ai-prompt-generator-js"
+        ></script>
+        <script
+          type="text/javascript"
+          async={true}
+          src="https://deepcave.io/wp-content/plugins/nico-core/includes/elementor//assets/js/wgl_elementor_widgets.js?ver=1.0.0"
+          id="wgl-widgets-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/themes/nico/js/theia-sticky-sidebar.min.js?ver=6.4.1"
+          id="theia-sticky-sidebar-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/themes/nico/js/jquery.appear.js?ver=1.0.0"
+          id="jquery-appear-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/themes/nico/js/anime.min.js?ver=6.4.1"
+          id="anime-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.16.2"
+          id="elementor-pro-webpack-runtime-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.16.6"
+          id="elementor-webpack-runtime-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.16.6"
+          id="elementor-frontend-modules-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2"
+          id="wp-polyfill-inert-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.14.0"
+          id="regenerator-runtime-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
+          id="wp-polyfill-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1"
+          id="wp-hooks-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef"
+          id="wp-i18n-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.16.2"
+          id="elementor-pro-frontend-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2"
+          id="elementor-waypoints-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2"
+          id="jquery-ui-core-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.16.6"
+          id="elementor-frontend-js"
+        ></script>
+        <span
+          id="elementor-device-mode"
+          className="elementor-screen-only"
+        ></span>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.16.2"
+          id="pro-elements-handlers-js"
+        ></script>
         <svg
-          id="SvgjsSvg1001"
-          width="2"
-          height="0"
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          style={{
-            overflow: "hidden",
-            top: "-100%",
-            left: "-100%",
-            position: "absolute",
-            opacity: "0",
-          }}
-        >
-          <defs id="SvgjsDefs1002"></defs>
-          <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
-          <path id="SvgjsPath1004" d="M0 0 "></path>
-        </svg>
-        <div className="ReactModalPortal"></div>
-        <div className="ReactModalPortal"></div>
-        <div className="ReactModalPortal"></div>
+          style={{ display: "none" }}
+          className="e-font-icon-svg-symbols"
+        ></svg>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/nico-core/includes/elementor/assets/js/wgl_webgl_fluid.js?ver=6.4.1"
+          id="wgl-webgl-fluid-js"
+        ></script>
+        <script
+          async={true}
+          type="text/javascript"
+          src="https://deepcave.io/wp-content/plugins/wgl-extensions/includes/elementor/assets/js/wgl_elementor_sections.js?ver=6.4.1"
+          id="wgl-parallax-js"
+        ></script>
+        <script
+          async={true}
+          src="https://deepcave.io/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5"
+        ></script>
         <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb">
           <section id="shadow-host-companion"></section>
         </div>
