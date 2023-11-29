@@ -809,10 +809,10 @@ const Home: NextPage = () => {
                             <CustomConnect
                               clickComp={
                                 <div
-                                  className="wgl-button btn-size-xl "
+                                  className="wgl-button btn-size-xl"
                                   role="button"
                                 >
-                                  <div className="button__content ">
+                                  <div className="button__content">
                                     <span className="button__text">
                                       Please wait...
                                     </span>
@@ -821,7 +821,7 @@ const Home: NextPage = () => {
                               }
                               normalComp={
                                 <div
-                                  className="wgl-button btn-size-xl "
+                                  className="wgl-button btn-size-xl pulse-button"
                                   role="button"
                                 >
                                   <div className="button__content ">
@@ -1583,7 +1583,7 @@ const Home: NextPage = () => {
                                         }
                                         normalComp={
                                           <div
-                                            className="wgl-button btn-size-xl "
+                                            className="wgl-button btn-size-xl pulse-button "
                                             role="button"
                                           >
                                             <div className="button__content ">
