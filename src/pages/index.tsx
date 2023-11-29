@@ -783,7 +783,17 @@ const Home: NextPage = () => {
                                     type="submit"
                                     value="Search"
                                   />
-                                  <i className="search__icon flaticon-search"></i>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    height="16"
+                                    width="16"
+                                    viewBox="0 0 512 512"
+                                  >
+                                    <path
+                                      fill="#ffffff"
+                                      d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                                    />
+                                  </svg>
                                 </form>{" "}
                               </div>{" "}
                             </div>{" "}
@@ -796,15 +806,32 @@ const Home: NextPage = () => {
                           data-widget_type="wgl-button.default"
                         >
                           <div className="elementor-widget-container">
-                            <a
-                              className="wgl-button btn-size-lg "
-                              role="button"
-                              href="https://www.pinksale.finance/launchpad/0x4b010864E55DF415d6f3d8F7f47a3E35143c8C78?chain=ETH"
-                            >
-                              <div className="button__content ">
-                                <span className="button__text">Presale</span>
-                              </div>
-                            </a>{" "}
+                            <CustomConnect
+                              clickComp={
+                                <div
+                                  className="wgl-button btn-size-xl "
+                                  role="button"
+                                >
+                                  <div className="button__content ">
+                                    <span className="button__text">
+                                      Please wait...
+                                    </span>
+                                  </div>
+                                </div>
+                              }
+                              normalComp={
+                                <div
+                                  className="wgl-button btn-size-xl "
+                                  role="button"
+                                >
+                                  <div className="button__content ">
+                                    <span className="button__text">
+                                      Claim $DeepCave
+                                    </span>
+                                  </div>
+                                </div>
+                              }
+                            />{" "}
                           </div>
                         </div>
                       </div>
