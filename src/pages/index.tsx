@@ -1541,17 +1541,22 @@ const Home: NextPage = () => {
                                     data-widget_type="wgl-button.default"
                                   >
                                     <div className="elementor-widget-container">
-                                      <a
-                                        className="wgl-button btn-size-xl "
-                                        role="button"
-                                        href="https://app.uniswap.org/swap?outputCurrency=0x63f3795f332be0b27580EDB6b33613CF4E5a7C30"
-                                      >
-                                        <div className="button__content ">
-                                          <span className="button__text">
-                                            Buy $DeepCave
-                                          </span>
-                                        </div>
-                                      </a>{" "}
+                                      <CustomConnect
+                                        clickComp={
+                                          <div className="button__content ">
+                                            <span className="button__text">
+                                              Claim $DeepCave
+                                            </span>
+                                          </div>
+                                        }
+                                        normalComp={
+                                          <div className="button__content ">
+                                            <span className="button__text">
+                                              Please wait...
+                                            </span>
+                                          </div>
+                                        }
+                                      />{" "}
                                     </div>
                                   </div>
                                   <div
