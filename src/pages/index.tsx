@@ -15,7 +15,7 @@ const Home: NextPage = () => {
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <meta httpEquiv="X-UA-Compatible" content="IE=Edge" />
-        <title>Deepcave – Turn Your Words Into Art</title>
+        <title>Deepcave - Turn Your Words Into Art</title>
         <meta name="robots" content="max-image-preview:large" />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link
