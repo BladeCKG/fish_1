@@ -869,7 +869,7 @@ const Home: NextPage = () => {
                                                 }
                                                 normalComp={
                                                   <div className="ohio-widget-holder -left">
-                                                    <div className="ohio-widget button -primary">
+                                                    <div className="ohio-widget button -primary borderc-div">
                                                       Claim $Morra
                                                       <i className="icon -right bi">
                                                         <svg
