@@ -4736,7 +4736,7 @@ button.swiper-pagination-bullet {
 }
 
 .kit-spot[data-v-c951ae60] {
-  background-image: url(./ellipse.c2bb3973.svg);
+  background-image: url(https://venom.foundation/_nuxt/ellipse.c2bb3973.svg);
   background-position: 0;
   background-repeat: no-repeat;
   background-size: contain;
@@ -4789,7 +4789,7 @@ button.swiper-pagination-bullet {
 }
 
 .kit-spot.footer[data-v-c951ae60] {
-  background-image: url(./footer.dd98d1e5.svg);
+  background-image: url(https://venom.foundation/_nuxt/footer.dd98d1e5.svg);
   background-position: bottom;
   background-size: cover;
   bottom: 0;
@@ -4801,7 +4801,7 @@ button.swiper-pagination-bullet {
 
 @media (max-width: 1555px) {
   .kit-spot.footer[data-v-c951ae60] {
-    background-image: url(./footer-320.d1f92bb1.svg);
+    background-image: url(https://venom.foundation/_nuxt/footer-320.d1f92bb1.svg);
     background-size: cover;
     height: 600px;
   }
@@ -5934,7 +5934,8 @@ button.swiper-pagination-bullet {
   font-family: Poppins;
   font-style: normal;
   font-weight: 400;
-  src: url(./Poppins-Regular.a2c1dd01.woff2) format("woff2");
+  src: url(https://venom.foundation/_nuxt/Poppins-Regular.a2c1dd01.woff2)
+    format("woff2");
 }
 
 @font-face {
@@ -5942,7 +5943,8 @@ button.swiper-pagination-bullet {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
-  src: url(./Poppins-Medium.54cedf5d.woff2) format("woff2");
+  src: url(https://venom.foundation/_nuxt/Poppins-Medium.54cedf5d.woff2)
+    format("woff2");
 }
 
 .wrapper[data-v-82da5e0f] {
