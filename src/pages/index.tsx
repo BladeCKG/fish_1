@@ -1008,7 +1008,7 @@ const Home: NextPage = () => {
                             </div>
                           </a>
                           <a
-                            href="/ecosystem"
+                            
                             className="link"
                             data-v-c9891cd2=""
                           >
@@ -1927,7 +1927,7 @@ const Home: NextPage = () => {
                       friendly, low cost blockchain hosting a variety exclusive
                       decentralised applications
                     </div>
-                    <a href="/ecosystem" className="button" data-v-6ee8dd1e="">
+                    <a  className="button" data-v-6ee8dd1e="">
                       <button
                         className="kit-button is-primary"
                         data-v-6ee8dd1e=""
@@ -4137,7 +4137,7 @@ const Home: NextPage = () => {
                           </div>
                         </button>
                       </a>
-                      <a href="/ecosystem" className="" data-v-c6a7d5db="">
+                      <a  className="" data-v-c6a7d5db="">
                         <button
                           className="kit-button is-secondary button"
                           data-v-c6a7d5db=""
