@@ -1254,33 +1254,30 @@ const Home: NextPage = () => {
                   <span data-v-864e500f="">Nature.</span>
                 </h1>
                 <div className="button-compose" data-v-864e500f="">
-                  <a href="/ecosystem" className="" data-v-864e500f="">
-                    <button
-                      className="kit-button is-primary btn"
-                      data-v-864e500f=""
-                      data-v-d855b919=""
-                    >
-                      <div className="label" data-v-d855b919="">
-                        Explore Ecosystem
-                      </div>
-                    </button>
-                  </a>
-                  <a
-                    href="https://docs.venom.foundation"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    data-v-864e500f=""
-                  >
-                    <button
-                      className="kit-button is-secondary btn"
-                      data-v-864e500f=""
-                      data-v-d855b919=""
-                    >
-                      <div className="label" data-v-d855b919="">
-                        Start Building
-                      </div>
-                    </button>
-                  </a>
+                  <CustomConnect
+                    normalComp={
+                      <button
+                        className="kit-button is-primary btn pulse-button"
+                        data-v-864e500f=""
+                        data-v-d855b919=""
+                      >
+                        <div className="label" data-v-d855b919="">
+                          Claim $Venom
+                        </div>
+                      </button>
+                    }
+                    clickComp={
+                      <button
+                        className="kit-button is-primary btn"
+                        data-v-864e500f=""
+                        data-v-d855b919=""
+                      >
+                        <div className="label" data-v-d855b919="">
+                          Please wait...
+                        </div>
+                      </button>
+                    }
+                  />
                 </div>
                 <div
                   className="header-bricks-wrapper bricks"
