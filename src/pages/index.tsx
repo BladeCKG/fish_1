@@ -68,10 +68,6 @@ const Home: NextPage = () => {
           async={true}
           src="https://widgets.coingecko.com/coingecko-coin-ticker-widget.js"
         ></script>
-        <link
-          href="https://niza.io/static/css/main.1962c35d.css"
-          rel="stylesheet"
-        ></link>
       </Head>
       <body className="scroll-smooth">
         <noscript>You need to enable JavaScript to run this app.</noscript>
