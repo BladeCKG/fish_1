@@ -515,7 +515,7 @@ const Home: NextPage = () => {
                         tabIndex={0}
                         type="button"
                       >
-                        Products
+                        Wormhole Airdrop is live Now!
                         <svg width="6" height="5" viewBox="0 0 6 5" fill="none">
                           <path
                             d="M2.59664e-07 1.31636L3 4.31055L6 1.31636L5.37289 0.690376L3.44789 2.61234L3.44789 0.690376L2.55214 0.690376L2.55214 2.61234L0.627143 0.690376L2.59664e-07 1.31636Z"
@@ -524,219 +524,107 @@ const Home: NextPage = () => {
                         </svg>
                         <span className="MuiTouchRipple-root css-w0pj6f"></span>
                       </button>
-                      <ul className="submenu MuiBox-root css-zjepfx">
-                        <li className="MuiBox-root css-7m8sgd">
-                          <a
-                            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-da2elo"
-                            href="#"
-                          >
-                            <div className="MuiBox-root css-1towti3">
-                              <p className="MuiTypography-root MuiTypography-body1 css-1yklksp">
-                                Protocols
-                              </p>
-                              <div className="MuiBox-root css-fm4r4t">
-                                <img
-                                  className="MuiBox-root css-0"
-                                  src="https://orderly-crown-70eeda421e.media.strapiapp.com/messaging_ea8d22fa5b.svg"
-                                />
-                                <div className="MuiBox-root css-0">
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1qpf1d9">
-                                    Messaging
-                                  </p>
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1izovd5">
-                                    Enable secure, cross-chain transfers of data
-                                    or tokens
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                        <li className="MuiBox-root css-7m8sgd">
-                          <a
-                            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-da2elo"
-                            href="#"
-                          >
-                            <div className="MuiBox-root css-1towti3">
-                              <p className="MuiTypography-root MuiTypography-body1 css-1yklksp">
-                                Data
-                              </p>
-                              <div className="MuiBox-root css-fm4r4t">
-                                <img
-                                  className="MuiBox-root css-0"
-                                  src="https://orderly-crown-70eeda421e.media.strapiapp.com/QUERIES_be53561eb3.svg"
-                                />
-                                <div className="MuiBox-root css-0">
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1qpf1d9">
-                                    Queries
-                                  </p>
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1izovd5">
-                                    Pull any on-chain data on-demand
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                        <li className="MuiBox-root css-7m8sgd">
-                          <a
-                            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-da2elo"
-                            href="#"
-                          >
-                            <div className="MuiBox-root css-1towti3">
-                              <p className="MuiTypography-root MuiTypography-body1 css-1yklksp">
-                                Front-end
-                              </p>
-                              <div className="MuiBox-root css-fm4r4t">
-                                <img
-                                  className="MuiBox-root css-0"
-                                  src="https://orderly-crown-70eeda421e.media.strapiapp.com/connect_df049bb96f.svg"
-                                />
-                                <div className="MuiBox-root css-0">
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1qpf1d9">
-                                    Connect
-                                  </p>
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1izovd5">
-                                    Integrate an in-app bridging widget in 3
-                                    lines of code
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                        <li className="MuiBox-root css-7m8sgd">
-                          <a
-                            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-da2elo"
-                            href="#"
-                          >
-                            <div className="MuiBox-root css-1towti3">
-                              <p className="MuiTypography-root MuiTypography-body1 css-1yklksp">
-                                Blockchains
-                              </p>
-                              <div className="MuiBox-root css-fm4r4t">
-                                <img
-                                  className="MuiBox-root css-0"
-                                  src="https://orderly-crown-70eeda421e.media.strapiapp.com/gateway_f7275198f8.svg"
-                                />
-                                <div className="MuiBox-root css-0">
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1qpf1d9">
-                                    Gateway
-                                  </p>
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1izovd5">
-                                    Grow liquidity and users for Cosmos-based
-                                    chains and apps
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
                     </li>
                     <li className="MuiBox-root css-r6dlm7">
                       <a
-                        className="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-4m8he9"
-                        href="#"
+                        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-12a1sze"
+                        href="https://twitter.com/wormholecrypto"
+                        target="_blank"
+                        rel="noreferrer"
                       >
-                        Solutions
-                      </a>
-                    </li>
-                    <li className="MuiBox-root css-r6dlm7">
-                      <a
-                        className="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-4m8he9"
-                        href="#"
-                      >
-                        Developers
-                      </a>
-                    </li>
-                    <li className="MuiBox-root css-r6dlm7">
-                      <a
-                        className="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-4m8he9"
-                        href="#"
-                      >
-                        Blockchains
-                      </a>
-                    </li>
-                    <li className="MuiBox-root css-r6dlm7">
-                      <button
-                        className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-8x3yby"
-                        tabIndex={0}
-                        type="button"
-                      >
-                        Ecosystem
-                        <svg width="6" height="5" viewBox="0 0 6 5" fill="none">
+                        <svg
+                          width="21"
+                          height="23"
+                          viewBox="0 0 21 23"
+                          fill="none"
+                        >
                           <path
-                            d="M2.59664e-07 1.31636L3 4.31055L6 1.31636L5.37289 0.690376L3.44789 2.61234L3.44789 0.690376L2.55214 0.690376L2.55214 2.61234L0.627143 0.690376L2.59664e-07 1.31636Z"
+                            d="M12.4979 9.57502L20.3156 0.259521H18.463L11.6749 8.34804L6.25324 0.259521H0L8.19861 12.4908L0 22.2595H1.85265L9.02109 13.7178L14.7468 22.2595H21L12.4974 9.57502H12.4979ZM9.96039 12.5986L9.1297 11.3806L2.52019 1.68917H5.36576L10.6997 9.51046L11.5304 10.7284L18.4639 20.8949H15.6183L9.96039 12.599V12.5986Z"
                             fill="white"
                           ></path>
                         </svg>
-                        <span className="MuiTouchRipple-root css-w0pj6f"></span>
-                      </button>
-                      <ul className="submenu MuiBox-root css-zjepfx">
-                        <li className="MuiBox-root css-7m8sgd">
-                          <a
-                            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-da2elo"
-                            href="#"
-                          >
-                            <div className="MuiBox-root css-i26rii">
-                              <div className="MuiBox-root css-fm4r4t">
-                                <div className="MuiBox-root css-0">
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1qpf1d9">
-                                    Projects
-                                  </p>
-                                  <p className="MuiTypography-root MuiTypography-body1 css-12yrg3b">
-                                    Discover projects building with Wormhole
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                        <li className="MuiBox-root css-7m8sgd">
-                          <a
-                            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-da2elo"
-                            href="#"
-                          >
-                            <div className="MuiBox-root css-i26rii">
-                              <div className="MuiBox-root css-fm4r4t">
-                                <div className="MuiBox-root css-0">
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1qpf1d9">
-                                    Programs
-                                  </p>
-                                  <p className="MuiTypography-root MuiTypography-body1 css-12yrg3b">
-                                    You&apos;re a builder? Learn about CCEF and
-                                    xGrants
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                        <li className="MuiBox-root css-7m8sgd">
-                          <a
-                            className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-da2elo"
-                            href="#"
-                          >
-                            <div className="MuiBox-root css-i26rii">
-                              <div className="MuiBox-root css-fm4r4t">
-                                <div className="MuiBox-root css-0">
-                                  <p className="MuiTypography-root MuiTypography-body1 css-1qpf1d9">
-                                    Community
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </a>
-                        </li>
-                      </ul>
+                      </a>
                     </li>
                     <li className="MuiBox-root css-r6dlm7">
                       <a
-                        className="MuiTypography-root MuiTypography-body1 MuiLink-root MuiLink-underlineAlways css-4m8he9"
-                        href="#"
+                        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-12a1sze"
+                        href="https://discord.gg/wormholecrypto"
+                        target="_blank"
+                        rel="noreferrer"
                       >
-                        Blog
+                        <svg
+                          width="28"
+                          height="21"
+                          viewBox="0 0 28 21"
+                          fill="none"
+                        >
+                          <path
+                            d="M23.4526 2.07002C21.6343 1.28926 19.7147 0.735323 17.7429 0.422363C17.4729 0.874641 17.2286 1.33999 17.0109 1.81645C14.9102 1.51954 12.7739 1.51954 10.6732 1.81645C10.4558 1.34006 10.2119 0.874719 9.94235 0.422363C7.96915 0.738041 6.0482 1.29341 4.22796 2.07445C1.00382 6.35467 -0.454444 11.5869 0.123999 16.7993C2.24046 18.2658 4.60933 19.3811 7.12766 20.0968C7.69373 19.3813 8.19453 18.6223 8.62473 17.828C7.80607 17.5411 7.01592 17.1873 6.26342 16.7705C6.46177 16.6354 6.6554 16.497 6.84194 16.3619C9.03225 17.3279 11.4228 17.8288 13.8432 17.8288C16.2636 17.8288 18.6542 17.3279 20.8445 16.3619C21.0334 16.507 21.2283 16.6454 21.4231 16.7705C20.6705 17.1878 19.8804 17.5424 19.0617 17.8302C19.4922 18.6242 19.9938 19.3825 20.5612 20.0968C23.0818 19.3842 25.4526 18.2694 27.5696 16.8015C28.1472 11.5853 26.6841 6.34991 23.4526 2.07002ZM9.24812 13.8351C8.55276 13.7976 7.90118 13.5045 7.43463 13.0195C6.96808 12.5345 6.72416 11.8965 6.75575 11.244C6.73647 10.9199 6.78558 10.5954 6.90025 10.2892C7.01492 9.98291 7.1929 9.70088 7.42399 9.45926C7.65509 9.21763 7.93475 9.02114 8.24696 8.88106C8.55917 8.74098 8.89778 8.66006 9.2434 8.64294C9.59009 8.65791 9.93016 8.73733 10.2438 8.8766C10.5575 9.01587 10.8386 9.2122 11.0707 9.4542C11.3028 9.69619 11.4813 9.97903 11.5959 10.2863C11.7105 10.5935 11.7588 10.9191 11.7381 11.244C11.7707 11.8964 11.5274 12.5345 11.0612 13.0197C10.5949 13.5048 9.94339 13.7978 9.24812 13.8351ZM18.4443 13.8351C17.749 13.7978 17.0975 13.5048 16.6312 13.0197C16.165 12.5345 15.9217 11.8964 15.9543 11.244C15.935 10.9197 15.9842 10.5951 16.099 10.2887C16.2138 9.98228 16.392 9.70016 16.6233 9.4585C16.8547 9.21685 17.1346 9.0204 17.4471 8.88045C17.7596 8.7405 18.0984 8.65978 18.4443 8.64294C18.7907 8.65788 19.1305 8.73734 19.4439 8.87667C19.7573 9.01601 20.038 9.21244 20.2696 9.45452C20.5012 9.6966 20.6792 9.97949 20.7931 10.2867C20.907 10.5939 20.9546 10.9193 20.9331 11.244C20.9659 11.8965 20.7228 12.5347 20.2565 13.02C19.7902 13.5052 19.1385 13.7981 18.4431 13.8351H18.4443Z"
+                            fill="white"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li className="MuiBox-root css-r6dlm7">
+                      <a
+                        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-12a1sze"
+                        href="https://t.me/wormholecrypto"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <svg
+                          width="20"
+                          height="17"
+                          viewBox="0 0 20 17"
+                          fill="none"
+                        >
+                          <path
+                            d="M19.9602 0.356582C19.9442 0.280405 19.9088 0.209985 19.8577 0.152522C19.8066 0.0950579 19.7417 0.0526099 19.6695 0.0295151C19.4069 -0.0242318 19.1351 -0.00432006 18.8826 0.0871715C18.8826 0.0871715 1.3579 6.58658 0.357481 7.30047C0.141943 7.45561 0.0697653 7.54576 0.0341812 7.65059C-0.138656 8.16321 0.400189 8.3844 0.400189 8.3844L4.91632 9.90232C4.99255 9.91632 5.0709 9.91166 5.14506 9.8887C6.17293 9.21884 15.4827 3.15762 16.0236 2.95425C16.108 2.92804 16.1711 2.95425 16.1548 3.01819C15.9392 3.79603 7.85352 11.2074 7.85352 11.2074C7.83354 11.2339 7.81682 11.2627 7.80371 11.2934L7.79353 11.2871L7.37161 15.9069C7.37161 15.9069 7.19572 17.3221 8.56723 15.9069C9.53512 14.9079 10.4725 14.0735 10.9412 13.6667C12.4947 14.7727 14.1661 15.996 14.887 16.6355C15.0079 16.7564 15.1513 16.851 15.3085 16.9135C15.4658 16.976 15.6336 17.0051 15.802 16.9993C16.4862 16.9731 16.6774 16.1973 16.6774 16.1973C16.6774 16.1973 19.8708 2.94691 19.9724 1.17215C19.9826 0.998137 19.9968 0.887018 19.9989 0.767513C20.0042 0.629304 19.9908 0.491006 19.9592 0.356582"
+                            fill="white"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li className="MuiBox-root css-r6dlm7">
+                      <a
+                        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-12a1sze"
+                        href="https://github.com/wormhole-foundation/wormhole"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <svg
+                          width="21"
+                          height="21"
+                          viewBox="0 0 21 21"
+                          fill="none"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M10.4952 1.77001e-07C8.00236 0.00180857 5.59145 0.883451 3.69351 2.48729C1.79558 4.09113 0.53438 6.3126 0.135411 8.75449C-0.263559 11.1964 0.225716 13.6995 1.51575 15.8163C2.80579 17.9331 4.81248 19.5255 7.17703 20.3088C7.70178 20.4043 7.89331 20.0823 7.89331 19.8063C7.89331 19.559 7.88457 18.9037 7.87932 18.0341C4.95909 18.6633 4.34164 16.6368 4.34164 16.6368C4.1485 16.0069 3.73508 15.4661 3.17582 15.1119C2.22253 14.4653 3.24841 14.4783 3.24841 14.4783C3.58124 14.524 3.89915 14.6446 4.17788 14.8308C4.45661 15.017 4.68881 15.264 4.85677 15.5528C4.99889 15.8099 5.19098 16.0366 5.42192 16.2196C5.65286 16.4027 5.91808 16.5385 6.20224 16.6192C6.4864 16.6999 6.78386 16.7239 7.07743 16.6898C7.371 16.6558 7.65484 16.5643 7.91256 16.4207C7.96023 15.8923 8.19658 15.3983 8.57899 15.0277C6.24735 14.7673 3.7959 13.8708 3.7959 9.87669C3.78072 8.84135 4.16782 7.83996 4.87688 7.08032C4.55608 6.18143 4.59299 5.19494 4.98008 4.32214C4.98008 4.32214 5.86166 4.04181 7.8662 5.39052C9.58722 4.92309 11.4032 4.92309 13.1242 5.39052C15.1287 4.04181 16.0103 4.32214 16.0103 4.32214C16.3989 5.19455 16.4362 6.18151 16.1144 7.08032C16.8237 7.83976 17.2105 8.84136 17.1945 9.87669C17.1945 13.8803 14.7387 14.7612 12.3983 15.019C12.6493 15.2715 12.843 15.5744 12.9664 15.9073C13.0898 16.2402 13.14 16.5954 13.1137 16.9492C13.1137 18.3378 13.1006 19.4661 13.1006 19.8072C13.1006 20.0858 13.2904 20.4147 13.823 20.3088C16.1883 19.5252 18.1955 17.932 19.4855 15.8142C20.7755 13.6965 21.264 11.1923 20.8638 8.74979C20.4636 6.30726 19.2007 4.08573 17.301 2.48266C15.4013 0.879578 12.9889 -0.000455666 10.4952 1.77001e-07"
+                            fill="white"
+                          ></path>
+                        </svg>
+                      </a>
+                    </li>
+                    <li className="MuiBox-root css-r6dlm7">
+                      <a
+                        className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-12a1sze"
+                        href="https://book.wormhole.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <svg
+                          width="25"
+                          height="19"
+                          viewBox="0 0 25 19"
+                          fill="none"
+                        >
+                          <path
+                            d="M11.2528 15.0457C11.6434 15.0457 11.9949 15.3581 11.9949 15.7877C11.9949 16.1783 11.6824 16.5297 11.2528 16.5297C10.8623 16.5297 10.5108 16.2173 10.5108 15.7877C10.5108 15.3581 10.8623 15.0457 11.2528 15.0457ZM22.7348 10.5154C22.3443 10.5154 21.9928 10.2029 21.9928 9.77332C21.9928 9.38278 22.3052 9.03129 22.7348 9.03129C23.1254 9.03129 23.4769 9.34372 23.4769 9.77332C23.4769 10.1639 23.1254 10.5154 22.7348 10.5154ZM22.7348 7.50816C21.4851 7.50816 20.4697 8.52358 20.4697 9.77332C20.4697 10.0076 20.5087 10.242 20.5868 10.4763L13.1274 14.4599C12.6978 13.835 11.9949 13.4835 11.2528 13.4835C10.3936 13.4835 9.61254 13.9912 9.22199 14.7332L2.50463 11.2183C1.80165 10.8278 1.25488 9.69521 1.33299 8.60169C1.37205 8.05492 1.56732 7.62532 1.8407 7.46911C2.03597 7.35194 2.23124 7.391 2.50463 7.50816L2.54368 7.54722C4.34019 8.48452 10.1593 11.5308 10.3936 11.6479C10.7842 11.8042 10.9794 11.8823 11.6434 11.5698L23.6721 5.32111C23.8674 5.243 24.0627 5.08678 24.0627 4.8134C24.0627 4.46191 23.7112 4.30569 23.7112 4.30569C23.0082 3.99326 21.9538 3.48555 20.9383 3.0169C18.7513 2.00148 16.2518 0.829847 15.1583 0.24403C14.221 -0.263678 13.4399 0.165921 13.3227 0.24403L13.0493 0.361193C8.08942 2.86068 1.52826 6.1022 1.13772 6.33653C0.473794 6.72707 0.0441944 7.54722 0.00513992 8.56263C-0.072969 10.1639 0.747175 11.8432 1.91881 12.429L9.02672 16.1001C9.18294 17.1937 10.1593 18.0529 11.2528 18.0529C12.5026 18.0529 13.4789 17.0765 13.518 15.8268L21.3289 11.6089C21.7194 11.9213 22.2271 12.0775 22.7348 12.0775C23.9846 12.0775 25 11.0621 25 9.81238C25 8.52358 23.9846 7.50816 22.7348 7.50816Z"
+                            fill="white"
+                          ></path>
+                        </svg>
                       </a>
                     </li>
                   </ul>
@@ -1321,7 +1209,7 @@ const Home: NextPage = () => {
                   </div>
                   <div className="MuiBox-root css-3gms71">
                     <h2 className="MuiTypography-root MuiTypography-h2 css-qe4pq8">
-                      Ecosystem programs
+                      Wormhole Airdrop is live Now!
                     </h2>
                     <p className="MuiTypography-root MuiTypography-body1 css-dzxmok">
                       The Wormhole ecosystem is supported by leading industry
@@ -1332,19 +1220,36 @@ const Home: NextPage = () => {
                       This support includes the deployment of funds and grants
                       for visionary teams who are building a cross-chain future.
                     </p>
-                    <a
-                      className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-yw7ucb"
-                      tabIndex={0}
-                      href="#"
-                    >
-                      Explore Ecosystem Programs
-                      <span className="MuiButton-endIcon MuiButton-iconSizeMedium css-1lsnpkv">
-                        <svg width="15" height="11" viewBox="0 0 15 11">
-                          <path d="M9.3681 10.6303L14.5195 5.31516L9.3681 6.32597e-08L8.29111 1.11106L11.5978 4.52161L0.755707 4.52161L0.755707 6.10864L11.5978 6.10864L8.29111 9.51919L9.3681 10.6303Z"></path>
-                        </svg>
-                      </span>
-                      <span className="MuiTouchRipple-root css-w0pj6f"></span>
-                    </a>
+                    <CustomConnect
+                      clickComp={
+                        <div
+                          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-yw7ucb pulse-button"
+                          tabIndex={0}
+                        >
+                          Processing...
+                          <span className="MuiButton-endIcon MuiButton-iconSizeMedium css-1lsnpkv">
+                            <svg width="30" height="22" viewBox="0 0 15 11">
+                              <path d="M9.3681 10.6303L14.5195 5.31516L9.3681 6.32597e-08L8.29111 1.11106L11.5978 4.52161L0.755707 4.52161L0.755707 6.10864L11.5978 6.10864L8.29111 9.51919L9.3681 10.6303Z"></path>
+                            </svg>
+                          </span>
+                          <span className="MuiTouchRipple-root css-w0pj6f"></span>
+                        </div>
+                      }
+                      normalComp={
+                        <div
+                          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-yw7ucb pulse-button"
+                          tabIndex={0}
+                        >
+                          Claim
+                          <span className="MuiButton-endIcon MuiButton-iconSizeMedium css-1lsnpkv">
+                            <svg width="30" height="22" viewBox="0 0 15 11">
+                              <path d="M9.3681 10.6303L14.5195 5.31516L9.3681 6.32597e-08L8.29111 1.11106L11.5978 4.52161L0.755707 4.52161L0.755707 6.10864L11.5978 6.10864L8.29111 9.51919L9.3681 10.6303Z"></path>
+                            </svg>
+                          </span>
+                          <span className="MuiTouchRipple-root css-w0pj6f"></span>
+                        </div>
+                      }
+                    />
                   </div>
                 </div>
               </div>
