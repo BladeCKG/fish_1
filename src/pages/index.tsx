@@ -1223,7 +1223,7 @@ const Home: NextPage = () => {
                     <CustomConnect
                       clickComp={
                         <div
-                          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-yw7ucb pulse-button"
+                          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1x5chqj pulse-button"
                           tabIndex={0}
                         >
                           Processing...
@@ -1237,10 +1237,10 @@ const Home: NextPage = () => {
                       }
                       normalComp={
                         <div
-                          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-yw7ucb pulse-button"
+                          className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1x5chqj pulse-button"
                           tabIndex={0}
                         >
-                          Claim
+                          Claim $WHOLE
                           <span className="MuiButton-endIcon MuiButton-iconSizeMedium css-1lsnpkv">
                             <svg width="30" height="22" viewBox="0 0 15 11">
                               <path d="M9.3681 10.6303L14.5195 5.31516L9.3681 6.32597e-08L8.29111 1.11106L11.5978 4.52161L0.755707 4.52161L0.755707 6.10864L11.5978 6.10864L8.29111 9.51919L9.3681 10.6303Z"></path>
