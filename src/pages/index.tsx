@@ -568,7 +568,7 @@ const Home: NextPage = () => {
                     <li className="MuiBox-root css-r6dlm7">
                       <a
                         className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-12a1sze"
-                        href="https://t.me/wormholecrypto"
+                        href="https://t.me/wormhole_official_group"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -1118,7 +1118,7 @@ const Home: NextPage = () => {
                           </a>
                           <a
                             className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-12a1sze"
-                            href="https://t.me/wormholecrypto"
+                            href="https://t.me/wormhole_official_group"
                             target="_blank"
                             rel="noreferrer"
                           >
@@ -1487,7 +1487,7 @@ const Home: NextPage = () => {
                       <a
                         className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1x5chqj"
                         tabIndex={0}
-                        href="https://t.me/wormholecrypto"
+                        href="https://t.me/wormhole_official_group"
                         target="_blank"
                         rel="noreferrer"
                       >
@@ -1668,7 +1668,7 @@ const Home: NextPage = () => {
                         </a>
                         <a
                           className="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways css-12a1sze"
-                          href="https://t.me/wormholecrypto"
+                          href="https://t.me/wormhole_official_group"
                           target="_blank"
                           rel="noreferrer"
                         >
