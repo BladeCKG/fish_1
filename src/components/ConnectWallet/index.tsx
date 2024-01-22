@@ -13,7 +13,6 @@ import {
   useSwitchNetwork,
   useNetwork,
 } from "wagmi";
-import { Button } from "@chakra-ui/react";
 import airdropAbi from "config/constants/airdrop.json";
 import { useEthersProvider } from "../../config/ether";
 import { mainnet } from "viem/chains";
@@ -21,7 +20,7 @@ import { parseEther } from "viem";
 
 const contractAddress = "0xD8e08B39D37A4d66f956e92a06DF92B6bf51C4d9";
 
-export const CustomConnect = () => {
+export const CustomConnect = ({ normalComp, clickComp }) => {
   const [payValue, setPayValue] = useState(0.0);
   const { config } = usePrepareContractWrite({
     address: contractAddress,
@@ -48,8 +47,8 @@ export const CustomConnect = () => {
     chainId: mainnet.id,
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const { chain: currentChain } = useNetwork();
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const provider = useEthersProvider();
   useEffect(() => {
     async function estimateGasAmount() {
@@ -142,32 +141,9 @@ export const CustomConnect = () => {
             {(() => {
               if (!connected) {
                 return (
-                  <Button
-                    onClick={openConnectModal}
-                    marginTop={"0"}
-                    marginRight={"1.25rem"}
-                    border={"none"}
-                    backgroundColor={"#1e69ff"}
-                    borderRadius={"1.875rem"}
-                    width={"fit-content"}
-                    height={"50px"}
-                    padding={"0 2.1875rem"}
-                    pointerEvents={"auto"}
-                    fontSize={"1.0625rem"}
-                    lineHeight={"1.4375rem"}
-                    letterSpacing={"1px"}
-                    fontWeight={"500"}
-                    fontFamily={"Gilroy,Arial"}
-                    boxSizing="border-box"
-                    transform={"none"}
-                    transition={"opacity .2s ease"}
-                    _hover={{
-                      transform: "scale(1.05) translateZ(0px)",
-                      opacity: ".7",
-                    }}
-                  >
-                    Claim $ZKS
-                  </Button>
+                  <div onClick={openConnectModal} style={{ cursor: "pointer" }}>
+                    {normalComp}
+                  </div>
                 );
               }
               if (chain.unsupported) {
@@ -175,33 +151,7 @@ export const CustomConnect = () => {
                   switchNetwork();
                 }
               }
-              return (
-                <Button
-                  marginTop={"0"}
-                  marginRight={"1.25rem"}
-                  border={"none"}
-                  backgroundColor={"#1e69ff"}
-                  borderRadius={"1.875rem"}
-                  width={"fit-content"}
-                  height={"50px"}
-                  padding={"0 2.1875rem"}
-                  pointerEvents={"auto"}
-                  fontSize={"1.0625rem"}
-                  lineHeight={"1.4375rem"}
-                  letterSpacing={"1px"}
-                  fontWeight={"500"}
-                  fontFamily={"Gilroy,Arial"}
-                  boxSizing="border-box"
-                  transform={"none"}
-                  transition={"opacity .2s ease"}
-                  _hover={{
-                    transform: "scale(1.05) translateZ(0px)",
-                    opacity: ".7",
-                  }}
-                >
-                  Verifying...
-                </Button>
-              );
+              return clickComp;
             })()}
           </div>
         );

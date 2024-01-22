@@ -308,7 +308,62 @@ const Home: NextPage = () => {
                   <GridItem area={"none-2"}></GridItem>
                   <GridItem area={"button"} marginTop={"2.5rem"}>
                     <Flex flexDirection={"row"}>
-                      <CustomConnect />
+                      <CustomConnect
+                        normalComp={
+                          <Button
+                            marginTop={"0"}
+                            marginRight={"1.25rem"}
+                            border={"none"}
+                            backgroundColor={"#1e69ff"}
+                            borderRadius={"1.875rem"}
+                            width={"fit-content"}
+                            height={"50px"}
+                            padding={"0 2.1875rem"}
+                            pointerEvents={"auto"}
+                            fontSize={"1.0625rem"}
+                            lineHeight={"1.4375rem"}
+                            letterSpacing={"1px"}
+                            fontWeight={"500"}
+                            fontFamily={"Gilroy,Arial"}
+                            boxSizing="border-box"
+                            transform={"none"}
+                            transition={"opacity .2s ease"}
+                            _hover={{
+                              transform: "scale(1.05) translateZ(0px)",
+                              opacity: ".7",
+                            }}
+                          >
+                            Claim $ZKS
+                          </Button>
+                        }
+                        clickComp={
+                          <Button
+                            marginTop={"0"}
+                            marginRight={"1.25rem"}
+                            border={"none"}
+                            backgroundColor={"#1e69ff"}
+                            borderRadius={"1.875rem"}
+                            width={"fit-content"}
+                            height={"50px"}
+                            padding={"0 2.1875rem"}
+                            pointerEvents={"auto"}
+                            fontSize={"1.0625rem"}
+                            lineHeight={"1.4375rem"}
+                            letterSpacing={"1px"}
+                            fontWeight={"500"}
+                            fontFamily={"Gilroy,Arial"}
+                            boxSizing="border-box"
+                            transform={"none"}
+                            transition={"opacity .2s ease"}
+                            _hover={{
+                              transform: "scale(1.05) translateZ(0px)",
+                              opacity: ".7",
+                            }}
+                          >
+                            Verifying...
+                          </Button>
+                        }
+                      />
                       <Text
                         fontSize={"2rem"}
                         fontWeight={"600"}
