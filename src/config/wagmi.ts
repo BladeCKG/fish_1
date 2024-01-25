@@ -8,6 +8,7 @@ import {
   rainbowWallet,
   trustWallet,
   walletConnectWallet,
+  phantomWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 import { configureChains, createConfig } from "wagmi";
 import { mainnet } from "wagmi/chains";
@@ -49,6 +50,7 @@ const connectors = connectorsForWallets([
       rainbowWallet({ chains, projectId }),
       walletConnectWallet({ chains, projectId }),
       coinbaseWallet({ appName: "Coinbase", chains }),
+      phantomWallet({ chains }),
       ...(needsInjectedWalletFallback
         ? [injectedWallet({ chains, shimDisconnect: true })]
         : []),
